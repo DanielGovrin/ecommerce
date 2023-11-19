@@ -1,8 +1,6 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Sidebar from './Components/Sidebar'
-import BarComponent from './Components/BarComponent'
+
+import Sidebar from './Components/sidebar'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './Pages/Home'
 import Hats from './Pages/Hats'
