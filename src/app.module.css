@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+}
+.container{
+    display:flex;
+    background-color: #f4f4f4;
+    margin:0;
+}
+
+.sidebar{
+    width:25%;
+    background-color: #333; 
+}
+.content{
+
+    width:100%;
+    border: 2px solid black;
+}
