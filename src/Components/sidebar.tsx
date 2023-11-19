@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { SidebarData } from './SidebarData'
+import { SidebarData } from './Data'
 import styles from './sidebar.module.css'
 
 type Props = {}
