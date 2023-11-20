@@ -2,85 +2,80 @@ import * as FaIcons from 'react-icons/fa'
 import * as IoIcons from 'react-icons/io'
 import * as IoIcons5 from 'react-icons/io5'
 import * as PiIcons from 'react-icons/pi'
+import {SidebarItem, CardItem} from "./datatypes"
 
-export const PantsData = [
+
+export const PantsData: CardItem[]= [
   {
-    MainTitle: "Classic Straight-Leg Jeans",
+    MainTitle: "Levi's Classic Straight-Leg Jeans",
     SecondaryTitle: "Timeless Denim for Versatile Styling",
-    Image: "/images/classic_jeans.jpg",
+    Image: "/public/PantsImages/classic_jeans.jpg",
     Price: "$39.99"
   },
   {
     MainTitle: "Slim Fit Chino Trousers",
     SecondaryTitle: "Tailored Comfort for a Sleek Look",
-    Image: "/images/slim_fit_chinos.jpg",
+    Image: "/public/PantsImages/slim_fit_chinos.jpg",
     Price: "$29.99"
   },
   {
     MainTitle: "Cargo Jogger Pants",
     SecondaryTitle: "Functional Style with Ample Pockets",
-    Image: "/images/cargo_joggers.jpg",
+    Image: "/public/PantsImages/cargo_joggers.jpg",
     Price: "$34.99"
   },
   {
     MainTitle: "Cozy Lounge Sweatpants",
     SecondaryTitle: "Relaxation Mode: Activated",
-    Image: "/images/lounge_sweatpants.jpg",
+    Image: "/public/PantsImages/lounge_sweatpants.jpg",
     Price: "$24.99"
   },
   {
     MainTitle: "Athletic Performance Leggings",
     SecondaryTitle: "Move Freely with Breathable Comfort",
-    Image: "/images/athletic_leggings.jpg",
+    Image: "/public/PantsImages/athletic_leggings.jpg",
     Price: "$27.99"
   },
   {
     MainTitle: "Casual Corduroy Pants",
     SecondaryTitle: "Soft Texture for Everyday Casual Wear",
-    Image: "/images/corduroy_pants.jpg",
+    Image: "/public/PantsImages/corduroy_pants.jpg",
     Price: "$31.99"
   },
   {
     MainTitle: "Cargo Shorts",
     SecondaryTitle: "Stylish Utility for Warmer Days",
-    Image: "/images/cargo_shorts.jpg",
+    Image: "/public/PantsImages/cargo_shorts.jpg",
     Price: "$22.99"
   },
   {
     MainTitle: "Formal Dress Trousers",
     SecondaryTitle: "Polished Elegance for Special Occasions",
-    Image: "/images/formal_dress_trousers.jpg",
+    Image: "/public/PantsImages/formal_dress_trousers.jpg",
     Price: "$49.99"
   },
   {
     MainTitle: "Rugged Outdoor Hiking Pants",
     SecondaryTitle: "Durable Performance for Adventure Seekers",
-    Image: "/images/hiking_pants.jpg",
+    Image: "/public/PantsImages/hiking_pants.jpg",
     Price: "$37.99"
-  },
-  {
-    MainTitle: "Printed Boho Palazzo Pants",
-    SecondaryTitle: "Bohemian Chic for a Stylish Statement",
-    Image: "/images/boho_palazzo_pants.jpg",
-    Price: "$42.99"
   },
   {
     MainTitle: "Stretchy Yoga Leggings",
     SecondaryTitle: "Flexible Comfort for Your Active Lifestyle",
-    Image: "/images/yoga_leggings.jpg",
+    Image: "/public/PantsImages/yoga_leggings.jpg",
     Price: "$19.99"
   },
   {
     MainTitle: "Fashionable High-Waisted Culottes",
     SecondaryTitle: "Trendy Style with a Comfortable Fit",
-    Image: "/images/high_waisted_culottes.jpg",
+    Image: "/public/PantsImages/high_waisted_culottes.jpg",
     Price: "$36.99"
   },
-  // Add more items as needed
 ];
 
 
-export const ShirtData = [
+export const ShirtsData = [
   {
     MainTitle: "Classic Black Cotton Tee",
     SecondaryTitle: "Essential Comfort for Everyday Casual",
@@ -150,7 +145,7 @@ export const ShirtData = [
 ];
 
 
-export const HatsData = [
+export const HatsData: CardItem[] = [
   {
     MainTitle: "Classic NY Fedora Hat",
     SecondaryTitle: "Timeless Style for Every Occasion",
@@ -208,7 +203,7 @@ export const HatsData = [
 
 ]
 
-export const SidebarData = [
+export const SidebarData :SidebarItem[]= [
   {
     title: 'home',
     path: '/',

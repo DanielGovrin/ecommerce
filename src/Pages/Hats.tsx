@@ -1,9 +1,20 @@
 import React from 'react'
+import { HatsData } from '../components/Data'
+import Card from '../components/Card';
+import { CardItem } from '../components/datatypes';
 
 function Hats() {
   return (
-    <div><h1>Hats</h1></div>
-  )
+    <ul>
+      {HatsData.map((item, index) => (
+        <li key={index}>
+          <div className="item">
+            <Card {...item} />
+          </div>
+        </li>
+      ))}
+    </ul>
+  );
 }
 
 export default Hats

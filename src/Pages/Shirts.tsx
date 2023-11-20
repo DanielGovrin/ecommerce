@@ -1,11 +1,19 @@
 import React from 'react'
-import { useParams } from 'react-router-dom';
+import { ShirtsData } from '../components/Data';
+import Card from '../components/Card';
 
 function Shirts() {
-
-    return (
-        <div><h1>Shirts</h1></div>
-    )
+  return (
+    <ul>
+      {ShirtsData.map((item, index) => (
+        <li key={index}>
+          <div className="item">
+            <Card {...item} />
+          </div>
+        </li>
+      ))}
+    </ul>
+  );
 }
 
 export default Shirts
