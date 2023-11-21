@@ -7,7 +7,7 @@ import {SidebarItem, CardItem} from "./datatypes"
 
 export const PantsData: CardItem[]= [
   {
-    MainTitle: "Levi's Classic Straight-Leg Jeans",
+    MainTitle: "Levi's Classic Straight Jeans",
     SecondaryTitle: "Timeless Denim for Versatile Styling",
     Image: "/public/PantsImages/classic_jeans.jpg",
     Price: "$39.99"
@@ -67,7 +67,7 @@ export const PantsData: CardItem[]= [
     Price: "$19.99"
   },
   {
-    MainTitle: "Fashionable High-Waisted Culottes",
+    MainTitle: "High-Waisted Culottes",
     SecondaryTitle: "Trendy Style with a Comfortable Fit",
     Image: "/public/PantsImages/high_waisted_culottes.jpg",
     Price: "$36.99"

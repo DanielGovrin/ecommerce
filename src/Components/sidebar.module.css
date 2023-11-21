@@ -1,12 +1,3 @@
-ul{
-    display: inline;
-}
-
-
-li{
-    list-style-type: none;
-}
-
 .navbar {
     background: linear-gradient(to right, #ffffff, #f0f0f0);
     max-width: 25%;
@@ -21,7 +12,7 @@ li{
 }
 
 .navbar a {
-    color: #01001e;
+    color: #000000;
     text-decoration: none;
     transition: color 0.3s ease;
 }

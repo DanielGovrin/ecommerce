@@ -5,6 +5,8 @@
     display:flex;
     background-color: #f6f6f6;
     margin:0;
+    height: 100%;
+    overflow: hidden;
 }
 
 .sidebar{
@@ -13,6 +15,11 @@
 
 .content{
     width:100%;
-    border-left: 2px solid rgb(34, 34, 34);
+    border-left: 1px solid rgb(132, 132, 132);
+    height: 100%;
+    overflow: auto;
 }
-    
+
+:global(#root), :global(body), :global(html) {
+    height: 100%;
+}

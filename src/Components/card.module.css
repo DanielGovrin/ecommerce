@@ -1,32 +1,37 @@
-.cardContainer{
-    width: 25%;
-    height: 25%;
+.cardContainer {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     text-align: center;
     border: 2px solid #c1c1c1;
-    border-radius: 10%;
-    margin: 1rem; 
-}
-.cardContainer:hover{
-    border: 1px solid #808080;
-    background-color: #f4f4f4;
+    border-radius: 40px;
+    transition: border 0.3s, background-color 0.3s;
 }
 
-.titles{
-    font-family: 'Poppins', Courier, monospace;
+.cardContainer:hover {
+    border: 2px solid #bdbdbd;
+    background-color: rgb(226, 226, 226);
+}
+
+.titles {
+    font-family: 'Poppins', sans-serif;
     font-size: 0.8rem;
     font-weight: bolder;
+    margin-bottom: 10px;
+    color: black;
 }
-.img{
+
+.img {
     width: 150px;
     height: 150px;
     align-items: center;
+    margin: 10px;
+    mix-blend-mode:initial;
 }
 
-.price{
+.price {
     font-family: 'Poppins', Courier, monospace;
-
+    margin-top: 10px;
 }

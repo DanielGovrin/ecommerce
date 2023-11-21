@@ -6,7 +6,7 @@ function Card({ MainTitle, SecondaryTitle, Image, Price }: CardItem) {
     <div className={styles.cardContainer}>
       <div className={styles.titles}>
         <h1 className={styles.mainTitle}>{MainTitle}</h1>
-        <p className={styles.SecondaryTitle}>{SecondaryTitle}</p>
+        <h3 className={styles.SecondaryTitle}>{SecondaryTitle}</h3>
       </div>
       <img className={styles.img} src={Image} alt={MainTitle} draggable={false} />
       <p className={styles.price}>{Price}</p>

@@ -1,4 +1,3 @@
-import React from 'react'
 import { ShirtsData } from '../components/Data';
 import Card from '../components/card';
 import styles from "./pages.module.css"
