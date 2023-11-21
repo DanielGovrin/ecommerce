@@ -15,7 +15,7 @@ function App() {
       <div className={styles.container}>
         <Sidebar />
         <div className={styles.content}>
-          <Routes>
+        <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/Hats' element={<Hats />} />
             <Route path='/Pants' element={<Pants />} />
