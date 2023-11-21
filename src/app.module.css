@@ -3,15 +3,16 @@
 }
 .container{
     display:flex;
-    background-color: #f4f4f4;
+    background-color: #f6f6f6;
     margin:0;
 }
 
 .sidebar{
     width:25%;
-    background-color: #333; 
 }
+
 .content{
     width:100%;
-    border: 2px solid black;
+    border-left: 2px solid rgb(34, 34, 34);
 }
+    

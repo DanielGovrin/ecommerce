@@ -1,18 +1,16 @@
 import React from 'react'
 import { ShirtsData } from '../components/Data';
-import Card from '../components/Card';
+import Card from '../components/card';
+import styles from "./pages.module.css"
+
 
 function Shirts() {
   return (
-    <ul>
-      {ShirtsData.map((item, index) => (
-        <li key={index}>
-          <div className="item">
-            <Card {...item} />
-          </div>
-        </li>
+    <div className={styles.pageContainer}>
+      {ShirtsData.map((item) => (
+        <Card {...item} />
       ))}
-    </ul>
+    </div>
   );
 }
 

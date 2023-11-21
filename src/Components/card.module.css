@@ -1,6 +1,32 @@
-
-
+.cardContainer{
+    width: 25%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid #c1c1c1;
+    border-radius: 10%;
+    margin: 1rem; 
+}
+.cardContainer:hover{
+    border: 1px solid #808080;
+    background-color: #f4f4f4;
+}
 
 .titles{
     font-family: 'Poppins', Courier, monospace;
+    font-size: 0.8rem;
+    font-weight: bolder;
+}
+.img{
+    width: 150px;
+    height: 150px;
+    align-items: center;
+}
+
+.price{
+    font-family: 'Poppins', Courier, monospace;
+
 }

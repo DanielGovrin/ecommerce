@@ -1,19 +1,14 @@
-import React from 'react'
 import { HatsData } from '../components/Data'
-import Card from '../components/Card';
-import { CardItem } from '../components/datatypes';
+import Card from '../components/card';
+import styles from "./pages.module.css"
 
 function Hats() {
   return (
-    <ul>
-      {HatsData.map((item, index) => (
-        <li key={index}>
-          <div className="item">
-            <Card {...item} />
-          </div>
-        </li>
+    <div className={styles.pageContainer}>
+      {HatsData.map((item) => (
+          <Card {...item} />
       ))}
-    </ul>
+    </div>
   );
 }
 
