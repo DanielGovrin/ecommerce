@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
 import styles from './sidebar.module.css'
 import { SidebarData } from './Data'
+type Props = {}
 
-export default function Sidebar() {
+export default function Sidebar({ }: Props) {
   return (
     <ul className={styles.navbar}>
       {SidebarData.map((item, index) => {
