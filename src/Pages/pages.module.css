@@ -8,17 +8,25 @@
     flex-wrap: wrap;
     padding: 30px 175px 50px 175px;
     overflow: auto;
-}
-.leftside{
-    height:50%;
-    width:50%;
 
 }
 
-.contactContainer{
+.leftside {
+    height: 50%;
+    width: 50%;
+
+}
+
+.contactContainer {
     display: flex;
 }
 
 input:focus::placeholder {
     color: transparent;
-  }
+}
+
+
+.text{
+    font-family: 'Poppins', sans-serif;
+
+}
