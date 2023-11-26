@@ -9,11 +9,9 @@ export default function Sidebar({ }: Props) {
       {SidebarData.map((item, index) => {
         return (
           <li key={index} className={styles.listItem}>
-            <Link to={item.path} draggable={false}>
-              <div className={styles.sidebarContent}>
-                <div className={styles.icon}>{item.icon}</div>
+            <Link className={styles.sidebarContent} to={item.path} draggable={false}>
+                {item.icon}
                 <span className={styles.text}>{item.title}</span>
-              </div>
             </Link>
           </li>
         )

@@ -40,29 +40,28 @@ function Contact() {
       <div className={styles.rightside}>
         <h1 className={`${styles.text} ${styles.contact} ${styles.header}`}>Contact Us</h1>
         <form>
-          <div className={`${styles.inputText} ${styles.nameText}`}>
             <input type="text"
+              className={`${styles.inputText} ${styles.inputCommon}`}
               value={name}
               placeholder="Enter Your Name"
               onChange={handleNameChange} />
 
             <input
-              className={styles.inputText}
+              className={`${styles.inputText} ${styles.inputCommon}`}
               type="email"
               value={email}
               placeholder="Enter Your Email"
               onChange={handleEmailChange}
               pattern=".+@example\.com" />
 
-            <input
-              type="message"
+            <textarea
+              className={`${styles.messageText} ${styles.inputCommon}`}
               value={message}
               placeholder="Enter Your Message"
               onChange={handleMessageChange} />
 
 
             <button>Submit</button>
-          </div>
         </form>
       </div>
 
