@@ -1,14 +1,17 @@
 import React from 'react'
+import styles from './SocialMedia.module.css'
+
 
 interface SocialMediaProps {
-    icon: string;
+    icon: JSX.Element;
     url: string;
+    className?: string;
 };
 
 
-function SocialMedia({ icon, url }: SocialMediaProps) {
+function SocialMedia({ icon, url, className }: SocialMediaProps) {
     return (
-        <div>
+        <div className={className && styles[className]}>
             <a href={url} target="_blank" rel="noopener noreferrer">
                 {icon}
             </a>
@@ -17,3 +20,4 @@ function SocialMedia({ icon, url }: SocialMediaProps) {
 }
 
 export default SocialMedia
+
