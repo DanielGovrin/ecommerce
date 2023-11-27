@@ -1,24 +1,15 @@
 .navbar {
-   padding: 0.2rem;
+   background: linear-gradient(to right, #ffffff, #f0f0f0);
    height: 100vh;
-}
-
-.text {
-   font-size: 1.5rem;
-   padding: 0.5rem 0rem 0rem 0.9rem;
-   font-family: 'Poppins', sans-serif;
-}
-
-.navbar a {
-   color: #01001e;
-   text-decoration: none;
-   transition: color 0.3s ease;
+   flex:0 0 10%;
 }
 
 .listItem {
    margin: 0.5rem;
    padding: 0.2rem;
    border-radius: 5px;
+   color:black
+   
 }
 
 .listItem:hover {
@@ -29,10 +20,23 @@
 .listItem:active {
    background-color: rgba(7, 7, 7, 0.478);
    box-shadow: 1px 1px 1px #1c1c1c9e;
+   color: black; /* or specify the desired font color */
+
 }
 
 .sidebarContent {
    display: flex;
+   align-items:center;
+   gap: 0.2rem;
+   color: #01001e;
+   transition: color 0.3s ease;
+   margin-left: 0.5rem;
+   font-size: 1.5rem;
+
+}
+
+.text {
+   padding: 0.5rem 0rem 0rem 1rem;
 }
 
 .icon {
