@@ -1,16 +1,12 @@
-
-.container{
-    display:flex;
-    background-color: #f4f4f4;
-    margin:0;
+.container {
+   display: flex;
+   background-color: #f6f6f6;
+   height: 100%;
+   overflow: hidden;
 }
 
-.sidebar{
-    width:25%;
-    background-color: #333; 
-}
-
-.content{
-    width:100%;
-    border: 2px solid black;
+.content {
+   width: 100%;
+   border-left: 1px solid black;
+   overflow: auto;
 }

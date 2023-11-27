@@ -1,49 +1,41 @@
-li{
-    list-style-type: none;
-}
-
 .navbar {
-    padding: 0.2rem;
-    height: 100vh;
+   padding: 0.2rem;
+   height: 100vh;
 }
 
 .text {
-    font-size: 1.5rem;
-    padding: 0.5rem 0rem 0rem 0.9rem;
-    font-family: 'Poppins', sans-serif;
+   font-size: 1.5rem;
+   padding: 0.5rem 0rem 0rem 0.9rem;
+   font-family: 'Poppins', sans-serif;
 }
 
 .navbar a {
-    color: #01001e;
-    text-decoration: none;
-    transition: color 0.3s ease;
+   color: #01001e;
+   text-decoration: none;
+   transition: color 0.3s ease;
 }
 
 .listItem {
-    margin: 0.5rem;
-    padding: 0.2rem;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-left: 4px solid #353535;
-
+   margin: 0.5rem;
+   padding: 0.2rem;
+   border-radius: 5px;
 }
 
-
 .listItem:hover {
-    background-color: rgba(51, 51, 51, 0.478);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   background-color: rgba(50, 50, 50, 0.5);
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .listItem:active {
-    background-color: rgba(7, 7, 7, 0.478);
-    box-shadow: 1px 1px 1px #1c1c1c9e
+   background-color: rgba(7, 7, 7, 0.478);
+   box-shadow: 1px 1px 1px #1c1c1c9e;
 }
 
 .sidebarContent {
-    display: flex;
+   display: flex;
 }
 
 .icon {
-    font-size: 1.5rem;
-    padding-top: 0.8rem;
+   font-size: 1.5rem;
+   padding-top: 0.8rem;
 }
