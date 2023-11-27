@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styles from './sidebar.module.css'
-import { SidebarData } from './SidebarData'
+import { SidebarData } from './data'
 type Props = {}
 
 export default function Sidebar({ }: Props) {
