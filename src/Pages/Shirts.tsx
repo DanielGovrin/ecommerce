@@ -1,7 +1,6 @@
-import { ShirtsData } from '../components/Data';
-import Card from '../components/card';
-import styles from "./pages.module.css"
-
+import { ShirtsData } from '../components/Data'
+import Card from '../components/card'
+import styles from './contentpages.module.css'
 
 function Shirts() {
   return (
@@ -10,7 +9,7 @@ function Shirts() {
         <Card {...item} />
       ))}
     </div>
-  );
+  )
 }
 
 export default Shirts

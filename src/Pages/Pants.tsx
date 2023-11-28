@@ -1,8 +1,6 @@
-import { PantsData } from '../components/Data';
-import Card from '../components/card';
-import styles from "./pages.module.css"
-
-
+import { PantsData } from '../components/Data'
+import Card from '../components/card'
+import styles from './contentpages.module.css'
 
 function Pants() {
   return (
@@ -11,7 +9,7 @@ function Pants() {
         <Card {...item} />
       ))}
     </div>
-  );
+  )
 }
 
 export default Pants

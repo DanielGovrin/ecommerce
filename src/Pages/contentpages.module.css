@@ -1,0 +1,17 @@
+.pageContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 30px;
+  justify-items: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 30px 175px 50px 175px;
+  overflow: auto;
+}
+
+.inputCommon:focus::placeholder {
+  color: transparent;
+  transition: linear 0.5s;
+  font-family: 'Poppins', sans-serif;
+}
