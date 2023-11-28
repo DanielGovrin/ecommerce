@@ -1,60 +1,70 @@
+.mainTitle {
+   text-align: center;
+}
+
 .contactContainer {
-  display: flex;
-  margin: 20px;
+   display: flex;
+   margin: 20px;
 }
 
 .leftside {
-  width: 50%;
-  padding-right: 20px;
+   width: 50%;
+   padding-right: 20px;
 }
 
 .header {
-  margin-bottom: 1rem;
+   margin-bottom: 1rem;
 }
-.address {
-  margin-bottom: 0.5rem;
+
+.location {
+   display: flex;
+   gap: 1rem;
+}
+
+.location:first-child{
+  text-size-adjust: ;
 }
 
 .socialContainer {
-  display: flex;
-  margin-top: 20px;
+   display: flex;
+   margin-top: 20px;
 }
 
 .rightside {
-  width: 50%;
+   width: 50%;
 }
 
 .inputCommon {
-  box-sizing: border-box;
-  width: 85%;
-  padding: 10px;
-  margin-bottom: 10px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+   box-sizing: border-box;
+   width: 85%;
+   padding: 10px;
+   margin-bottom: 10px;
+   font-size: 16px;
+   border: 1px solid #ccc;
+   border-radius: 5px;
 }
 
 .inputCommon:focus::placeholder {
-  color: transparent;
+   color: transparent;
 }
 
 .message {
-  height: 150px;
-  resize: none;
+   height: 150px;
+   resize: none;
 }
 
 .submit {
-  box-sizing: border-box;
+   box-sizing: border-box;
 
-  width: 85%;
-  padding: 10px;
-  background-color: #56ade7;
-  color: #fff;
-  border: 1px solid #4a9bd1;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 18px;
+   width: 85%;
+   padding: 10px;
+   background-color: #56ade7;
+   color: #fff;
+   border: 1px solid #4a9bd1;
+   border-radius: 5px;
+   cursor: pointer;
+   font-size: 18px;
 }
 .submit:active {
-  background-color: #4281a4; /* Change the background color on click */
+   background-color: #4281a4; /* Change the background color on click */
 }

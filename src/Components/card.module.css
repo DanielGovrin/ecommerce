@@ -1,46 +1,46 @@
 .cardContainer {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  border: 2px solid #c1c1c1;
-  border-radius: 40px;
-  transition:
-    border 0.3s,
-    background-color 0.3s;
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   border: 2px solid #c1c1c1;
+   border-radius: 40px;
+   transition:
+      border 0.3s,
+      background-color 0.3s;
 }
 
 .cardContainer:hover {
-  border: 2px solid #bdbdbd;
-  background-color: rgb(207, 207, 207);
-  cursor: grab;
+   border: 2px solid #bdbdbd;
+   background-color: rgb(207, 207, 207);
+   cursor: grab;
 }
 
 .cardContainer:active {
-  border: 2px solid #bdbdbd;
-  background-color: rgb(181, 181, 181);
-  cursor: grab;
+   border: 2px solid #bdbdbd;
+   background-color: rgb(181, 181, 181);
+   cursor: grab;
 }
 
 .titles {
-  font-family: 'Poppins', sans-serif;
-  font-size: 0.8rem;
-  font-weight: bolder;
-  margin-bottom: 10px;
-  color: black;
+   font-family: 'Poppins', sans-serif;
+   font-size: 0.8rem;
+   font-weight: bolder;
+   margin-bottom: 10px;
+   color: black;
 }
 
 .img {
-  width: 150px;
-  height: 150px;
-  align-items: center;
-  margin: 10px;
-  mix-blend-mode: initial;
+   width: 150px;
+   height: 150px;
+   align-items: center;
+   margin: 10px;
+   mix-blend-mode: initial;
 }
 
 .price {
-  font-family: 'Poppins', Courier, monospace;
-  margin-top: 10px;
+   font-family: 'Poppins', Courier, monospace;
+   margin-top: 10px;
 }
