@@ -1,15 +1,14 @@
 .navbar {
    background: linear-gradient(to right, #ffffff, #f0f0f0);
    height: 100vh;
-   flex:0 0 10%;
+   flex: 0 0 10%;
 }
-
+   
 .listItem {
    margin: 0.5rem;
    padding: 0.2rem;
    border-radius: 5px;
-   color:black
-   
+   color: black;
 }
 
 .listItem:hover {
@@ -18,28 +17,17 @@
 }
 
 .listItem:active {
-   background-color: rgba(7, 7, 7, 0.478);
+   background-color: rgba(7, 7, 7, 0.5);
    box-shadow: 1px 1px 1px #1c1c1c9e;
-   color: black; /* or specify the desired font color */
-
+   color: black; 
 }
 
 .sidebarContent {
    display: flex;
-   align-items:center;
-   gap: 0.2rem;
+   align-items: center;
+   gap: 1rem;
    color: #01001e;
-   transition: color 0.3s ease;
    margin-left: 0.5rem;
-   font-size: 1.5rem;
-
+   font-size: 1.6rem;
 }
 
-.text {
-   padding: 0.5rem 0rem 0rem 1rem;
-}
-
-.icon {
-   font-size: 1.5rem;
-   padding-top: 0.8rem;
-}

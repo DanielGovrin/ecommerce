@@ -12,8 +12,8 @@ export default function Sidebar() {
                      to={item.path}
                      draggable={false}
                      className={styles.sidebarContent}>
-                     <div className={styles.icon}>{item.icon}</div>
-                     <span className={styles.text}>{item.title}</span>
+                     {item.icon}
+                     {item.title}
                   </Link>
                </li>
             );
