@@ -1,36 +1,36 @@
 import { useState, ChangeEventHandler } from 'react'
-import styles from './contact.module.css'
 import { LiaFacebook } from 'react-icons/lia'
 import { SiInstagram } from 'react-icons/si'
 import { PiTiktokLogo } from 'react-icons/pi'
 
 import SocialMedia from '../components/SocialMedia'
+import styles from './contact.module.css'
 
 function Contact() {
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  })
 
-  const handleNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setName(e.target.value)
+  const handleChange: ChangeEventHandler<
+    HTMLInputElement | HTMLTextAreaElement
+  > = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value })
   }
-  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value)
-  }
-  const handleMessageChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    setMessage(e.target.value)
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    // Add logic to handle form submission, e.g., sending data to a server
+    console.log('Form submitted:', formData)
   }
 
   return (
     <div className={styles.contactContainer}>
       <div className={styles.leftside}>
-        <h1 className={`${styles.location} ${styles.text} ${styles.header}`}>
-          Location
-        </h1>
-        <h3 className={`${styles.address} ${styles.text}`}>
-          123 Code Lane, Devtown, REACT 54321
-        </h3>
-        <h2 className={`${styles.follow} ${styles.text}`}>Follow Us</h2>
+        <h1 className={`${styles.location} ${styles.header}`}>Location</h1>
+        <h3 className={styles.address}>123 Code Lane, Devtown, REACT 54321</h3>
+        <h2 className={styles.follow}>Follow Us</h2>
         <div className={styles.socialContainer}>
           <SocialMedia
             icon={<LiaFacebook />}
@@ -51,35 +51,39 @@ function Contact() {
       </div>
 
       <div className={styles.rightside}>
-        <h1 className={`${styles.text} ${styles.contact} ${styles.header}`}>
-          Contact Us
-        </h1>
-        <form>
+        <h1 className={`${styles.contact} ${styles.header}`}>Contact Us</h1>
+        <form onSubmit={handleSubmit}>
           <input
+            className={styles.inputCommon}
             type="text"
-            className={`${styles.inputText} ${styles.inputCommon}`}
-            value={name}
+            name="name"
+            value={formData.name}
             placeholder="Enter Your Name"
-            onChange={handleNameChange}
+            onChange={handleChange}
           />
 
           <input
-            className={`${styles.inputText} ${styles.inputCommon}`}
+            className={styles.inputCommon}
             type="email"
-            value={email}
+            name="email"
+            value={formData.email}
             placeholder="Enter Your Email"
-            onChange={handleEmailChange}
+            onChange={handleChange}
             pattern=".+@example\.com"
           />
 
           <textarea
-            className={`${styles.messageText} ${styles.inputCommon}`}
-            value={message}
+            className={`${styles.inputCommon} ${styles.message}`}
+            name="message"
+            value={formData.message}
             placeholder="Enter Your Message"
-            onChange={handleMessageChange}
+            onChange={handleChange}
+            required
           />
 
-          <button>Submit</button>
+          <button type="submit" className={styles.submit}>
+            Submit
+          </button>
         </form>
       </div>
     </div>

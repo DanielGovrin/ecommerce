@@ -9,9 +9,3 @@
   padding: 30px 175px 50px 175px;
   overflow: auto;
 }
-
-.inputCommon:focus::placeholder {
-  color: transparent;
-  transition: linear 0.5s;
-  font-family: 'Poppins', sans-serif;
-}
