@@ -1,5 +1,13 @@
 .mainTitle {
+   display: flex;
+   justify-content: center;
    text-align: center;
+   font-size: 3rem;
+   margin-top: 1rem;
+}
+
+.heart {
+   margin: 0.3rem 0.5rem 0 0.5rem;
 }
 
 .contactContainer {
@@ -9,11 +17,11 @@
 
 .leftside {
    width: 50%;
-   padding-right: 20px;
+   padding-left: 20px;
 }
 
-.header {
-   margin-bottom: 1rem;
+.address {
+   display: flex;
 }
 
 .location {
@@ -21,22 +29,19 @@
    gap: 1rem;
 }
 
-.location:first-child{
-  text-size-adjust: ;
-}
-
 .socialContainer {
    display: flex;
-   margin-top: 20px;
+   margin-top: 5rem;
 }
 
 .rightside {
    width: 50%;
+   margin-left: 10rem;
 }
 
 .inputCommon {
    box-sizing: border-box;
-   width: 85%;
+   width: 100%;
    padding: 10px;
    margin-bottom: 10px;
    font-size: 16px;
@@ -55,8 +60,7 @@
 
 .submit {
    box-sizing: border-box;
-
-   width: 85%;
+   width: 100%;
    padding: 10px;
    background-color: #56ade7;
    color: #fff;
@@ -66,5 +70,14 @@
    font-size: 18px;
 }
 .submit:active {
-   background-color: #4281a4; /* Change the background color on click */
+   background-color: #4281a4;
+}
+
+.socialMediaIcon {
+   font-size: 5rem;
+   margin: 1rem;
+}
+
+.socialMediaIcon:hover {
+   cursor: pointer;
 }

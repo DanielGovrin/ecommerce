@@ -10,11 +10,11 @@
 }
 
 .sidebar {
-   width: 25%;
+   width: 15%;
 }
 
 .content {
-   width: 100%;
+   width: 85%;
    border-left: 1px solid rgb(132, 132, 132);
    height: 100%;
    overflow: auto;

@@ -3,6 +3,7 @@ import { LiaFacebook } from 'react-icons/lia'
 import { SiInstagram } from 'react-icons/si'
 import { PiTiktokLogo } from 'react-icons/pi'
 import { IoLocationOutline } from 'react-icons/io5'
+import { TbHeart } from 'react-icons/tb'
 
 import Icon from '../components/Icon'
 import styles from './contact.module.css'
@@ -21,38 +22,40 @@ function Contact() {
    }
 
    const handleSubmit = (e: React.FormEvent) => {
-      e.preventDefault()
+      // e.preventDefault()
 
       console.log('Form submitted:', formData)
    }
 
    return (
       <>
-         <h1 className={styles.mainTitle}>We'd love to help!</h1>
+         <h1 className={styles.mainTitle}>
+            <span className={styles.mainTitleText}>We'd</span>
+            <Icon icon={<TbHeart />} className="heart" />
+            <span className={styles.mainTitleText}>to help!</span>
+         </h1>
          <div className={styles.contactContainer}>
             <div className={styles.leftside}>
-               <div className={styles.location}>
-                  <Icon icon={<IoLocationOutline />} />
-                  <h3 className={styles.address}>
-                     123 Code Lane, Devtown, REACT 54321
-                  </h3>
-               </div>
+               <h2 className={styles.address}>
+                  <Icon icon={<IoLocationOutline />} className="location" />
+                  123 Code Lane, Devtown, REACT 54321
+               </h2>
 
                <div className={styles.socialContainer}>
                   <Icon
                      icon={<LiaFacebook />}
                      url="https://www.facebook.com"
-                     className="facebook"
+                     className="socialMediaIcon"
                   />
                   <Icon
                      icon={<SiInstagram />}
                      url="https://www.instagram.com"
-                     className="instagram"
+                     className="socialMediaIcon"
                   />
                   <Icon
                      icon={<PiTiktokLogo />}
                      url="https://www.tiktok.com"
-                     className="tiktok"
+                     className="socialMediaIcon"
                   />
                </div>
             </div>
