@@ -1,5 +1,6 @@
 import { CardItem } from './datatypes'
 import styles from './card.module.css'
+import AddToCart from './AddToCart'
 
 function Card({ MainTitle, SecondaryTitle, Image, Price }: CardItem) {
    return (
@@ -14,7 +15,9 @@ function Card({ MainTitle, SecondaryTitle, Image, Price }: CardItem) {
             alt={MainTitle}
             draggable={false}
          />
-         <p className={styles.price}>{Price}</p>
+         <h3 className={styles.price}>{Price}</h3>
+         <AddToCart />
+
       </div>
    )
 }

@@ -12,23 +12,11 @@
       background-color 0.3s;
 }
 
-.cardContainer:hover {
-   border: 2px solid #bdbdbd;
-   background-color: rgb(207, 207, 207);
-   cursor: grab;
-}
-
-.cardContainer:active {
-   border: 2px solid #bdbdbd;
-   background-color: rgb(181, 181, 181);
-   cursor: grab;
-}
-
 .titles {
    font-family: 'Poppins', sans-serif;
+   margin:0.5rem;
    font-size: 0.8rem;
    font-weight: bolder;
-   margin-bottom: 10px;
    color: black;
 }
 
@@ -37,7 +25,7 @@
    height: 150px;
    align-items: center;
    margin: 10px;
-   mix-blend-mode: initial;
+
 }
 
 .price {

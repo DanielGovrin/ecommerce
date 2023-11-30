@@ -144,9 +144,9 @@ export const ShirtsData = [
 
 export const HatsData: CardItem[] = [
    {
-      MainTitle: 'Classic NY Fedora Hat',
+      MainTitle: 'Classic NY Hat',
       SecondaryTitle: 'Timeless Style for Every Occasion',
-      Image: '/public/HatImages/baseball_cap_image.jpg',
+      Image: '/public/HatImages/baseball_cap_image.png',
       Price: '$29.99',
    },
    {
