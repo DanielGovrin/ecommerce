@@ -1,4 +1,4 @@
-import { ShirtsData } from '../components/Data'
+import { ShirtsData } from '../components/data'
 import Card from '../components/card'
 import styles from './contentpages.module.css'
 

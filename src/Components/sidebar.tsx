@@ -1,25 +1,23 @@
-import { Link } from 'react-router-dom'
-import styles from './sidebar.module.css'
-import { SidebarData } from './Data'
-type Props = {}
+import { Link } from 'react-router-dom';
+import { sidebardata } from './data';
+import styles from './sidebar.module.css';
 
-export default function Sidebar({}: Props) {
+export default function Sidebar() {
    return (
       <ul className={styles.navbar}>
-         {SidebarData.map((item, index) => {
+         {sidebardata.map((item, index) => {
             return (
                <li key={index} className={styles.listItem}>
                   <Link
-                     className={styles.sidebarContent}
                      to={item.path}
                      draggable={false}
-                  >
+                     className={styles.sidebarContent}>
                      {item.icon}
-                     <span className={styles.text}>{item.title}</span>
+                     {item.title}
                   </Link>
                </li>
-            )
+            );
          })}
       </ul>
-   )
+   );
 }

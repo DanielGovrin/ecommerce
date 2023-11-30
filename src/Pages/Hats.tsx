@@ -1,4 +1,4 @@
-import { HatsData } from '../components/Data'
+import { HatsData } from '../components/data'
 import Card from '../components/card'
 import styles from './contentpages.module.css'
 
