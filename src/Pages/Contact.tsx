@@ -4,6 +4,7 @@ import { SiInstagram } from 'react-icons/si'
 import { PiTiktokLogo } from 'react-icons/pi'
 import { IoLocationOutline } from 'react-icons/io5'
 import { TbHeart } from 'react-icons/tb'
+import { IoPhonePortraitSharp } from "react-icons/io5";
 
 import Icon from '../components/Icon'
 import styles from './contact.module.css'
@@ -37,8 +38,12 @@ function Contact() {
          <div className={styles.contactContainer}>
             <div className={styles.leftside}>
                <h2 className={styles.address}>
-                  <Icon icon={<IoLocationOutline />} className="location" />
+                  <Icon icon={<IoLocationOutline />} className="locationIcon" />
                   123 Code Lane, Devtown, REACT 54321
+               </h2>
+               <h2 className={styles.address}>
+                  <Icon icon={<IoPhonePortraitSharp />} className="locationIcon" />
+                  +972 4139917
                </h2>
 
                <div className={styles.socialContainer}>
