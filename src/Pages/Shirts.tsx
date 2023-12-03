@@ -6,7 +6,7 @@ function Shirts() {
    return (
       <div className={styles.pageContainer}>
          {ShirtsData.map((item) => (
-            <Card {...item} />
+            <Card {...item} key={item.id} />
          ))}
       </div>
    )

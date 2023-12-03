@@ -6,7 +6,7 @@ function Hats() {
    return (
       <div className={styles.pageContainer}>
          {HatsData.map((item) => (
-            <Card {...item} />
+            <Card {...item} key={item.id}/>
          ))}
       </div>
    )

@@ -1,4 +1,5 @@
 export interface CardItem {
+   id:string
    MainTitle: string
    SecondaryTitle: string
    Image: string
