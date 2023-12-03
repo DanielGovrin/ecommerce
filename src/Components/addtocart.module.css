@@ -1,15 +1,14 @@
-.addtocart{
-    background-color: #56ade7;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border:none;
-    border-radius: 10px;
-    color:#ffffff;
-    cursor: pointer;
-    margin-bottom:0.8rem;
+.addtocart {
+   background-color: #56ade7;
+   padding: 10px 20px;
+   border-radius: 5px;
+   border: none;
+   border-radius: 10px;
+   color: #ffffff;
+   cursor: pointer;
+   margin-bottom: 0.8rem;
 }
 
-.addtocart:hover{
-    background-color: #2980b9;
-
+.addtocart:hover {
+   background-color: #2980b9;
 }

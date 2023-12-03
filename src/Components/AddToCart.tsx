@@ -1,25 +1,20 @@
-import { useState } from "react";
-import styles from "./addtocart.module.css"
+import styles from './addtocart.module.css';
 
 interface AddToCartProps {
-  id: string;
+   id: string;
 }
-
 
 function AddToCart({ id }: AddToCartProps) {
-
-  const [buttonText, setButtonText] = useState('Add To Cart');
-
-  const carting = () => {
-    setButtonText((prevButtonText) =>
-      prevButtonText === 'Add To Cart' ? 'Clicked' : 'Add To Cart'
-    );
-  };
-
-
-  return (
-    <div className={styles.addtocart} onClick={carting}> {buttonText}</div>
-  )
+   const button = document.getElementById(id);
+   function carting() {
+      console.log(button);
+   }
+   return (
+      <div className={styles.addtocart} onClick={carting}>
+         {' '}
+         Add To Cart
+      </div>
+   );
 }
 
-export default AddToCart
+export default AddToCart;

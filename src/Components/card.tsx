@@ -1,8 +1,8 @@
-import { CardItem } from './datatypes'
-import styles from './card.module.css'
-import AddToCart from './AddToCart'
+import { CardItem } from './datatypes';
+import styles from './card.module.css';
+import AddToCart from './AddToCart';
 
-function Card({ MainTitle, SecondaryTitle, Image, Price }: CardItem) {
+function Card({ id, MainTitle, SecondaryTitle, Image, Price }: CardItem) {
    return (
       <div className={styles.cardContainer}>
          <div className={styles.titles}>
@@ -17,10 +17,10 @@ function Card({ MainTitle, SecondaryTitle, Image, Price }: CardItem) {
          />
          <div className={styles.check}>
             <h3 className={styles.price}>{Price}</h3>
-            <AddToCart />
+            <AddToCart id={id} />
          </div>
       </div>
-   )
+   );
 }
 
-export default Card
+export default Card;

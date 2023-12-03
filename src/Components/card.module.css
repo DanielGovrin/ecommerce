@@ -15,7 +15,7 @@
 
 .titles {
    font-family: 'Poppins', sans-serif;
-   margin:0.5rem;
+   margin: 0.5rem;
    font-size: 0.8rem;
    font-weight: bolder;
    color: black;
@@ -26,7 +26,6 @@
    height: 150px;
    align-items: center;
    margin: 10px;
-
 }
 
 .price {
@@ -34,8 +33,7 @@
    margin-top: 10px;
 }
 
-
-.check{
+.check {
    display: flex;
    flex-direction: column;
    justify-content: space-between;
