@@ -72,6 +72,7 @@
    border-radius: 5px;
    cursor: pointer;
    font-size: 18px;
+   /* margin:0.5rem; */
 }
 .submit:active {
    background-color: #4281a4;

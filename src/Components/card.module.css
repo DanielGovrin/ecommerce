@@ -6,6 +6,7 @@
    align-items: center;
    text-align: center;
    border: 2px solid #c1c1c1;
+   justify-content: space-between;
    border-radius: 40px;
    transition:
       border 0.3s,
@@ -31,4 +32,11 @@
 .price {
    font-family: 'Poppins', Courier, monospace;
    margin-top: 10px;
+}
+
+
+.check{
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
 }
