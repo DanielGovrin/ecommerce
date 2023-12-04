@@ -1,9 +1,9 @@
-import Sidebar from './components/sidebar';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Hats from './Pages/Hats';
-import Pants from './Pages/Pants';
-import Shirts from './Pages/Shirts';
-import styles from './app.module.css';
+import Sidebar from './components/sidebar'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Hats from './Pages/Hats'
+import Pants from './Pages/Pants'
+import Shirts from './Pages/Shirts'
+import styles from './app.module.css'
 
 function App() {
    return (
@@ -19,7 +19,7 @@ function App() {
             </div>
          </div>
       </BrowserRouter>
-   );
+   )
 }
 
 export default App;

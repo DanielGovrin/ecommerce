@@ -5,13 +5,11 @@ interface AddToCartProps {
 }
 
 function AddToCart({ id }: AddToCartProps) {
-   const button = document.getElementById(id);
    function carting() {
-      console.log(button);
+      console.log("Add This Item To The Cart via the id");
    }
    return (
       <div className={styles.addtocart} onClick={carting}>
-         {' '}
          Add To Cart
       </div>
    );

@@ -15,10 +15,9 @@ function Card({ id, MainTitle, SecondaryTitle, Image, Price }: CardItem) {
             alt={MainTitle}
             draggable={false}
          />
-         <div className={styles.check}>
-            <h3 className={styles.price}>{Price}</h3>
-            <AddToCart id={id} />
-         </div>
+         <h3 className={styles.price}>{Price}</h3>
+         <AddToCart id={id} />
+
       </div>
    );
 }

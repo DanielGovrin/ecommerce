@@ -8,9 +8,7 @@
    border: 2px solid #c1c1c1;
    justify-content: space-between;
    border-radius: 40px;
-   transition:
-      border 0.3s,
-      background-color 0.3s;
+
 }
 
 .titles {
@@ -30,11 +28,9 @@
 
 .price {
    font-family: 'Poppins', Courier, monospace;
-   margin-top: 10px;
+   font-size: 1.2rem;
+   color: #3498db; /* Green color, you can change it to your preference */
+   font-weight: bold;
+   padding-top: 5px; /* Add some padding on top for spacing */
 }
 
-.check {
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
-}
