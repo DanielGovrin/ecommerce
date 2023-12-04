@@ -1,27 +1,14 @@
-.ShowText {
+.addtocart {
    background-color: #4189f5;
-   font-size: 1rem;
    padding: 10px 20px;
    border-radius: 10px;
+   font-size: 1rem;
+   border: none;
    color: #ffffff;
    cursor: pointer;
    margin-bottom: 1rem;
-   border: none;
 }
 
-.ShowText:active {
+.addtocart:active {
    background-color: rgb(50, 107, 145);
-   animation: cart 1s ease-in-out;
-}
-
-@keyframe cart {
-   0% {
-      opacity: 0;
-   }
-   50% {
-      opacity: 0.5;
-   }
-   100% {
-      opacity: 1;
-   }
 }
