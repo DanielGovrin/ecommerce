@@ -1,9 +1,9 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Contact from './Pages/Contact';
-import Hats from './Pages/Hats';
-import Home from './Pages/Home';
-import Pants from './Pages/Pants';
-import Shirts from './Pages/Shirts';
+import Contact from './pages/Contact';
+import Hats from './pages/Hats';
+import Home from './pages/Home';
+import Pants from './pages/Pants';
+import Shirts from './pages/Shirts';
 import styles from './app.module.css';
 import Header from './components/header';
 import Sidebar from './components/sidebar';
