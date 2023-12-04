@@ -7,7 +7,7 @@ function Card({ id, mainTitle, secondaryTitle, image, price }: CardItem) {
       <div className={styles.cardContainer}>
          <div className={styles.titles}>
             <h1>{mainTitle}</h1>
-            <h3 >{secondaryTitle}</h3>
+            <h3>{secondaryTitle}</h3>
          </div>
          <img
             className={styles.img}
@@ -17,7 +17,6 @@ function Card({ id, mainTitle, secondaryTitle, image, price }: CardItem) {
          />
          <h3 className={styles.price}>{price}</h3>
          <AddToCart id={id} />
-
       </div>
    );
 }

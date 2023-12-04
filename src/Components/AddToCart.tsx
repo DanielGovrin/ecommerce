@@ -6,7 +6,7 @@ interface AddToCartProps {
 
 function AddToCart({ id }: AddToCartProps) {
    function carting() {
-      console.log("Add This Item To The Cart via the id");
+      console.log('Add This Item To The Cart via the id');
    }
    return (
       <div className={styles.addtocart} onClick={carting}>
