@@ -1,5 +1,4 @@
 .navbar {
-   background: linear-gradient(to right, #ffffff, #f0f0f0);
    height: 100vh;
    flex: 0 0 10%;
 }
@@ -12,7 +11,7 @@
 }
 
 .listItem:hover {
-   background-color: rgba(50, 50, 50, 0.5);
+   background-color: rgba(109, 107, 107, 0.5);
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
