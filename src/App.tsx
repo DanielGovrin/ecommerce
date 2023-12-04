@@ -1,11 +1,11 @@
-import Sidebar from './components/sidebar'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './Pages/Home'
-import Hats from './Pages/Hats'
-import Pants from './Pages/Pants'
-import Shirts from './Pages/Shirts'
-import Contact from './Pages/Contact'
-import styles from './app.module.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Contact from './Pages/Contact';
+import Hats from './Pages/Hats';
+import Home from './Pages/Home';
+import Pants from './Pages/Pants';
+import Shirts from './Pages/Shirts';
+import styles from './app.module.css';
+import Sidebar from './components/sidebar';
 
 function App() {
    return (
@@ -23,7 +23,7 @@ function App() {
             </div>
          </div>
       </BrowserRouter>
-   )
+   );
 }
 
 export default App;

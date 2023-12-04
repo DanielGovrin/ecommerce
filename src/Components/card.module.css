@@ -8,17 +8,11 @@
    border: 2px solid #c1c1c1;
    justify-content: space-between;
    border-radius: 40px;
-   transition:
-      border 0.3s,
-      background-color 0.3s;
 }
 
 .titles {
-   font-family: 'Poppins', sans-serif;
-   margin:0.5rem;
+   margin: 0.5rem;
    font-size: 0.8rem;
-   font-weight: bolder;
-   color: black;
 }
 
 .img {
@@ -26,17 +20,11 @@
    height: 150px;
    align-items: center;
    margin: 10px;
-
 }
 
 .price {
-   font-family: 'Poppins', Courier, monospace;
-   margin-top: 10px;
-}
-
-
-.check{
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
+   font-size: 1.5rem;
+   color: #3498db;
+   font-weight: bold;
+   padding-top: 5px;
 }

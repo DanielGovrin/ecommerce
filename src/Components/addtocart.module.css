@@ -1,15 +1,27 @@
-.addtocart{
-    background-color: #56ade7;
-    padding: 10px 20px;
-    border-radius: 5px;
-    border:none;
-    border-radius: 10px;
-    color:#ffffff;
-    cursor: pointer;
-    margin-bottom:0.8rem;
+.ShowText {
+   background-color: #4189f5;
+   font-size: 1rem;
+   padding: 10px 20px;
+   border-radius: 10px;
+   color: #ffffff;
+   cursor: pointer;
+   margin-bottom: 1rem;
+   border: none;
 }
 
-.addtocart:hover{
-    background-color: #2980b9;
+.ShowText:active {
+   background-color: rgb(50, 107, 145);
+   animation: cart 1s ease-in-out;
+}
 
+@keyframe cart {
+   0% {
+      opacity: 0;
+   }
+   50% {
+      opacity: 0.5;
+   }
+   100% {
+      opacity: 1;
+   }
 }

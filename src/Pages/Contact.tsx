@@ -1,32 +1,32 @@
-import { useState, ChangeEventHandler } from 'react'
-import { LiaFacebook } from 'react-icons/lia'
-import { SiInstagram } from 'react-icons/si'
-import { PiTiktokLogo } from 'react-icons/pi'
-import { IoLocationOutline } from 'react-icons/io5'
-import { TbHeart } from 'react-icons/tb'
-import { IoPhonePortraitSharp } from "react-icons/io5";
+import { useState, ChangeEventHandler } from 'react';
+import { LiaFacebook } from 'react-icons/lia';
+import { SiInstagram } from 'react-icons/si';
+import { PiTiktokLogo } from 'react-icons/pi';
+import { IoLocationOutline } from 'react-icons/io5';
+import { TbHeart } from 'react-icons/tb';
+import { IoPhonePortraitSharp } from 'react-icons/io5';
 
-import Icon from '../components/Icon'
-import styles from './contact.module.css'
+import Icon from '../components/Icon';
+import styles from './contact.module.css';
 
 function Contact() {
    const [formData, setFormData] = useState({
       name: '',
       email: '',
       message: '',
-   })
+   });
 
    const handleChange: ChangeEventHandler<
       HTMLInputElement | HTMLTextAreaElement
    > = (e) => {
-      setFormData({ ...formData, [e.target.name]: e.target.value })
-   }
+      setFormData({ ...formData, [e.target.name]: e.target.value });
+   };
 
    const handleSubmit = (e: React.FormEvent) => {
       // e.preventDefault()
 
-      console.log('Form submitted:', formData)
-   }
+      console.log('Form submitted:', formData);
+   };
 
    return (
       <>
@@ -42,7 +42,10 @@ function Contact() {
                   123 Code Lane, Devtown, REACT 54321
                </h2>
                <h2 className={styles.address}>
-                  <Icon icon={<IoPhonePortraitSharp />} className="locationIcon" />
+                  <Icon
+                     icon={<IoPhonePortraitSharp />}
+                     className="locationIcon"
+                  />
                   +972 4139917
                </h2>
 
@@ -103,7 +106,7 @@ function Contact() {
             </div>
          </div>
       </>
-   )
+   );
 }
 
-export default Contact
+export default Contact;
