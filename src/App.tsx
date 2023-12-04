@@ -1,9 +1,9 @@
-import Sidebar from './components/sidebar'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Hats from './Pages/Hats'
 import Pants from './Pages/Pants'
 import Shirts from './Pages/Shirts'
 import styles from './app.module.css'
+import Sidebar from './components/sidebar'
 
 function App() {
    return (

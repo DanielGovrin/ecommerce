@@ -1,9 +1,9 @@
 export interface CardItem {
    id: string;
-   MainTitle: string;
-   SecondaryTitle: string;
-   Image: string;
-   Price: string;
+   mainTitle: string;
+   secondaryTitle: string;
+   image: string;
+   price: string;
 }
 
 export interface SidebarItem {
