@@ -8,15 +8,11 @@
    border: 2px solid #c1c1c1;
    justify-content: space-between;
    border-radius: 40px;
-
 }
 
 .titles {
-   font-family: 'Poppins', sans-serif;
    margin: 0.5rem;
    font-size: 0.8rem;
-   font-weight: bolder;
-   color: black;
 }
 
 .img {
@@ -27,10 +23,9 @@
 }
 
 .price {
-   font-family: 'Poppins', Courier, monospace;
-   font-size: 1.2rem;
-   color: #3498db; /* Green color, you can change it to your preference */
+   font-size: 1.5rem;
+   color: #3498db; 
    font-weight: bold;
-   padding-top: 5px; /* Add some padding on top for spacing */
+
 }
 

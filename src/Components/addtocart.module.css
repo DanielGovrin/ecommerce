@@ -2,13 +2,12 @@
    background-color: #4189f5;
    padding: 10px 20px;
    border-radius: 5px;
-   border: none;
    border-radius: 10px;
    color: #ffffff;
    cursor: pointer;
-   margin-bottom: 0.8rem;
+   margin-bottom: 1rem;
 }
 
-.addtocart:hover {
+.addtocart:active {
    background-color: rgb(50, 107, 145);
 }
