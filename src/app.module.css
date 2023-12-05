@@ -1,10 +1,27 @@
+* {
+   margin: 0;
+}
 .container {
    display: flex;
-   background-color: #f6f6f6;
+   background-color: #f6f3f3;
+   margin: 0;
+   height: 100%;
    overflow: hidden;
+   flex-wrap: wrap;
+}
+
+.sidebar {
+   width: 15%;
 }
 
 .content {
-   border-left: 1px solid black;
+   width: 85%;
+   height: 100%;
    overflow: auto;
+}
+
+:global(#root),
+:global(body),
+:global(html) {
+   height: 100%;
 }

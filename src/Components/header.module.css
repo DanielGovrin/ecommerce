@@ -1,5 +1,11 @@
-.containter{
-    display:flex;
-    width:100vw;
-    flex-wrap: wrap;
+.headerContainer {
+   font-size: 3rem;
+   display: flex;
+   flex-basis: 100vw;
+   height: 10%;
+   border-bottom: 1px solid black;
+}
+
+.logo {
+   width: 5%;
 }

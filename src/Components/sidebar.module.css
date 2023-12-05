@@ -1,9 +1,8 @@
 .navbar {
-   background: linear-gradient(to right, #ffffff, #f0f0f0);
    height: 100vh;
    flex: 0 0 10%;
 }
-   
+
 .listItem {
    margin: 0.5rem;
    padding: 0.2rem;
@@ -19,7 +18,7 @@
 .listItem:active {
    background-color: rgba(7, 7, 7, 0.5);
    box-shadow: 1px 1px 1px #1c1c1c9e;
-   color: black; 
+   color: black;
 }
 
 .sidebarContent {
@@ -30,4 +29,3 @@
    margin-left: 0.5rem;
    font-size: 1.6rem;
 }
-

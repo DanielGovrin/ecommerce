@@ -3,12 +3,11 @@ import styles from './app.module.css';
 import Sidebar from './components/sidebar';
 import Header from './components/header';
 
-
 function App() {
    return (
       <BrowserRouter>
          <div className={styles.container}>
-            <Header/>
+            <Header />
             <Sidebar />
             <div className={styles.content}></div>
          </div>
