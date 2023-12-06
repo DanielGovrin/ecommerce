@@ -25,6 +25,9 @@
    border-radius: 5px;
    width: 50px
 }
+.siteSearch:focus::placeholder {
+   color: transparent;
+}
 
 .cartLogo {
    transform: scaleX(-1);

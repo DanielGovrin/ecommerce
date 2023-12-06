@@ -4,11 +4,12 @@ import styles from "./header.module.css"
 function Header() {
 
 
-    const [searchWord, setSearchWord] = useState({searchWord:''});
+    const [searchWord, setSearchWord] = useState("Search");
 
-    const handleChange: ChangeEventHandler<HTMLInputElement> = (e) => {
-        setSearchWord({ ...formData, [e.target.name]: e.target.value });
-    };
+    const handleChange:ChangeEventHandler = (event) => {
+        setSearchWord(event.target.value)
+    }
+
 
     return (
         <div className={styles.headerContainer}>
@@ -19,7 +20,13 @@ function Header() {
             </div>
 
             <div className={styles.searchAndCart}>
-                <input type="search" className={styles.siteSearch} value="Search" onChange={handleChange} />
+                <input 
+                type="search"
+                className={styles.siteSearch}
+                value={searchWord}
+                placeholder="Search"
+                onChange={handleChange}
+                />
                 <button className={styles.searchButton}>Search</button>
                 <img src="./src/assets/cart.svg" className={styles.cartLogo} />
 
