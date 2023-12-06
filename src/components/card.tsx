@@ -6,8 +6,8 @@ function Card({ id, mainTitle, secondaryTitle, image, price }: CardItem) {
    return (
       <div className={styles.cardContainer}>
          <div className={styles.titles}>
-            <h1>{mainTitle}</h1>
-            <h3>{secondaryTitle}</h3>
+            <h1 className={styles.mainTitle}>{mainTitle}</h1>
+            <h3 className={styles.secondaryTitle}>{secondaryTitle}</h3>
          </div>
          <img
             className={styles.img}

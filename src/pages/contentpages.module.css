@@ -1,11 +1,8 @@
 .pageContainer {
    display: grid;
-   grid-template-columns: 1fr 1fr 1fr;
-   grid-template-rows: 1fr 1fr 1fr;
+   grid-template-columns: repeat(3, 0.8fr);
+   grid-template-rows: repeat(3, 0.8fr);
    gap: 30px;
-   justify-items: center;
-   align-items: center;
-   flex-wrap: wrap;
-   padding: 30px 175px 50px 175px;
+   padding: 70px 200px 200px 200px;
    overflow: auto;
 }
