@@ -6,11 +6,13 @@ import Pants from './pages/Pants';
 import Shirts from './pages/Shirts';
 import styles from './app.module.css';
 import Sidebar from './components/sidebar';
+import Header from './components/header';
 
 function App() {
    return (
       <BrowserRouter>
          <div className={styles.container}>
+            <Header />
             <Sidebar />
             <div className={styles.content}>
                <Routes>
