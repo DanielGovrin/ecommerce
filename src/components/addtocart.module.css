@@ -1,14 +1,14 @@
 .addtocart {
-   height: 5rem;
-   width: 5rem;
-   background-color: rgb(86, 192, 231);
-   border-radius: 10px;
-   font-size: 1rem;
+   height: 3rem;
+   background-color: rgb(50, 180, 228);
+   border-radius: 50%;
+   font-size: 1.5rem;
    border: none;
    color: #ffffff;
    cursor: pointer;
    margin: 1rem;
    padding: 2px;
+   justify-content: center;
 }
 
 .addtocart:active {
