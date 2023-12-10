@@ -5,7 +5,6 @@ import AddToCart from './AddToCart';
 function Card({ id, mainTitle, secondaryTitle, image, price }: CardItem) {
    return (
       <div className={styles.cardContainer}>
-
          <img
             className={styles.img}
             src={image}
@@ -14,12 +13,12 @@ function Card({ id, mainTitle, secondaryTitle, image, price }: CardItem) {
          />
          <div className={styles.listingContainer}>
             <div className={styles.titles}>
-               <h3 className={styles.mainTitle}>{mainTitle}</h3>
+               <h4 className={styles.mainTitle}>{mainTitle}</h4>
                <h5 className={styles.secondaryTitle}>{secondaryTitle}</h5>
+               <h3 className={styles.price}>{price}</h3>
             </div>
-            <h3 className={styles.price}>{price}</h3>
+            <AddToCart id={id} />
          </div>
-         <AddToCart id={id} />
       </div>
    );
 }
