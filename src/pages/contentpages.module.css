@@ -1,8 +1,10 @@
 .pageContainer {
    display: grid;
-   grid-template-columns: repeat(3, 0.4fr);
+   grid-template-columns: repeat(3, 1fr);
    grid-template-rows: repeat(3, 1fr);
-   gap: 30px;
-   padding: 70px 200px 200px 200px;
+   gap: 35px;
+   padding: 30px 250px 100px;
+   align-items: center;
    overflow: auto;
+
 }

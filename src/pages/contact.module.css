@@ -1,8 +1,7 @@
-
 .mainTitle {
    display: flex;
    justify-content: center;
-   width:100%;
+   width: 100%;
    font-size: 3rem;
    margin-top: 2rem;
 }
@@ -12,15 +11,15 @@
 }
 
 .contactContainer {
-   display: flex; 
+   display: flex;
    justify-content: center;
    margin: 20px;
 }
 
-.contact{
-   display:flex;
-   width:100%;
-   margin:1rem;
+.contact {
+   display: flex;
+   width: 100%;
+   margin: 1rem;
    justify-content: center;
 }
 
@@ -55,16 +54,14 @@
    border: none;
    border-radius: 5px;
    cursor: pointer;
-   box-shadow: 5px 5px 5px 0px  #000000; /* Keep box shadow black */
+   box-shadow: 5px 5px 5px 0px #000000; /* Keep box shadow black */
    font-size: 25px;
-   transition: box-shadow 0.5s ;
+   transition: box-shadow 0.5s;
 }
 
-.submit:hover{
-   box-shadow: 5px 5px 5px 4px  #000000; /* Keep box shadow black */
-
+.submit:hover {
+   box-shadow: 5px 5px 5px 4px #000000; /* Keep box shadow black */
 }
-
 
 .submit:active {
    background-color: #33d8ea;
