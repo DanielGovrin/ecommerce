@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Hats from './Pages/Hats';
-import Pants from './Pages/Pants';
-import Shirts from './Pages/Shirts';
+import Hats from './pages/Hats';
+import Pants from './pages/Pants';
+import Shirts from './pages/Shirts';
 import styles from './app.module.css';
 import Sidebar from './components/sidebar';
 
