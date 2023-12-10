@@ -1,5 +1,7 @@
 import { ChangeEventHandler, useState } from 'react';
 import styles from './header.module.css';
+import shoppingBagSVG from '../assets/shopping-bag.svg';
+
 
 function Header() {
     const [searchWord, setSearchWord] = useState('');
@@ -10,7 +12,7 @@ function Header() {
 
     return (
         <div className={styles.headerContainer}>
-            <img src="/src/assets/logo.svg" alt="Logo" className={styles.logo} draggable="false"/>
+            <img src="/src/assets/logo.svg" alt="Logo" className={styles.logo} draggable="false" />
 
             <div className={styles.categories}></div>
 
@@ -25,7 +27,7 @@ function Header() {
                         onChange={handleChange}
                     />
                 </form>
-                <img src="src/assets/shopping-bag.svg" className={styles.shoppingBagLogo} draggable="false" />
+                <button type='button' className={styles.shoppingBagButton}></button>
 
             </div>
         </div>
