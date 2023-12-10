@@ -5,19 +5,17 @@
    border-bottom: 1px solid black;
 }
 
-.logo{
+.logo {
    transform: rotate(90deg);
    height: 4rem;
    width: 6rem;
    align-self: center;
-
 }
 
 .searchAndCart {
    display: flex;
    align-items: center;
    margin-right: 1.5rem;
-
 }
 
 .searchbarContainer {
@@ -26,7 +24,7 @@
    color: #555;
    display: flex;
    border-radius: 50px;
-   background-color: #f5f5f5;
+   background-color: #ffffff;
    padding: 10px 10px;
    margin: 10px;
 }
@@ -36,7 +34,7 @@
    color: inherit;
    border: none;
    background-color: inherit;
-   font-family: "Helvetica Now Text",Helvetica,Arial,sans-serif;
+   font-family: 'Helvetica Now Text', Helvetica, Arial, sans-serif;
 }
 
 .siteSearch::placeholder {

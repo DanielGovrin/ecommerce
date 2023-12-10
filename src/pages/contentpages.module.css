@@ -1,7 +1,7 @@
 .pageContainer {
    display: grid;
-   grid-template-columns: repeat(3, 0.8fr);
-   grid-template-rows: repeat(3, 0.8fr);
+   grid-template-columns: repeat(3, 0.4fr);
+   grid-template-rows: repeat(3, 1fr);
    gap: 30px;
    padding: 70px 200px 200px 200px;
    overflow: auto;

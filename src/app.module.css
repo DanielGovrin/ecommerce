@@ -1,14 +1,19 @@
 * {
    margin: 0;
 }
+
 .container {
    display: flex;
    flex-wrap: wrap;
-   background-color: #39A7FF;
+   background-color: #ffffff;
    margin: 0;
    height: 100%;
    overflow: hidden;
-   }
+   background-image: url('src/assets/contactBackground.jpg');
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
 
 .sidebar {
    width: 15%;
