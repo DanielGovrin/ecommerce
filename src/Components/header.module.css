@@ -64,6 +64,6 @@ input:focus {
    height: 40px;
    overflow: hidden;
    border: solid transparent;
-   background: transparent url('src/assets/shopping-bag.svg') no-repeat center;
+   background: transparent url("src/assets/shopping-bag.svg") no-repeat center;
    cursor: pointer;
 }

@@ -27,6 +27,7 @@ function Header() {
                         onChange={handleChange}
                     />
                 </form>
+                
                 <button type='button' className={styles.shoppingBagButton}></button>
 
             </div>
