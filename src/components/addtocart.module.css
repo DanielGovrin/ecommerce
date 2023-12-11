@@ -8,8 +8,10 @@
    background-color: rgb(50, 180, 228);
    border-radius: 18px;
    font-size: 1.5rem;
+   margin-top: 1rem;
+   padding-bottom: 3px;
    height: 2.5rem;
-   width:40%;
+   width: 50%;
    border: none;
    color: #ffffff;
    cursor: pointer;
