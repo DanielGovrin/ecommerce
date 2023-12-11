@@ -1,12 +1,12 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-import Hats from './pages/Hats';
-import Home from './pages/Home';
-import Pants from './pages/Pants';
-import Shirts from './pages/Shirts';
 import styles from './app.module.css';
-import Sidebar from './components/sidebar';
 import Header from './components/header';
+import Sidebar from './components/sidebar';
+import Hats from './pages/hats';
+import Home from './pages/home';
+import Pants from './pages/pants';
+import Shirts from './pages/shirts';
 
 function App() {
    return (

@@ -1,6 +1,5 @@
 import { ChangeEventHandler, useState } from 'react';
 import styles from './header.module.css';
-import shoppingBagSVG from '../assets/shopping-bag.svg';
 
 function Header() {
    const [searchWord, setSearchWord] = useState('');
