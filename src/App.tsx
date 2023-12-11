@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-
 import styles from './app.module.css';
 import Header from './components/header';
 import Sidebar from './components/sidebar';

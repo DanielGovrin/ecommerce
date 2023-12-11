@@ -1,6 +1,6 @@
-import { CardItem } from './datatypes';
-import styles from './card.module.css';
 import AddToCart from './AddToCart';
+import styles from './card.module.css';
+import { CardItem } from './datatypes';
 
 function Card({ id, mainTitle, secondaryTitle, image, price }: CardItem) {
    return (

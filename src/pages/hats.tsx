@@ -1,5 +1,5 @@
-import { HatsData } from '../components/data';
 import Card from '../components/card';
+import { HatsData } from '../components/data';
 import styles from './contentpages.module.css';
 
 function Hats() {

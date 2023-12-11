@@ -1,5 +1,5 @@
-import { PantsData } from '../components/data';
 import Card from '../components/card';
+import { PantsData } from '../components/data';
 import styles from './contentpages.module.css';
 
 function Pants() {

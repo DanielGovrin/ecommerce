@@ -2,7 +2,7 @@ import * as FaIcons from 'react-icons/fa';
 import * as IoIcons from 'react-icons/io';
 import * as IoIcons5 from 'react-icons/io5';
 import * as PiIcons from 'react-icons/pi';
-import { SidebarItem, CardItem } from './datatypes';
+import { CardItem, SidebarItem } from './datatypes';
 
 export const PantsData: CardItem[] = [
    {
@@ -250,10 +250,5 @@ export const SidebarData: SidebarItem[] = [
       title: 'hats',
       path: '/Hats',
       icon: <FaIcons.FaHatCowboy />,
-   },
-   {
-      title: 'contact',
-      path: '/Contact',
-      icon: <IoIcons.IoMdContact />,
    },
 ];
