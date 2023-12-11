@@ -6,10 +6,18 @@
 }
 
 .logo {
-   transform: rotate(90deg);
-   height: 4rem;
-   width: 6rem;
-   align-self: center;
+   margin-left: 1rem;
+
+   animation: spin 1s ease-in-out;
+}
+
+@keyframes spin {
+   from {
+      transform: rotate(0deg);
+   }
+   to {
+      transform: rotate(360deg);
+   }
 }
 
 .searchAndCart {

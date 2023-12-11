@@ -10,10 +10,13 @@ function AddToCart({ id }: AddToCartProps) {
    };
 
    return (
-      <button className={styles.addtocart} onClick={handleClick}>
-         Add To Cart
-      </button>
+      <div className={styles.addtocartContainer}>
+         <button className={styles.addtocart} onClick={handleClick}>
+            Add To Cart
+         </button>
+      </div>
    );
 }
+
 
 export default AddToCart;
