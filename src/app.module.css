@@ -1,21 +1,17 @@
 * {
    margin: 0;
 }
+
 .container {
    display: flex;
-   background-color: #ffffff;
-   margin: 0;
+   flex-wrap: wrap;
    height: 100%;
    overflow: hidden;
-   flex-wrap: wrap;
-}
-
-.sidebar {
-   width: 15%;
+   background-image: url('src/assets/contactBackground.jpg');
 }
 
 .content {
-   width: 85%;
+   width: 90%;
    height: 100%;
    overflow: auto;
 }
