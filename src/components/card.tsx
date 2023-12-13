@@ -2,7 +2,7 @@ import AddToCart from './AddToCart';
 import styles from './card.module.css';
 import { CardItem } from './datatypes';
 
-function Card({ id, mainTitle, secondaryTitle, image, price }: CardItem) {
+export const Card = ({ mainTitle, secondaryTitle, image, price }: CardItem) => {
    return (
       <div className={styles.cardContainer}>
          <img
@@ -16,9 +16,7 @@ function Card({ id, mainTitle, secondaryTitle, image, price }: CardItem) {
             <h4 className={styles.secondaryTitle}>{secondaryTitle}</h4>
             <h3 className={styles.price}>{price}</h3>
          </div>
-         <AddToCart id={id} />
+         <AddToCart />
       </div>
    );
-}
-
-export default Card;
+};

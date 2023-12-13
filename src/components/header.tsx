@@ -1,12 +1,9 @@
-import { ChangeEventHandler, useState } from 'react';
+import { useState } from 'react';
 import styles from './header.module.css';
+import { cartCount } from './datatypes';
 
-function Header() {
+export const Header = ({ cartCount }: cartCount) => {
    const [searchWord, setSearchWord] = useState('');
-
-   const handleChange: ChangeEventHandler<HTMLInputElement> = (event) => {
-      setSearchWord(event.target.value);
-   };
 
    return (
       <div className={styles.headerContainer}>
@@ -27,14 +24,14 @@ function Header() {
                   className={styles.siteSearch}
                   value={searchWord}
                   placeholder="Search..."
-                  onChange={handleChange}
+                  // onChange={handleChange}
                />
             </form>
 
-            <button type="button" className={styles.shoppingBagButton}></button>
+            <button type="button" className={styles.shoppingBagButton}>
+               <p>{cartCount}</p>
+            </button>
          </div>
       </div>
    );
-}
-
-export default Header;
+};

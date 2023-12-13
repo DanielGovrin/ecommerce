@@ -1,12 +1,8 @@
 import styles from './addtocart.module.css';
 
-interface AddToCartProps {
-   id: string;
-}
-
-function AddToCart({ id }: AddToCartProps) {
+const AddToCart = () => {
    const handleClick = () => {
-      console.log('Add This Item To The Cart Via id');
+      //    setCartCount(prevCartCount => prevCartCount + 1);
    };
 
    return (
@@ -16,6 +12,6 @@ function AddToCart({ id }: AddToCartProps) {
          </button>
       </div>
    );
-}
+};
 
 export default AddToCart;

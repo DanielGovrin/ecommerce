@@ -1,8 +1,14 @@
 import { createBoard } from '@wixc3/react-board';
-import Header from '../../../components/header';
+import { Header } from '../../../components/header';
 
 export default createBoard({
-    name: 'Header',
-    Board: () => <Header />,
-    isSnippet: true,
+   name: 'Header',
+   Board: () => <Header />,
+   isSnippet: true,
+   environmentProps: {
+      windowWidth: 1796,
+      canvasWidth: 882,
+      windowHeight: 842,
+      canvasHeight: 5,
+   },
 });

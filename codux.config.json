@@ -1,0 +1,3 @@
+{
+   "boardGlobalSetup": "./src/_codux/boards-global-setup.ts"
+}
