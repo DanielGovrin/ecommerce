@@ -1,8 +1,9 @@
 import styles from './addtocart.module.css';
+import { setCartCount } from './datatypes';
 
-const AddToCart = () => {
+const AddToCart = ({ setCartCount }: setCartCount) => {
    const handleClick = () => {
-      //    setCartCount(prevCartCount => prevCartCount + 1);
+      setCartCount((prevCartCount) => prevCartCount + 1);
    };
 
    return (

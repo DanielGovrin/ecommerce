@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import styles from './header.module.css';
 import { cartCount } from './datatypes';
+import styles from './header.module.css';
 
 export const Header = ({ cartCount }: cartCount) => {
    const [searchWord, setSearchWord] = useState('');
@@ -24,12 +24,11 @@ export const Header = ({ cartCount }: cartCount) => {
                   className={styles.siteSearch}
                   value={searchWord}
                   placeholder="Search..."
-                  // onChange={handleChange}
                />
             </form>
 
             <button type="button" className={styles.shoppingBagButton}>
-               <p>{cartCount}</p>
+               <p>{cartCount <= 0 ? '' : cartCount < 10 ? cartCount : '9+'}</p>
             </button>
          </div>
       </div>

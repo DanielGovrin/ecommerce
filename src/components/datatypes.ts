@@ -14,3 +14,7 @@ export interface SidebarItem {
 export interface cartCount {
    cartCount: number;
 }
+
+export interface setCartCount {
+   setCartCount: (count: number | ((prevCartCount: number) => number)) => void;
+}

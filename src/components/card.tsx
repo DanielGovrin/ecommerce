@@ -1,8 +1,14 @@
 import AddToCart from './AddToCart';
 import styles from './card.module.css';
-import { CardItem } from './datatypes';
+import { CardItem, setCartCount } from './datatypes';
 
-export const Card = ({ mainTitle, secondaryTitle, image, price }: CardItem) => {
+export const Card = ({
+   mainTitle,
+   secondaryTitle,
+   image,
+   price,
+   setCartCount,
+}: CardItem & setCartCount) => {
    return (
       <div className={styles.cardContainer}>
          <img
@@ -16,7 +22,7 @@ export const Card = ({ mainTitle, secondaryTitle, image, price }: CardItem) => {
             <h4 className={styles.secondaryTitle}>{secondaryTitle}</h4>
             <h3 className={styles.price}>{price}</h3>
          </div>
-         <AddToCart />
+         <AddToCart setCartCount={setCartCount} />
       </div>
    );
 };
