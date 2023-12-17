@@ -13,4 +13,3 @@ export const Pants = ({ setCartCount }: setCartCount) => {
    );
 };
 
-export default Pants;
