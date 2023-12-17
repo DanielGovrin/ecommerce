@@ -9,8 +9,9 @@ export default createBoard({
          secondaryTitle={''}
          image={PantsData[0].image}
          price={'bazillion $'}
-         mainTitle={'Cool pants'}
-      />
+         mainTitle={'Cool pants'} setCartCount={function (count: number | ((prevCartCount: number) => number)): void {
+            throw new Error('Function not implemented.');
+         } }      />
    ),
    isSnippet: true,
    environmentProps: {
