@@ -1,5 +1,5 @@
 import { createBoard } from '@wixc3/react-board';
-import AddToCart from '../../../components/AddToCart';
+import { AddToCart } from '../../../components/AddToCart';
 
 export default createBoard({
    name: 'AddToCart',

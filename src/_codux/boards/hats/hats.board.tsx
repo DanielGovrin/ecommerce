@@ -1,5 +1,5 @@
 import { createBoard } from '@wixc3/react-board';
-import Hats from '../../../pages/hats';
+import { Hats } from '../../../pages/hats';
 
 export default createBoard({
    name: 'Hats',

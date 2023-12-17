@@ -1,4 +1,4 @@
-import AddToCart from './AddToCart';
+import { AddToCart } from './AddToCart';
 import styles from './card.module.css';
 import { CardItem, setCartCount } from './datatypes';
 

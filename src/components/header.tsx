@@ -1,10 +1,7 @@
-import { useState } from 'react';
 import { cartCount } from './datatypes';
 import styles from './header.module.css';
 
 export const Header = ({ cartCount }: cartCount) => {
-   const [searchWord, setSearchWord] = useState('');
-
    return (
       <div className={styles.headerContainer}>
          <img
@@ -22,7 +19,6 @@ export const Header = ({ cartCount }: cartCount) => {
                <input
                   type="search"
                   className={styles.siteSearch}
-                  value={searchWord}
                   placeholder="Search..."
                />
             </form>

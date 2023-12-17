@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import styles from './app.module.css';
 import { Header } from './components/header';
 import { Sidebar } from './components/sidebar';
@@ -8,10 +8,11 @@ import { Home } from './pages/home';
 import { Pants } from './pages/pants';
 import { Shirts } from './pages/shirts';
 
+
+
 export const App = () => {
    const [cartCount, setCartCount] = useState(0);
    return (
-      <BrowserRouter>
          <div className={styles.container}>
             <Header cartCount={cartCount} />
             <Sidebar />
@@ -33,6 +34,5 @@ export const App = () => {
                </Routes>
             </div>
          </div>
-      </BrowserRouter>
    );
 };

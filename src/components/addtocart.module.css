@@ -4,19 +4,125 @@
    align-items: center;
 }
 
-.addtocart {
+.addtocartButton {
+   position: relative;
    background-color: rgb(50, 180, 228);
    border-radius: 18px;
-   font-size: 1.5rem;
    margin-top: 1rem;
-   padding-bottom: 3px;
-   height: 2.5rem;
-   width: 50%;
+   height: 50px;
+   width: 180px;
    border: none;
    color: #ffffff;
    cursor: pointer;
 }
 
-.addtocart:active {
+.addtocartButton:active {
    background-color: rgb(50, 107, 145);
+}
+
+.shoppingCart {
+   position: absolute;
+   z-index: 3;
+   top: 15%;
+   left: -100%;
+   color: black;
+   font-size: 1.7rem;
+   transform: translate(-50%, 50%);
+   overflow: hidden;
+   color: #ffffff;
+
+}
+
+.box {
+   position: absolute;
+   z-index: 2;
+   overflow: auto;
+   color: red;
+   top: -50%;
+   left: 53%;
+   font-size: 1rem;
+   transform: translate(-50%, 50%);
+}
+
+.addtocartButton span {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   font-size: 25px;
+   width: 150px;
+}
+
+.addToCartText {
+   opacity: 1;
+}
+
+.addedText {
+   opacity: 0;
+}
+
+.addtocartButton .shoppingCart {
+   animation: cartAnimation 1.5s ease-in-out forwards;
+}
+
+.box {
+   animation: boxAnimation 1.5s ease-in-out forwards;
+}
+
+.addtocartButton .addToCartText {
+   animation: txt1 1.5s ease-in-out forwards;
+}
+
+.addtocartButton .addedText {
+   animation: txt2 1.5s ease-in-out forwards;
+}
+
+@keyframes cartAnimation {
+   0% {
+      left: -10%;
+   }
+   40%,
+   60% {
+      left: 50%;
+   }
+
+   100% {
+      left: 110%;
+   }
+}
+
+@keyframes boxAnimation {
+   0%,
+   40% {
+      top: -40%;
+   }
+
+   60% {
+      top: 20%;
+      left: 53%;
+   }
+   100% {
+      top: 20%;
+      left: 110%;
+   }
+}
+
+@keyframes txt1 {
+   0% {
+      opacity: 1;
+   }
+   20%,
+   100% {
+      opacity: 0;
+   }
+}
+
+@keyframes txt2 {
+   0%,
+   80% {
+      opacity: 0;
+   }
+   100% {
+      opacity: 1;
+   }
 }

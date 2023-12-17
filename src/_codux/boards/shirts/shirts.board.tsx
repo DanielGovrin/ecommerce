@@ -1,5 +1,5 @@
 import { createBoard } from '@wixc3/react-board';
-import Shirts from '../../../pages/shirts';
+import {Shirts} from '../../../pages/shirts';
 
 export default createBoard({
    name: 'Shirts',
