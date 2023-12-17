@@ -19,7 +19,7 @@ export const AddToCart = ({ setCartCount }: setCartCount) => {
 
    return (
       <div className={styles.addtocartContainer}>
-         <button className={`${styles.addtocartButton} ${isAnimating ? styles.animateCart : ''}`} onClick={handleClick}>
+         <button className={`${styles.addToCartButton} ${isAnimating ? styles.animateCart : ''}`} onClick={handleClick}>
             <span className={styles.addToCartText}>Add To Cart</span>
             <span className={styles.addedText}>Added</span>
             <FontAwesomeIcon className={styles.shoppingCart} icon={faShoppingCart} />

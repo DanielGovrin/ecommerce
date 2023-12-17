@@ -3,7 +3,7 @@ import { Header } from '../../../components/header';
 
 export default createBoard({
    name: 'Header',
-   Board: () => <Header />,
+   Board: () => <Header cartCount={0} />,
    isSnippet: true,
    environmentProps: {
       windowWidth: 1796,
