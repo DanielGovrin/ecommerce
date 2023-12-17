@@ -8,8 +8,6 @@ import { Home } from './pages/home';
 import { Pants } from './pages/pants';
 import { Shirts } from './pages/shirts';
 
-
-
 export const App = () => {
    const [cartCount, setCartCount] = useState(0);
    return (
