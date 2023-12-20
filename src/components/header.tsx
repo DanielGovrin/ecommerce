@@ -1,7 +1,6 @@
-import { cartCount } from './datatypes';
 import styles from './header.module.css';
 
-export const Header = ({ cartCount }: cartCount) => {
+export const Header = () => {
    return (
       <div className={styles.headerContainer}>
          <img

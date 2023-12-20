@@ -18,3 +18,7 @@
 a {
    text-decoration: none;
 }
+
+:root {
+   --color: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}

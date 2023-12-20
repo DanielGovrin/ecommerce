@@ -1,26 +1,19 @@
-import { useState } from 'react';
+import { useCart } from '../CartContext';
 import styles from './addtocart.module.css';
-import { setCartCount } from './datatypes';
+import { Item } from './datatypes';
 
 
-export const AddToCart = ({ setCartCount }: setCartCount) => {
-   const [isAnimating, setIsAnimating] = useState(false);
+export const AddToCart: React.FC<Item> = ({ mainTitle, secondaryTitle, image, price }) => {
+   const userContext = useCart();
    const handleClick = () => {
-      setIsAnimating(true)
-
-
-      setTimeout(() => {
-         setIsAnimating(false);
-      }, 500);
-      setCartCount((prevCartCount) => prevCartCount + 1);
-   };
+      userContext.addToCart({ mainTitle, secondaryTitle, image, price })
+   }
 
    return (
       <div className={styles.addtocartContainer}>
-         <button className={`${styles.addToCartButton} ${isAnimating ? styles.animateCart : ''}`} onClick={handleClick}>
+         <button className={styles.addToCartButton} onClick={handleClick}>
             <span className={styles.addToCartText}>Add To Cart</span>
          </button>
       </div>
    );
 };
-

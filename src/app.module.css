@@ -8,9 +8,9 @@
    height: 100%;
    overflow: hidden;
    background-image: url('../src/assets/contactBackground.jpg');
-   background-size: cover; 
+   background-size: cover;
    background-position: center;
-   height: 100vh; 
+   height: 100vh;
 }
 
 .content {

@@ -1,4 +1,4 @@
-export interface CardItem {
+export interface Item {
    mainTitle: string;
    secondaryTitle: string;
    image: string;
@@ -13,8 +13,4 @@ export interface SidebarItem {
 
 export interface cartCount {
    cartCount: number;
-}
-
-export interface setCartCount {
-   setCartCount: (count: number | ((prevCartCount: number) => number)) => void;
 }

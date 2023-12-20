@@ -1,3 +1,9 @@
 {
-   "boardGlobalSetup": "./src/_codux/boards-global-setup.ts"
+   "boardGlobalSetup": "./src/_codux/boards-global-setup.ts",
+   "newComponent": {
+      "componentsPath": "./src/components"
+   },
+   "styling": {
+      "solution": "css modules"
+   }
 }

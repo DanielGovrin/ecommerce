@@ -1,14 +1,13 @@
 import { AddToCart } from './AddToCart';
 import styles from './card.module.css';
-import { CardItem, setCartCount } from './datatypes';
+import { Item } from './datatypes';
 
-export const Card = ({
+export const Card: React.FC<Item> = ({
    mainTitle,
    secondaryTitle,
    image,
    price,
-   setCartCount,
-}: CardItem & setCartCount) => {
+}) => {
    return (
       <div className={styles.cardContainer}>
          <img
@@ -22,7 +21,7 @@ export const Card = ({
             <h4 className={styles.secondaryTitle}>{secondaryTitle}</h4>
             <h3 className={styles.price}>{price}</h3>
          </div>
-         <AddToCart setCartCount={setCartCount} />
+         <AddToCart {...{ mainTitle, secondaryTitle, image, price }} />
       </div>
    );
 };

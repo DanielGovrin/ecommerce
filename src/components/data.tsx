@@ -1,9 +1,9 @@
 import * as FaIcons from 'react-icons/fa';
 import * as IoIcons5 from 'react-icons/io5';
 import * as PiIcons from 'react-icons/pi';
-import { CardItem, SidebarItem } from './datatypes';
+import { SidebarItem, Item } from './datatypes';
 
-export const PantsData: CardItem[] = [
+export const PantsData: Item[] = [
    {
       mainTitle: "Levi's Classic Straight Jeans",
       secondaryTitle: 'Timeless Denim for Versatile Styling',
@@ -72,7 +72,7 @@ export const PantsData: CardItem[] = [
    },
 ];
 
-export const ShirtsData: CardItem[] = [
+export const ShirtsData: Item[] = [
    {
       mainTitle: 'Classic Black Cotton Tee',
       secondaryTitle: 'Essential Comfort for Everyday Casual',
@@ -141,7 +141,7 @@ export const ShirtsData: CardItem[] = [
    },
 ];
 
-export const HatsData: CardItem[] = [
+export const HatsData: Item[] = [
    {
       mainTitle: 'Classic NY Hat',
       secondaryTitle: 'Timeless Style for Every Occasion',
