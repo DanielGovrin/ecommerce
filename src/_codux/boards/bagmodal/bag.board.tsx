@@ -5,7 +5,7 @@ import { BagModal } from '../../../components/bagModal/bagModal';
 export default createBoard({
    name: 'Bag',
    Board: () => (
-      <CartProvider >
+      <CartProvider>
          <BagModal />
       </CartProvider>
    ),

@@ -2,7 +2,7 @@ import styles from './header.module.css';
 import { useCart } from '../CartContext';
 
 export const Header = () => {
-   const {cartItems, toggleCartModal } = useCart();
+   const { cartItems, toggleCartModal } = useCart();
    let numOfItems = cartItems.length;
    return (
       <div className={styles.headerContainer}>
