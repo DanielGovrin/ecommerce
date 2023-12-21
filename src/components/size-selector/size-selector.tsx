@@ -1,6 +1,5 @@
 import SizeSelector_module from './size-selector.module.css';
 
-
 export const SizeSelector = () => {
    const sizeOptions = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
 

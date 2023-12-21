@@ -7,22 +7,24 @@ import { Hats } from './pages/hats';
 import { Home } from './pages/home';
 import { Pants } from './pages/pants';
 import { Shirts } from './pages/shirts';
+import { useState } from 'react';
+import { Item } from './components/datatypes';
 
 export const App = () => {
    return (
-         <CartProvider>
-            <div className={styles.container}>
-               <Header />
-               <Sidebar />
-               <div className={styles.content}>
-                  <Routes>
-                     <Route path="/" element={<Home />} />
-                     <Route path="hats" element={<Hats />} />
-                     <Route path="pants" element={<Pants />} />
-                     <Route path="shirts" element={<Shirts />} />
-                  </Routes>
-               </div>
+      <CartProvider>
+         <div className={styles.container}>
+            <Header />
+            <Sidebar />
+            <div className={styles.content}>
+               <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="hats" element={<Hats />} />
+                  <Route path="pants" element={<Pants />} />
+                  <Route path="shirts" element={<Shirts />} />
+               </Routes>
             </div>
-         </CartProvider>
+         </div>
+      </CartProvider>
    );
 };

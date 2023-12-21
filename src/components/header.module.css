@@ -1,78 +1,81 @@
 .headerContainer {
-    display: flex;
-    flex-basis: 100vw;
-    justify-content: space-between;
-    border-bottom: 1px solid black;
+   display: flex;
+   flex-basis: 100vw;
+   justify-content: space-between;
+   border-bottom: 1px solid black;
 }
 
 .logo {
-    margin-left: 1rem;
+   margin-left: 1rem;
 
-    animation: spin 1s ease-in-out;
+   animation: spin 1s ease-in-out;
 }
 
 @keyframes spin {
-    from {
-        transform: rotate(0deg);
-    }
+   from {
+      transform: rotate(0deg);
+   }
 
-    to {
-        transform: rotate(360deg);
-    }
+   to {
+      transform: rotate(360deg);
+   }
 }
 
 .searchAndCart {
-    display: flex;
-    align-items: center;
-    margin-right: 1.5rem;
+   display: flex;
+   align-items: center;
+   margin-right: 1.5rem;
 }
 
 .searchbarContainer {
-    display: flex;
-    flex-direction: row;
-    color: #555;
-    display: flex;
-    border-radius: 50px;
-    background-color: #ffffff;
-    padding: 10px 10px;
-    margin: 10px;
+   display: flex;
+   flex-direction: row;
+   color: #555;
+   display: flex;
+   border-radius: 50px;
+   background-color: #ffffff;
+   padding: 10px 10px;
+   margin: 10px;
 }
 
 .siteSearch {
-    font-size: 1.1rem;
-    color: inherit;
-    border: none;
-    background-color: inherit;
-    font-family: 'Helvetica Now Text', Helvetica, Arial, sans-serif;
+   font-size: 1.1rem;
+   color: inherit;
+   border: none;
+   background-color: inherit;
+   font-family: 'Helvetica Now Text', Helvetica, Arial, sans-serif;
 }
 
 .siteSearch::placeholder {
-    color: #000000;
+   color: #000000;
 }
 
 .magnifyGlass {
-    overflow: hidden;
-    width: 40px;
-    border: solid transparent;
-    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
-    cursor: pointer;
+   overflow: hidden;
+   width: 40px;
+   border: solid transparent;
+   background: transparent
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+      no-repeat center;
+   cursor: pointer;
 }
 
 input:focus {
-    outline: none;
+   outline: none;
 }
 
 .siteSearch:focus::placeholder {
-    color: transparent;
+   color: transparent;
 }
 
 .shoppingBagButton {
-    width: 40px;
-    height: 40px;
-    overflow: hidden;
-    border: solid transparent;
-    background: transparent url('../../src/assets/shopping-bag.svg') no-repeat center;
-    /* background: red; */
-    cursor: pointer;
-    opacity: 1;
+   width: 40px;
+   height: 40px;
+   overflow: hidden;
+   border: solid transparent;
+   background: transparent url('../../src/assets/shopping-bag.svg') no-repeat
+      center;
+   /* background: red; */
+   cursor: pointer;
+   opacity: 1;
 }

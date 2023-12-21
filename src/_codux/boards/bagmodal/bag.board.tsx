@@ -1,19 +1,19 @@
 import { createBoard } from '@wixc3/react-board';
-import { Header } from '../../../components/header';
 import { CartProvider } from '../../../CartContext';
+import { BagModal } from '../../../components/bagModal/bagModal';
 
 export default createBoard({
-   name: 'Header',
+   name: 'Bag',
    Board: () => (
-      <CartProvider>
-         <Header />
+      <CartProvider >
+         <BagModal />
       </CartProvider>
    ),
    isSnippet: true,
    environmentProps: {
-      windowWidth: 1796,
-      canvasWidth: 882,
-      windowHeight: 842,
-      canvasHeight: 5,
+      canvasWidth: 577,
+      canvasHeight: 480,
+      windowHeight: 705,
+      windowWidth: 1244,
    },
 });
