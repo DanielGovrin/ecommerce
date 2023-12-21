@@ -3,10 +3,10 @@ import styles from './addtocart.module.css';
 import { Item } from './datatypes';
 
 
-export const AddToCart: React.FC<Item> = ({ mainTitle, secondaryTitle, image, price }) => {
-   const userContext = useCart();
+export const AddToCart: React.FC<Item> = ({ id, mainTitle, secondaryTitle, image, price }) => {
+   const userCartContext = useCart();
    const handleClick = () => {
-      userContext.addToCart({ mainTitle, secondaryTitle, image, price })
+      userCartContext.addToCart({ id, mainTitle, secondaryTitle, image, price })
    }
 
    return (

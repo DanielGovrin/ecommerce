@@ -10,19 +10,19 @@ import { Shirts } from './pages/shirts';
 
 export const App = () => {
    return (
-      <CartProvider>
-         <div className={styles.container}>
-            <Header />
-            <Sidebar />
-            <div className={styles.content}>
-               <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="hats" element={<Hats />} />
-                  <Route path="pants" element={<Pants />} />
-                  <Route path="shirts" element={<Shirts />} />
-               </Routes>
+         <CartProvider>
+            <div className={styles.container}>
+               <Header />
+               <Sidebar />
+               <div className={styles.content}>
+                  <Routes>
+                     <Route path="/" element={<Home />} />
+                     <Route path="hats" element={<Hats />} />
+                     <Route path="pants" element={<Pants />} />
+                     <Route path="shirts" element={<Shirts />} />
+                  </Routes>
+               </div>
             </div>
-         </div>
-      </CartProvider>
+         </CartProvider>
    );
 };

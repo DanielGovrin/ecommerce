@@ -1,6 +1,17 @@
-import Bag_module from './bag.module.css';
-import { Item } from '../datatypes';
+import { useCart } from '../../CartContext';
+import styles from './bag.module.css'
+
 
 export const Bag = () => {
-   return <div></div>;
+   const useCartContext = useCart();
+   return <div>
+      <div className={styles.itemList}>
+
+      </div>
+
+      <div className={styles.ordersummary}>
+
+      </div>
+
+   </div>;
 };

@@ -4,7 +4,7 @@ import { Item } from './components/datatypes';
 interface CartContextProps {
    items: Item[];
    addToCart: (item: Item) => void;
-   removeFromCart: (index: number) => void;
+   removeFromCart: (id: string) => void;
    toggleCartModal: () => void;
    showCartModal: boolean;
    clearCart: () => void;
@@ -24,13 +24,9 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
       setCartItems((prevItems) => [...prevItems, item]);
    };
 
-   const removeFromCart = (index: number) => {
-      setCartItems((prevItems) => {
-         const newItems = [...prevItems];
-         newItems.splice(index, 1);
-         return newItems;
-      });
-   };
+   const removeFromCart = (id: string) => {
+      setCartItems((prevItems) => { return [...prevItems].filter((item) => item.id !== id) });
+};
 
    const toggleCartModal = () => {
       setShowCartModal((prev) => !prev);

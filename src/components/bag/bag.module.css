@@ -1,2 +1,10 @@
-.containet {
+.container {
+    flex-direction: column;
+    display: block;
+    border: 1px dashed black;
+}
+
+
+.itemList{
+
 }

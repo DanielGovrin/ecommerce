@@ -1,28 +1,40 @@
 .container {
-   display: flex;
-   flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 .test {
-   display: flex;
-   flex-direction: column;
+    flex-direction: column;
+    display: flex;
 }
 
 .productSelectionContainer {
-   display: flex;
-   flex-direction: row;
-   gap: 0px 12px;
-   align-items: baseline;
-   align-content: end;
-   margin: 12px 0px 0px;
-   justify-items: end;
+    display: flex;
+    flex-direction: row;
+    gap: 0px 12px;
+    align-items: baseline;
+    align-content: end;
+    margin: 12px 0px 0px;
+    justify-items: end;
 }
 
 .price {
-   color: #111111;
-   font-family: Helvetica Now;
-   font-weight: 500;
-   text-align: start;
-   margin: 6px 0px 0px 16px;
-   font-size: 20px;
+    color: #111111;
+    font-family: Helvetica Now;
+    font-weight: 500;
+    text-align: start;
+    margin: 6px 0px 0px 16px;
+    font-size: 20px;
 }
+
+.deleteButton {
+    background: transparent url('../../../src/assets/delete-button.svg') no-repeat center;
+    width: 30px;
+    height: 32px;
+    border: none;
+    margin-left: 10px;
+    margin-top: 3px;
+    padding: 0px;
+    align-self: stretch;
+}
+

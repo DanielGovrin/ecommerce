@@ -3,6 +3,7 @@ import styles from './card.module.css';
 import { Item } from './datatypes';
 
 export const Card: React.FC<Item> = ({
+   id,
    mainTitle,
    secondaryTitle,
    image,
@@ -21,7 +22,7 @@ export const Card: React.FC<Item> = ({
             <h4 className={styles.secondaryTitle}>{secondaryTitle}</h4>
             <h3 className={styles.price}>{price}</h3>
          </div>
-         <AddToCart {...{ mainTitle, secondaryTitle, image, price }} />
+         <AddToCart {...{ id, mainTitle, secondaryTitle, image, price }} />
       </div>
    );
 };

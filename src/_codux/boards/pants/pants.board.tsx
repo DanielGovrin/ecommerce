@@ -1,16 +1,13 @@
 import { createBoard } from '@wixc3/react-board';
+import { CartProvider } from '../../../CartContext';
 import { Pants } from '../../../pages/pants';
 
 export default createBoard({
    name: 'Pants',
    Board: () => (
-      <Pants
-         setCartCount={function (
-            count: number | ((prevCartCount: number) => number)
-         ): void {
-            throw new Error('Function not implemented.');
-         }}
-      />
+      <CartProvider>
+         <Pants />
+      </CartProvider>
    ),
    isSnippet: true,
    environmentProps: {

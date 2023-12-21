@@ -1,11 +1,7 @@
-import React from 'react';
 import SizeSelector_module from './size-selector.module.css';
 
-export interface SizeSelectorProps {
-   className?: string;
-}
 
-export const SizeSelector: React.FC<SizeSelectorProps> = () => {
+export const SizeSelector = () => {
    const sizeOptions = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
 
    return (

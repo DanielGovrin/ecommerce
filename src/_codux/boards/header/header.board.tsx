@@ -1,9 +1,14 @@
 import { createBoard } from '@wixc3/react-board';
 import { Header } from '../../../components/header';
+import { CartProvider } from '../../../CartContext';
 
 export default createBoard({
    name: 'Header',
-   Board: () => <Header cartCount={0} />,
+   Board: () =>
+      <CartProvider>
+         <Header />
+      </CartProvider>
+   ,
    isSnippet: true,
    environmentProps: {
       windowWidth: 1796,

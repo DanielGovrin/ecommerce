@@ -1,4 +1,5 @@
 export interface Item {
+   id: string;
    mainTitle: string;
    secondaryTitle: string;
    image: string;
