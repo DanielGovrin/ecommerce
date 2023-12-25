@@ -2,19 +2,26 @@
    margin: 0;
 }
 
+.modal{
+   background-color: white;
+   opacity: 1;
+}
+
 .container {
    display: flex;
+   position: absolute;
    flex-wrap: wrap;
-   height: 100%;
    overflow: hidden;
    background-image: url('../src/assets/contactBackground.jpg');
    background-size: cover;
    background-position: center;
    height: 100vh;
+   width:100vw
 }
 
 .content {
-   width: 90%;
+   padding-left: 10%;
+   width: 80%;
    height: 100%;
    overflow: auto;
 }

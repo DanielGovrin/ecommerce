@@ -1,19 +1,24 @@
-import { Route, Routes } from 'react-router-dom';
-import { CartProvider } from './CartContext';
+import { MemoryRouter, Route, Routes } from 'react-router-dom';
+import { useCart } from './CartContext';
 import styles from './app.module.css';
+import { BagModal } from './components/bagModal/bagModal';
 import { Header } from './components/header';
 import { Sidebar } from './components/sidebar';
 import { Hats } from './pages/hats';
 import { Home } from './pages/home';
 import { Pants } from './pages/pants';
 import { Shirts } from './pages/shirts';
-import { useState } from 'react';
-import { Item } from './components/datatypes';
+import { Blur } from './components/blur/blur';
+
 
 export const App = () => {
+   const { showModal } = useCart();
+
    return (
-      <CartProvider>
+      <MemoryRouter>
          <div className={styles.container}>
+            <BagModal />
+            <Blur />
             <Header />
             <Sidebar />
             <div className={styles.content}>
@@ -25,6 +30,6 @@ export const App = () => {
                </Routes>
             </div>
          </div>
-      </CartProvider>
+      </MemoryRouter>
    );
 };

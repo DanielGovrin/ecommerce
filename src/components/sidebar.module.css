@@ -1,6 +1,9 @@
 .navbar {
-   height: 100vh;
+   position: absolute;
+   /* height: 100vh; */
    flex: 0 0 10%;
+   margin-top: 10vh;
+
 }
 
 .listItem {

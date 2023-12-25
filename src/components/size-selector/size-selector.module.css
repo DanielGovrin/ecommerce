@@ -1,29 +1,51 @@
 .container {
-   display: flex;
-   flex-direction: row;
-   height: 30px;
+    display: flex;
+    flex-direction: row;
+    height: 30px;
 }
 
 .text {
-   font-family: 'Helvetica Now Text', Helvetica, Arial, sans-serif;
-   line-height: 28px;
-   color: #707072;
-   margin: 0px;
-   align-self: center;
-   font-size: 16px;
-   font-weight: 400;
+    font-family: 'Helvetica Now Text', Helvetica, Arial, sans-serif;
+    line-height: 28px;
+    color: #707072;
+    margin: 0px;
+    align-self: center;
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .selectBar {
-   font-weight: 100;
-   border: 0px solid black;
-   text-align: center;
-   align-self: center;
-   height: 21px;
-   margin: 1px 0px 2px 4px;
-   padding: 0px;
-   font-family: Tahoma, sans-serif;
-   width: 38px;
-   font-size: 13px;
-   color: #707072;
+    font-weight: 100;
+    border: 0px solid black;
+    text-align: center;
+    align-self: center;
+    height: 25px;
+    margin: 1px 0px 2px 4px;
+    padding: 0px;
+    font-family: Tahoma, sans-serif;
+    width: 45px;
+    font-size: 13px;
+    color: #707072;
 }
+
+.selectBar:hover {
+    cursor: pointer;
+}
+
+.selectBar:hover {}
+
+.selectBar:hover:disabled {}
+
+.selectBar:disabled {}
+
+.selectBar:hover {}
+
+.selectBar:hover {}
+
+.selectBar:hover {}
+
+.selectBar:hover:disabled {}
+
+.selectBar:disabled {}
+
+.selectBar:hover {}

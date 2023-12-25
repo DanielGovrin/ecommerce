@@ -4,6 +4,11 @@ import { useCart } from '../CartContext';
 export const Header = () => {
    const { cartItems, toggleCartModal } = useCart();
    let numOfItems = cartItems.length;
+
+   const handleShoppingBagClick = () => {
+      toggleCartModal();
+   };
+
    return (
       <div className={styles.headerContainer}>
          <img
@@ -25,12 +30,12 @@ export const Header = () => {
                />
             </form>
 
-            <button type="button" className={styles.shoppingBagButton}>
+            <button type="button" className={styles.shoppingBagButton} onClick={handleShoppingBagClick}>
                <p>
                   {numOfItems <= 0 ? '' : numOfItems < 10 ? numOfItems : '9+'}
                </p>
             </button>
          </div>
-      </div>
+      </div >
    );
 };

@@ -1,3 +1,4 @@
+
 import React, { createContext, useState, useContext } from 'react';
 import { Item } from './components/datatypes';
 
@@ -6,32 +7,26 @@ interface CartContextProps {
    addToCart: (item: Item) => void;
    removeFromCart: (id: string) => void;
    toggleCartModal: () => void;
-   showCartModal: boolean;
+   showModal: boolean; 
    clearCart: () => void;
 }
 
-export const CartContext = createContext<CartContextProps | undefined>(
-   undefined
-);
+export const CartContext = createContext<CartContextProps | undefined>(undefined);
 
-export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
-   children,
-}) => {
+export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
    const [cartItems, setCartItems] = useState<Item[]>([]);
-   const [showCartModal, setShowCartModal] = useState(false);
+   const [showModal, setShowModal] = useState(false);    
 
    const addToCart = (item: Item) => {
       setCartItems((prevItems) => [...prevItems, item]);
    };
 
    const removeFromCart = (id: string) => {
-      setCartItems((prevItems) => {
-         return [...prevItems].filter((item) => item.id !== id);
-      });
+      setCartItems((prevItems) => [...prevItems].filter((item) => item.id !== id));
    };
 
    const toggleCartModal = () => {
-      setShowCartModal((prev) => !prev);
+      setShowModal((prev) => !prev);
    };
 
    const clearCart = () => {
@@ -45,9 +40,10 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
             addToCart,
             removeFromCart,
             toggleCartModal,
-            showCartModal,
+            showModal,
             clearCart,
-         }}>
+         }}
+      >
          {children}
       </CartContext.Provider>
    );

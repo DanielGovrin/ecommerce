@@ -1,18 +1,19 @@
 import { createBoard } from '@wixc3/react-board';
 import { App } from '../../../App';
 import { MemoryRouter } from 'react-router-dom';
+import { CartProvider } from '../../../CartContext';
 
 export default createBoard({
-   name: 'App',
-   Board: () => (
-      <MemoryRouter>
-         <App />
-      </MemoryRouter>
-   ),
-   environmentProps: {
-      windowHeight: 1079,
-      windowWidth: 2216,
-      canvasWidth: 1736,
-      canvasHeight: 1032,
-   },
+    name: 'App',
+    Board: () => (
+        <CartProvider>
+            <App />
+        </CartProvider>
+    ),
+    environmentProps: {
+        canvasHeight: 1095,
+        canvasWidth: 2066,
+        windowHeight: 1015,
+        windowWidth: 1570
+    }
 });
