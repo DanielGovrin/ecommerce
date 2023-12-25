@@ -3,11 +3,7 @@ import styles from './blur.module.css';
 import { useCart } from '../../CartContext';
 
 export const Blur: React.FC = () => {
-    const { showModal } = useCart();
+   const { showModal } = useCart();
 
-
-    return (
-        showModal && (
-            <div className={styles.container}></div>
-        ))
+   return showModal && <div className={styles.container}></div>;
 };

@@ -30,12 +30,15 @@ export const Header = () => {
                />
             </form>
 
-            <button type="button" className={styles.shoppingBagButton} onClick={handleShoppingBagClick}>
+            <button
+               type="button"
+               className={styles.shoppingBagButton}
+               onClick={handleShoppingBagClick}>
                <p>
                   {numOfItems <= 0 ? '' : numOfItems < 10 ? numOfItems : '9+'}
                </p>
             </button>
          </div>
-      </div >
+      </div>
    );
 };

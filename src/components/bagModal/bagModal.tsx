@@ -18,7 +18,10 @@ export const BagModal = () => {
       };
 
       const handleClickOutside = (event: MouseEvent) => {
-         if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
+         if (
+            modalRef.current &&
+            !modalRef.current.contains(event.target as Node)
+         ) {
             toggleCartModal();
          }
       };
@@ -46,7 +49,11 @@ export const BagModal = () => {
 
    useEffect(() => {
       // Update the cursor only when the modal is shown
-      document.body.style.cursor = showModal ? (isMouseOver ? 'default' : 'pointer') : 'default';
+      document.body.style.cursor = showModal
+         ? isMouseOver
+            ? 'default'
+            : 'pointer'
+         : 'default';
 
       // Cleanup the cursor style when the component is unmounted
       return () => {
