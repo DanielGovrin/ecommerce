@@ -34,9 +34,11 @@ export const Header = () => {
                type="button"
                className={styles.shoppingBagButton}
                onClick={handleShoppingBagClick}>
-               <p>
-                  {numOfItems <= 0 ? '' : numOfItems < 10 ? numOfItems : '9+'}
-               </p>
+               {numOfItems > 0 && (
+                  <p className={styles.numOfItems}>
+                     {numOfItems < 10 ? numOfItems : '9+'}
+                  </p>
+               )}
             </button>
          </div>
       </div>

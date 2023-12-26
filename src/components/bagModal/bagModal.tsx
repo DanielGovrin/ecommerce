@@ -71,7 +71,7 @@ export const BagModal = () => {
             </div>
 
             <div className={styles.ordersummary}>
-               <h2 className={styles.summary}>Summary</h2>
+               <h2 className={styles.summary}> Order Summary</h2>
             </div>
          </div>
       )

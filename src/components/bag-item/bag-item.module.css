@@ -39,3 +39,7 @@
    padding: 0px;
    align-self: stretch;
 }
+
+.deleteButton:hover {
+   cursor: pointer;
+}

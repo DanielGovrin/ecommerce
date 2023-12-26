@@ -1,8 +1,7 @@
 .navbar {
-   position: absolute;
-   /* height: 100vh; */
+   width: 10vh;
    flex: 0 0 10%;
-   margin-top: 10vh;
+   padding-top: 35px;
 }
 
 .listItem {

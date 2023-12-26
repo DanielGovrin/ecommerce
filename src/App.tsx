@@ -14,8 +14,8 @@ export const App = () => {
    return (
       <MemoryRouter>
          <div className={styles.container}>
-            <BagModal />
             <Blur />
+            <BagModal />
             <Header />
             <Sidebar />
             <div className={styles.content}>
