@@ -18,7 +18,7 @@ const SizeSelector: React.FC = () => {
                 <button
                     key={size}
                     type='button'
-                    className={styles.sizeButton}
+                    className={`${styles.sizeButton} ${selectedSize === size ? styles.selected : ''} ${styles[size]}`}
                     onClick={() => handleSelectSize(size)}
                 >
                     {size}

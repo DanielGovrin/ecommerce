@@ -3,8 +3,8 @@
    height: 80vh;
    grid-template-columns: repeat(3, 1fr);
    grid-template-rows: repeat(3, 1fr);
-   padding: 50px 75px 150px 75px;
-   gap: 35px;
+   padding: 50px 90px 150px 90px;
+   gap: 50px;
    align-items: center;
    overflow: auto;
 }

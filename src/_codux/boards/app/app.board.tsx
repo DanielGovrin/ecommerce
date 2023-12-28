@@ -11,9 +11,9 @@ export default createBoard({
         </CartProvider>
     ),
     environmentProps: {
-        canvasHeight: 795,
-        canvasWidth: 3030,
-        windowHeight: 706,
-        windowWidth: 1256,
+        canvasHeight: 925,
+        canvasWidth: 1496,
+        windowHeight: 896,
+        windowWidth: 1478,
     },
 });

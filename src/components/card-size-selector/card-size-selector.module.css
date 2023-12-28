@@ -1,40 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+
 .sizeButtons {
-    height: 10%;
-    width: 100%;
-    display: flex;
-    gap: 10px;
-    flex-direction: row;
-    justify-content: center;
+   height: 10%;
+   width: 100%;
+   display: flex;
+   gap: 10px;
+   flex-direction: row;
+   justify-content: center;
 }
 
 .sizeButton {
-    width: 20%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    background-color: #FFFFFF;
+   width: 20%;
+   height: 100%;
+   align-items: center;
+   justify-content: center;
+   border: 2px solid rgb(253, 0, 207);
+   cursor: pointer;
+   background-color: #162944;
+   color: #fff;
+   font-family: 'Inconsolata', monospace;
+   font-weight: 500;
+   font-size: 20px;
+   box-shadow: inset 0 0 0 0 rgb(253, 0, 207);
+   transition: ease-in-out 0.4s;
 }
 
 .sizeButton:hover {
-    border: 1px solid black;
+   border: 1px solid black;
 }
 
-.sizeButton.selected {
-    border: 2px solid black;
-    background-color: #FFFFFF;
-    color: white;
+.S:hover {
+   box-shadow: inset 100px 0 0 0 rgb(253, 0, 207);
 }
 
-.container {
-    width: 320px;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
+.M:hover {
+   box-shadow: inset 75px 50px 0 0 rgb(253, 0, 207);
 }
 
-.sizeButton:hover {}
+.L:hover {
+    box-shadow: inset -75px -50px 0 0 rgb(253, 0, 207);
+ }
+
+.XL:hover {
+    box-shadow: inset -100px 0 0 0 rgb(253, 0, 207);
+}
