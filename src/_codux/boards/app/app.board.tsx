@@ -4,16 +4,16 @@ import { MemoryRouter } from 'react-router-dom';
 import { CartProvider } from '../../../CartContext';
 
 export default createBoard({
-   name: 'App',
-   Board: () => (
-      <CartProvider>
-         <App />
-      </CartProvider>
-   ),
-   environmentProps: {
-      canvasHeight: 795,
-      canvasWidth: 3030,
-      windowHeight: 706,
-      windowWidth: 780,
-   },
+    name: 'App',
+    Board: () => (
+        <CartProvider>
+            <App />
+        </CartProvider>
+    ),
+    environmentProps: {
+        canvasHeight: 795,
+        canvasWidth: 3030,
+        windowHeight: 706,
+        windowWidth: 1256,
+    },
 });

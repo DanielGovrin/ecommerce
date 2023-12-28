@@ -1,7 +1,7 @@
-import SizeSelector_module from './size-selector.module.css';
+import SizeSelector_module from './bag-size-selector.module.css';
 
-export const SizeSelector = () => {
-   const sizeOptions = ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
+export const BagSizeSelector = () => {
+   const sizeOptions = ['S', 'M', 'L', 'XL'];
 
    return (
       <div className={SizeSelector_module.container}>

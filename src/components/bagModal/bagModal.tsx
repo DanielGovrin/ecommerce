@@ -48,14 +48,11 @@ export const BagModal = () => {
    }, [showModal, toggleCartModal]);
 
    useEffect(() => {
-      // Update the cursor only when the modal is shown
       document.body.style.cursor = showModal
          ? isMouseOver
             ? 'default'
             : 'pointer'
          : 'default';
-
-      // Cleanup the cursor style when the component is unmounted
       return () => {
          document.body.style.cursor = 'default';
       };
@@ -72,6 +69,7 @@ export const BagModal = () => {
 
             <div className={styles.ordersummary}>
                <h2 className={styles.summary}> Order Summary</h2>
+
             </div>
          </div>
       )
