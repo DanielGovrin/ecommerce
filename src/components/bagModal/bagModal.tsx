@@ -1,12 +1,17 @@
 import { useEffect, useRef, useState } from 'react';
 import { useCart } from '../../CartContext';
 import { BagItem } from '../bag-item/bag-item';
-import styles from './bag.module.css';
+import styles from './bagmodal.module.css';
+import BagModal_module from './bagModal.module.css';
 
 export const BagModal = () => {
    const { cartItems, showModal, toggleCartModal } = useCart();
    const modalRef = useRef<HTMLDivElement>(null);
    const [isMouseOver, setIsMouseOver] = useState(false);
+   const totalPrice: number = cartItems.reduce(
+      (acc, item) => acc + parseFloat(item.price),
+      0
+   );
 
    useEffect(() => {
       const handleMouseEnter = () => {
@@ -66,10 +71,17 @@ export const BagModal = () => {
                   <BagItem {...item} />
                ))}
             </div>
-
             <div className={styles.ordersummary}>
-               <h2 className={styles.summary}> Order Summary</h2>
-
+               <div className={BagModal_module.ordersummaryheader}>
+                  <h2 className={BagModal_module.summarytext}>
+                     {' '}
+                     Order Summary
+                  </h2>
+                  <h2
+                     className={
+                        BagModal_module.totalprice
+                     }>{`$ ${totalPrice.toFixed(2)}`}</h2>
+               </div>
             </div>
          </div>
       )

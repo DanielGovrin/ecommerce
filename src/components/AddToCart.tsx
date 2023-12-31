@@ -9,9 +9,9 @@ export const AddToCart: React.FC<Item> = ({
    image,
    price,
 }) => {
-   const userCartContext = useCart();
+   const { addToCart } = useCart();
    const handleClick = () => {
-      userCartContext.addToCart({
+      addToCart({
          id,
          mainTitle,
          secondaryTitle,

@@ -12,6 +12,11 @@ export interface SidebarItem {
    icon: JSX.Element;
 }
 
-export interface cartCount {
-   cartCount: number;
+export interface CardSizeSelector {
+   size: null | string;
+   setSize: React.Dispatch<React.SetStateAction<string | null>>;
+}
+
+export interface CartItem extends Item {
+   size: string;
 }

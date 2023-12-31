@@ -15,6 +15,7 @@
    align-items: center;
    justify-content: center;
    border: 2px solid rgb(253, 0, 207);
+   border-radius: 10px;
    cursor: pointer;
    background-color: #162944;
    color: #fff;
@@ -26,7 +27,7 @@
 }
 
 .sizeButton:hover {
-   border: 1px solid black;
+   border: 2px solid rgb(253, 0, 207);
 }
 
 .S:hover {
@@ -38,9 +39,15 @@
 }
 
 .L:hover {
-    box-shadow: inset -75px -50px 0 0 rgb(253, 0, 207);
- }
+   box-shadow: inset -75px -50px 0 0 rgb(253, 0, 207);
+}
 
 .XL:hover {
-    box-shadow: inset -100px 0 0 0 rgb(253, 0, 207);
+   box-shadow: inset -100px 0 0 0 rgb(253, 0, 207);
+}
+
+.selectedSize {
+   background-color: #fff;
+   color: #162944;
+   border: 2px solid #162944;
 }

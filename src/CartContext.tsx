@@ -30,12 +30,12 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
       );
    };
 
-   const toggleCartModal = () => {
-      setShowModal((prev) => !prev);
-   };
-
    const clearCart = () => {
       setCartItems([]);
+   };
+
+   const toggleCartModal = () => {
+      setShowModal((prev) => !prev);
    };
 
    return (
