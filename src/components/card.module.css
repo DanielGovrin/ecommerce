@@ -1,5 +1,6 @@
 .cardContainer {
    display: flex;
+   align-items: center;
    height: 450px;
    width: 320px;
    flex-direction: column;
@@ -36,7 +37,7 @@
 .mainTitle,
 .secondaryTitle,
 .price {
-   margin: 3px 0;
+   margin: 2px 0;
 }
 
 .mainTitle {
@@ -45,8 +46,7 @@
 }
 
 .price {
-   font-size: 1.8rem;
+   font-size: 1.6rem;
    color: #3498db;
    font-weight: bold;
-   padding-top: 5px;
 }

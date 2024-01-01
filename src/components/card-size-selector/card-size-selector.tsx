@@ -1,5 +1,3 @@
-// SizeSelector.tsx
-
 import React from 'react';
 import styles from './card-size-selector.module.css';
 import { CardSizeSelector } from '../datatypes';
@@ -8,9 +6,7 @@ const SizeSelector: React.FC<CardSizeSelector> = ({ size, setSize }) => {
    const sizes = ['S', 'M', 'L', 'XL'];
 
    const handleSelectSize = (currentSize: string) => {
-      if (currentSize === size) {
-         size = null;
-      } else setSize(currentSize);
+      setSize(currentSize);
    };
 
    return (

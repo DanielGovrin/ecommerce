@@ -32,6 +32,7 @@ export const Card: React.FC<Item> = ({
             mainTitle={mainTitle}
             secondaryTitle={secondaryTitle}
             image={image}
+            size={size}
             price={price}
          />
       </div>

@@ -1,14 +1,9 @@
-.addtocartContainer {
+.addToCartButton {
    display: flex;
    justify-content: center;
-   align-items: center;
-}
-
-.addToCartButton {
-   position: relative;
    background-color: rgb(50, 180, 228);
    border-radius: 18px;
-   margin-top: 1rem;
+   margin-top: 1.5rem;
    height: 50px;
    width: 180px;
    border: none;
@@ -22,10 +17,7 @@
 }
 
 .addToCartButton span {
-   position: absolute;
-   left: 50%;
-   top: 50%;
-   transform: translate(-50%, -50%);
+   align-self: center;
    font-size: 25px;
-   width: 150px;
+   margin-bottom: 4px;
 }

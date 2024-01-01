@@ -4,6 +4,7 @@ export interface Item {
    secondaryTitle: string;
    image: string;
    price: string;
+   size?: string | null;
 }
 
 export interface SidebarItem {
@@ -15,8 +16,4 @@ export interface SidebarItem {
 export interface CardSizeSelector {
    size: null | string;
    setSize: React.Dispatch<React.SetStateAction<string | null>>;
-}
-
-export interface CartItem extends Item {
-   size: string;
 }
