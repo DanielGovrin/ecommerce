@@ -2,9 +2,7 @@ import styles from './header.module.css';
 import { useCart } from '../CartContext';
 
 export const Header = () => {
-   const { cartItems, toggleCartModal } = useCart();
-   let numOfItems = cartItems.length;
-
+   const { cartItems, toggleCartModal, numOfItems} = useCart();
    const handleShoppingBagClick = () => {
       toggleCartModal();
    };

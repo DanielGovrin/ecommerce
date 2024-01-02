@@ -7,7 +7,9 @@ interface CartContextProps {
    removeFromCart: (item: CartItem) => void;
    toggleCartModal: () => void;
    showModal: boolean;
+   totalPrice: number;
    clearCart: () => void;
+   numOfItems:number;
 }
 
 function generateCartItemId(id: string, size: Sizes) {
@@ -23,18 +25,43 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
 }) => {
    const [cartItems, setCartItems] = useState<Map<string, number>>(new Map<string, number>());
    const [showModal, setShowModal] = useState(false);
+   const [totalPrice, setTotalPrice] = useState<number>(0);
+   const [numOfItems, setNumOfItems] = useState<number>(0);
 
    const addToCart = (item: CartItem) => {
-      const generatedId = generateCartItemId(item.id, item.size);
-      const quantity = cartItems.get(generatedId) ?? 0;
-      setCartItems({ ...cartItems, [generatedId]: quantity + 1 });
+      setTotalPrice((prevPrice) => prevPrice + parseFloat(item.price));
+      setNumOfItems((prevNumOfItems) => prevNumOfItems + 1)
+      setCartItems((prevCartItems) => {
+         const generatedId = generateCartItemId(item.id, item.size);
+         const quantity = prevCartItems.get(generatedId) ?? 0;
+
+         return new Map<string, number>(prevCartItems).set(generatedId, quantity + 1);
+      });
+
    };
+
+
 
    const removeFromCart = (item: CartItem) => {
       const generatedId = generateCartItemId(item.id, item.size);
-      cartItems.delete(generatedId)
-      const newCart = new Map<string, number>(cartItems)
+
+      // Get the number of items and calculate the total price for the removed item
+      const numOfItemsRemoved: number = cartItems.get(generatedId) ?? 0;
+      const totalItemPrice = parseFloat(item.price) * numOfItemsRemoved;
+
+      // Remove the item from the cartItems Map
+      cartItems.delete(generatedId);
+
+      // Create a new Map to represent the updated cartItems (shallow copy)
+      const newCart = new Map<string, number>(cartItems);
+
+      // Update the state with the new cartItems Map
       setCartItems(newCart);
+
+      //Update the number of items in the cart
+      setNumOfItems((prevNumOfItems)=>prevNumOfItems - numOfItemsRemoved)
+      // Update the total price by subtracting the total price of the removed item
+      setTotalPrice((prevTotalPrice) => prevTotalPrice - totalItemPrice);
    };
 
    const clearCart = () => {
@@ -55,6 +82,8 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
             toggleCartModal,
             showModal,
             clearCart,
+            totalPrice,
+            numOfItems,
          }}>
          {children}
       </CartContext.Provider>

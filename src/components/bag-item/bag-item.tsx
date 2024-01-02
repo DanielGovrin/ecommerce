@@ -12,10 +12,18 @@ export const BagItem: React.FC<CartItem> = ({
    price,
    size,
 }) => {
-   const { removeFromCart } = useCart();
+   const { removeFromCart, cartItems } = useCart();
 
    const handleClick = () => {
-      removeFromCart(id, size);
+      removeFromCart({
+         id,
+         mainTitle,
+         secondaryTitle,
+         image,
+         price,
+         size,
+      }
+      );
    };
 
    return (
@@ -26,7 +34,7 @@ export const BagItem: React.FC<CartItem> = ({
             <h3>{secondaryTitle}</h3>
             <div className={BagItem_module.productSelectionContainer}>
                <BagSizeSelector size={size} />
-               <QuantitySelect />
+               <QuantitySelect quantity={cartItems.get(`${id}#${size}`)!} />
             </div>
             <button
                className={BagItem_module.deleteButton}

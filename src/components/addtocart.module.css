@@ -1,8 +1,8 @@
 .addToCartButton {
    display: flex;
    justify-content: center;
-   background-color: rgb(50, 180, 228);
-   border-radius: 18px;
+   background-color:  #162944;
+   border-radius: 100%;
    margin-top: 1.5rem;
    height: 50px;
    width: 180px;
@@ -13,8 +13,12 @@
 }
 
 .addToCartButton:active {
-   background-color: rgb(50, 107, 145);
+   background-color:  #162944;
 }
+.addToCartButton:hover{
+   background-color: rgb(253, 0, 207);
+}
+
 
 .addToCartButton span {
    align-self: center;

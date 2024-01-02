@@ -1,18 +1,15 @@
 import { useEffect, useRef, useState } from 'react';
 import { useCart } from '../../CartContext';
-import { BagItem } from '../bag-item/bag-item';
 import styles from './bagmodal.module.css';
+import { dataArrayByName} from '../data';
 import BagModal_module from './bagModal.module.css';
+import { CartItem, Item, Sizes } from '../datatypes';
+import { BagItem } from '../bag-item/bag-item';
 
 export const BagModal = () => {
-   const { cartItems, showModal, toggleCartModal } = useCart();
+   const { cartItems, showModal, toggleCartModal, totalPrice } = useCart();
    const modalRef = useRef<HTMLDivElement>(null);
    const [isMouseOver, setIsMouseOver] = useState(false);
-   const totalPrice: number = cartItems.reduce(
-      (acc, item) => acc + parseFloat(item.price),
-      0
-   );
-
    useEffect(() => {
       const handleMouseEnter = () => {
          setIsMouseOver(true);
@@ -63,13 +60,31 @@ export const BagModal = () => {
       };
    }, [isMouseOver, showModal]);
 
+   function getItemFromId(id: string): Item {
+      // Extract the prefix (e.g., "pants" from "pants421")
+      const prefix = id.replace(/[0-9]+$/, '');
+
+      // Capitalize the first letter and concatenate "Data"
+      const arrayDataName = prefix.charAt(0).toUpperCase() + prefix.slice(1) + 'Data';
+      const arrayData: Item[] | undefined = dataArrayByName[arrayDataName];
+      return arrayData.find((item) => item.id == id)!;
+
+
+   }
+
    return (
       showModal && (
          <div className={styles.container} ref={modalRef}>
             <div className={styles.itemList}>
-               {cartItems.map((item) => (
-                  <BagItem {...item} />
-               ))}
+               {
+                  Array.from(cartItems.entries()).map(([key]) => {
+                     const [id, size] = key.split('#');
+                     const cartItem: CartItem = { ...getItemFromId(id), size: size as Sizes }
+                     return (
+                        <BagItem {...cartItem} />
+                     );
+                  })}
+
             </div>
             <div className={styles.ordersummary}>
                <div className={BagModal_module.ordersummaryheader}>
