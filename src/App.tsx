@@ -1,5 +1,4 @@
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
-import { useCart } from './CartContext';
 import styles from './app.module.css';
 import { BagModal } from './components/bagModal/bagModal';
 import { Header } from './components/header';

@@ -1,6 +1,6 @@
 import { AddToCart } from './AddToCart';
 import styles from './card.module.css';
-import { Item } from './datatypes';
+import { Item, Sizes } from './datatypes';
 import CardSizeSelector from './card-size-selector/card-size-selector';
 import { useState } from 'react';
 
@@ -11,7 +11,8 @@ export const Card: React.FC<Item> = ({
    image,
    price,
 }) => {
-   const [size, setSize] = useState<null | string>(null);
+
+   const [size, setSize] = useState<Sizes>(null);
 
    return (
       <div className={styles.cardContainer}>

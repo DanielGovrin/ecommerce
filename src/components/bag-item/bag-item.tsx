@@ -1,20 +1,21 @@
 import BagItem_module from './bag-item.module.css';
-import { Item } from '../datatypes';
+import { CartItem } from '../datatypes';
 import { BagSizeSelector } from '../bag-size-selector/size-selector';
 import { useCart } from '../../CartContext';
 import { QuantitySelect } from '../quantity-select/quantity-select';
 
-export const BagItem: React.FC<Item> = ({
+export const BagItem: React.FC<CartItem> = ({
    id,
    mainTitle,
    secondaryTitle,
    image,
    price,
+   size,
 }) => {
    const { removeFromCart } = useCart();
 
    const handleClick = () => {
-      removeFromCart(id);
+      removeFromCart(id, size);
    };
 
    return (
@@ -23,9 +24,8 @@ export const BagItem: React.FC<Item> = ({
          <div className={BagItem_module.test}>
             <h2>{mainTitle} </h2>
             <h3>{secondaryTitle}</h3>
-            <p></p>
             <div className={BagItem_module.productSelectionContainer}>
-               <BagSizeSelector />
+               <BagSizeSelector size={size} />
                <QuantitySelect />
             </div>
             <button
