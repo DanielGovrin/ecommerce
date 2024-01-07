@@ -10,7 +10,7 @@ export interface Item {
 
 export interface CartItem extends Item {
    size: Sizes;
-   setAddToCartClicked: (addToCartClicked: boolean) => void
+   setAddToCartClicked: (addToCartClicked: boolean) => void;
 }
 
 export interface SidebarItem {
