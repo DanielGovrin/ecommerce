@@ -9,24 +9,28 @@ export const AddToCart: React.FC<CartItem> = ({
    image,
    price,
    size,
+   setAddToCartClicked
 }) => {
    const { addToCart } = useCart();
    const handleClick = () => {
-      addToCart({
-         id,
-         mainTitle,
-         secondaryTitle,
-         image,
-         price,
-         size,
-      });
+      setAddToCartClicked(true);
+      if (size) {
+         addToCart({
+            id,
+            mainTitle,
+            secondaryTitle,
+            image,
+            price,
+            size,
+            setAddToCartClicked
+         });
+      }
    };
 
    return (
       <button
          className={styles.addToCartButton}
-         onClick={handleClick}
-         disabled={!size}>
+         onClick={handleClick}>
          <span className={styles.addToCartText}>Add To Cart</span>
       </button>
    );

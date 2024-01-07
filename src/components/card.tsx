@@ -12,6 +12,7 @@ export const Card: React.FC<Item> = ({
    price,
 }) => {
    const [size, setSize] = useState<Sizes>(null);
+   const [addToCartClicked, setAddToCartClicked] = useState<boolean>(false);
 
    return (
       <div className={styles.cardContainer}>
@@ -26,7 +27,13 @@ export const Card: React.FC<Item> = ({
             <h4 className={styles.secondaryTitle}>{secondaryTitle}</h4>
             <h3 className={styles.price}>{`$ ${price}`}</h3>
          </div>
-         <CardSizeSelector size={size} setSize={setSize} />
+         {/* The following div is just so that the error message will be aligned left just as the sizeselector component */}
+         <div>
+            {addToCartClicked && !size && (
+               <p className={styles.errorMessage}>Please choose a size</p>
+            )}
+            <CardSizeSelector size={size} setSize={setSize} />
+         </div>
          <AddToCart
             id={id}
             mainTitle={mainTitle}
@@ -34,6 +41,7 @@ export const Card: React.FC<Item> = ({
             image={image}
             size={size}
             price={price}
+            setAddToCartClicked={setAddToCartClicked}
          />
       </div>
    );

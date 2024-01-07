@@ -23,26 +23,24 @@ export const CartContext = createContext<CartContextProps | undefined>(
 export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
    children,
 }) => {
-   const [cartItems, setCartItems] = useState<Map<string, number>>(
-      new Map<string, number>()
-   );
+   const [cartItems, setCartItems] = useState<Map<string, number>>(new Map<string, number>());
    const [showModal, setShowModal] = useState(false);
    const [totalPrice, setTotalPrice] = useState<number>(0);
    const [numOfItems, setNumOfItems] = useState<number>(0);
 
    const addToCart = (item: CartItem) => {
       setTotalPrice((prevPrice) => prevPrice + parseFloat(item.price));
-      setNumOfItems((prevNumOfItems) => prevNumOfItems + 1);
+      setNumOfItems((prevNumOfItems) => prevNumOfItems + 1)
       setCartItems((prevCartItems) => {
          const generatedId = generateCartItemId(item.id, item.size);
          const quantity = prevCartItems.get(generatedId) ?? 0;
 
-         return new Map<string, number>(prevCartItems).set(
-            generatedId,
-            quantity + 1
-         );
+         return new Map<string, number>(prevCartItems).set(generatedId, quantity + 1);
       });
+
    };
+
+
 
    const removeFromCart = (item: CartItem) => {
       const generatedId = generateCartItemId(item.id, item.size);
@@ -61,7 +59,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
       setCartItems(newCart);
 
       //Update the number of items in the cart
-      setNumOfItems((prevNumOfItems) => prevNumOfItems - numOfItemsRemoved);
+      setNumOfItems((prevNumOfItems) => prevNumOfItems - numOfItemsRemoved)
       // Update the total price by subtracting the total price of the removed item
       setTotalPrice((prevTotalPrice) => prevTotalPrice - totalItemPrice);
    };
@@ -73,6 +71,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
    const toggleCartModal = () => {
       setShowModal((prev) => !prev);
    };
+
 
    return (
       <CartContext.Provider

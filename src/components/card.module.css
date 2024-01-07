@@ -50,3 +50,26 @@
    color: #3498db;
    font-weight: bold;
 }
+.errorAndSizeContainer {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start; 
+}
+
+.errorMessage {
+   color: red;
+   margin-left: 20px;
+   font-weight: 600;
+   font-size: 16px;
+   animation:  showErrorMessage 0.8s  ease-in-out;
+}
+
+@keyframes showErrorMessage {
+   from{
+      opacity: 0%;
+   }
+   to{
+      opacity:100%;
+   }
+}
+
