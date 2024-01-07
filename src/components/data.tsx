@@ -232,7 +232,7 @@ export const dataArrayByName: Record<string, Item[]> = {
    PantsData,
    ShirtsData,
    HatsData,
- };
+};
 
 export const SidebarData: SidebarItem[] = [
    {

@@ -1,7 +1,7 @@
 .addToCartButton {
    display: flex;
    justify-content: center;
-   background-color:  #162944;
+   background-color: #162944;
    border-radius: 100%;
    margin-top: 1.5rem;
    height: 50px;
@@ -13,12 +13,11 @@
 }
 
 .addToCartButton:active {
-   background-color:  #162944;
+   background-color: #162944;
 }
-.addToCartButton:hover{
+.addToCartButton:hover {
    background-color: rgb(253, 0, 207);
 }
-
 
 .addToCartButton span {
    align-self: center;

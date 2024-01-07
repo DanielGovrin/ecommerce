@@ -22,8 +22,7 @@ export const BagItem: React.FC<CartItem> = ({
          image,
          price,
          size,
-      }
-      );
+      });
    };
 
    return (

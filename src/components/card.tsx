@@ -11,7 +11,6 @@ export const Card: React.FC<Item> = ({
    image,
    price,
 }) => {
-
    const [size, setSize] = useState<Sizes>(null);
 
    return (

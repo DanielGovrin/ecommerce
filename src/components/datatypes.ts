@@ -1,4 +1,3 @@
-
 export type Sizes = 'S' | 'M' | 'L' | 'XL' | null;
 
 export interface Item {

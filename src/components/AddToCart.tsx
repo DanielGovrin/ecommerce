@@ -8,7 +8,7 @@ export const AddToCart: React.FC<CartItem> = ({
    secondaryTitle,
    image,
    price,
-   size,   
+   size,
 }) => {
    const { addToCart } = useCart();
    const handleClick = () => {
