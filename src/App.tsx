@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, MemoryRouter} from 'react-router-dom';
 import styles from './app.module.css';
 import { Header } from './components/header';
 import { Sidebar } from './components/sidebar';
@@ -11,6 +11,7 @@ import { Shirts } from './pages/shirts';
 export const App = () => {
    const [cartCount, setCartCount] = useState(0);
    return (
+      <MemoryRouter>
          <div className={styles.container}>
             <Header cartCount={cartCount} />
             <Sidebar />
@@ -32,5 +33,7 @@ export const App = () => {
                </Routes>
             </div>
          </div>
+      </MemoryRouter>
+
    );
 };
