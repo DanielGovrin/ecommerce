@@ -33,7 +33,7 @@ export const BagItem: React.FC<CartItem> = ({
             <h3>{secondaryTitle}</h3>
             <div className={BagItem_module.productSelectionContainer}>
                <BagSizeSelector size={size} />
-               <QuantitySelect quantity={cartItems.get(`${id}#${size}`)!} />
+               <QuantitySelect quantity={cartItems.get(`${id}#${size}`)!} size={size} id={id} mainTitle={mainTitle} secondaryTitle={secondaryTitle} image={image} price={price} />
             </div>
             <button
                className={BagItem_module.deleteButton}

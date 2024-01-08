@@ -10,13 +10,18 @@ export interface Item {
 
 export interface CartItem extends Item {
    size: Sizes;
-   setAddToCartClicked: (addToCartClicked: boolean) => void;
+   setAddToCartClicked?: (addToCartClicked: boolean) => void;
 }
 
 export interface SidebarItem {
    title: string;
    path: string;
    icon: JSX.Element;
+}
+
+export interface QuantitySelector extends Item{
+   size:Sizes;
+   quantity: number;
 }
 
 export interface CardSizeSelector {

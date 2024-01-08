@@ -9,11 +9,12 @@ export const AddToCart: React.FC<CartItem> = ({
    image,
    price,
    size,
-   setAddToCartClicked,
+   setAddToCartClicked
 }) => {
    const { addToCart } = useCart();
    const handleClick = () => {
-      setAddToCartClicked(true);
+      if (setAddToCartClicked)
+         setAddToCartClicked(true);
       if (size) {
          addToCart({
             id,
@@ -22,13 +23,15 @@ export const AddToCart: React.FC<CartItem> = ({
             image,
             price,
             size,
-            setAddToCartClicked,
+            setAddToCartClicked
          });
       }
    };
 
    return (
-      <button className={styles.addToCartButton} onClick={handleClick}>
+      <button
+         className={styles.addToCartButton}
+         onClick={handleClick}>
          <span className={styles.addToCartText}>Add To Cart</span>
       </button>
    );

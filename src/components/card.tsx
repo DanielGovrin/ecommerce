@@ -4,6 +4,7 @@ import { Item, Sizes } from './datatypes';
 import CardSizeSelector from './card-size-selector/card-size-selector';
 import { useState } from 'react';
 
+
 export const Card: React.FC<Item> = ({
    id,
    mainTitle,
@@ -27,7 +28,7 @@ export const Card: React.FC<Item> = ({
             <h4 className={styles.secondaryTitle}>{secondaryTitle}</h4>
             <h3 className={styles.price}>{`$ ${price}`}</h3>
          </div>
-         {/* The following div is just so that the error message will be aligned left just as the sizeselector component */}
+         {/* The following div is just so that the error message will be aligned left just as the sizeselector */}
          <div>
             {addToCartClicked && !size && (
                <p className={styles.errorMessage}>Please choose a size</p>

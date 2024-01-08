@@ -1,5 +1,5 @@
 import React, { createContext, useState, useContext } from 'react';
-import { CartItem, Sizes } from './components/datatypes';
+import { CartItem, Item, Sizes } from './components/datatypes';
 
 interface CartContextProps {
    cartItems: Map<string, number>;
@@ -10,9 +10,11 @@ interface CartContextProps {
    totalPrice: number;
    clearCart: () => void;
    numOfItems: number;
+   ChangeNumOfItems: (item: Item, size: Sizes, quantity: number) => void;
+
 }
 
-function generateCartItemId(id: string, size: Sizes) {
+export function generateCartItemId(id: string, size: Sizes) {
    return `${id}#${size}`;
 }
 
@@ -60,11 +62,27 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
       // Update the state with the new cartItems Map
       setCartItems(newCart);
 
-      //Update the number of items in the cart
+      // Update the number of items in the cart
       setNumOfItems((prevNumOfItems) => prevNumOfItems - numOfItemsRemoved);
       // Update the total price by subtracting the total price of the removed item
       setTotalPrice((prevTotalPrice) => prevTotalPrice - totalItemPrice);
    };
+
+   const ChangeNumOfItems = (item: Item, size: Sizes, quantity: number) => {
+      const generatedId = generateCartItemId(item.id, size);
+      const newCartItems = new Map<string, number>(cartItems);
+
+      // Calculating the old and new prices of the specific item
+      const oldNumOfItems: number = newCartItems.get(generatedId) ?? 0;
+      const oldItemPrice: number = oldNumOfItems * parseFloat(item.price);
+      const newItemPrice: number = parseFloat(item.price) * quantity;
+   
+      // Update the quantity for the specific item and size
+      newCartItems.set(generatedId, quantity);
+      setCartItems(newCartItems);
+      setTotalPrice((prevPrice) => prevPrice - oldItemPrice + newItemPrice);
+   }
+   
 
    const clearCart = () => {
       setCartItems(new Map<string, number>());
@@ -85,6 +103,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
             clearCart,
             totalPrice,
             numOfItems,
+            ChangeNumOfItems
          }}>
          {children}
       </CartContext.Provider>
