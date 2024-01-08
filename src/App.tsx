@@ -1,25 +1,39 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Hats from './pages/Hats';
-import Pants from './pages/Pants';
-import Shirts from './pages/Shirts';
+import { useState } from 'react';
+import { Route, Routes, MemoryRouter} from 'react-router-dom';
 import styles from './app.module.css';
-import Sidebar from './components/sidebar';
+import { Header } from './components/header';
+import { Sidebar } from './components/sidebar';
+import { Hats } from './pages/hats';
+import { Home } from './pages/home';
+import { Pants } from './pages/pants';
+import { Shirts } from './pages/shirts';
 
-function App() {
+export const App = () => {
+   const [cartCount, setCartCount] = useState(0);
    return (
-      <BrowserRouter>
+      <MemoryRouter>
          <div className={styles.container}>
+            <Header cartCount={cartCount} />
             <Sidebar />
             <div className={styles.content}>
                <Routes>
-                  <Route path="/Hats" element={<Hats />} />
-                  <Route path="/Pants" element={<Pants />} />
-                  <Route path="/Shirts" element={<Shirts />} />
+                  <Route path="/" element={<Home />} />
+                  <Route
+                     path="hats"
+                     element={<Hats setCartCount={setCartCount} />}
+                  />
+                  <Route
+                     path="pants"
+                     element={<Pants setCartCount={setCartCount} />}
+                  />
+                  <Route
+                     path="shirts"
+                     element={<Shirts setCartCount={setCartCount} />}
+                  />
                </Routes>
             </div>
          </div>
-      </BrowserRouter>
-   );
-}
+      </MemoryRouter>
 
-export default App;
+   );
+};

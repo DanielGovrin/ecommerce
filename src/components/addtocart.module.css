@@ -1,12 +1,32 @@
-.addtocart {
-   background-color: #4189f5;
-   padding: 10px 20px;
-   border-radius: 10px;
-   color: #ffffff;
-   cursor: pointer;
-   margin-bottom: 1rem;
+.addtocartContainer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
-.addtocart:active {
+.addToCartButton {
+   position: relative;
+   background-color: rgb(50, 180, 228);
+   border-radius: 18px;
+   margin-top: 1rem;
+   height: 50px;
+   width: 180px;
+   border: none;
+   color: #ffffff;
+   overflow: hidden;
+   cursor: pointer;
+}
+
+.addToCartButton:active {
    background-color: rgb(50, 107, 145);
+}
+
+
+.addToCartButton span {
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   font-size: 25px;
+   width: 150px;
 }

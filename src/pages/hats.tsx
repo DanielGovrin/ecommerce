@@ -1,15 +1,14 @@
+import { Card } from '../components/card';
 import { HatsData } from '../components/data';
-import Card from '../components/card';
+import { setCartCount } from '../components/datatypes';
 import styles from './contentpages.module.css';
 
-function Hats() {
+export const Hats = ({ setCartCount }: setCartCount) => {
    return (
       <div className={styles.pageContainer}>
          {HatsData.map((item) => (
-            <Card {...item} key={item.id} />
+            <Card {...item} setCartCount={setCartCount} />
          ))}
       </div>
    );
-}
-
-export default Hats;
+};

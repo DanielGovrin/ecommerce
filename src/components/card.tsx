@@ -1,24 +1,28 @@
-import { CardItem } from './datatypes';
+import { AddToCart } from './AddToCart';
 import styles from './card.module.css';
-import AddToCart from './AddToCart';
+import { CardItem, setCartCount } from './datatypes';
 
-function Card({ id, mainTitle, secondaryTitle, image, price }: CardItem) {
+export const Card = ({
+   mainTitle,
+   secondaryTitle,
+   image,
+   price,
+   setCartCount,
+}: CardItem & setCartCount) => {
    return (
       <div className={styles.cardContainer}>
-         <div className={styles.titles}>
-            <h1>{mainTitle}</h1>
-            <h3>{secondaryTitle}</h3>
-         </div>
          <img
             className={styles.img}
             src={image}
             alt={mainTitle}
             draggable={false}
          />
-         <h3 className={styles.price}>{price}</h3>
-         <AddToCart id={id} />
+         <div className={styles.listingContainer}>
+            <h3 className={styles.mainTitle}>{mainTitle}</h3>
+            <h4 className={styles.secondaryTitle}>{secondaryTitle}</h4>
+            <h3 className={styles.price}>{price}</h3>
+         </div>
+         <AddToCart setCartCount={setCartCount} />
       </div>
    );
-}
-
-export default Card;
+};

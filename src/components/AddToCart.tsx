@@ -1,18 +1,26 @@
+import { useState } from 'react';
 import styles from './addtocart.module.css';
+import { setCartCount } from './datatypes';
 
-interface AddToCartProps {
-   id: string;
-}
 
-function AddToCart({ id }: AddToCartProps) {
-   function carting() {
-      console.log('Add This Item To The Cart via the id');
-   }
+export const AddToCart = ({ setCartCount }: setCartCount) => {
+   const [isAnimating, setIsAnimating] = useState(false);
+   const handleClick = () => {
+      setIsAnimating(true)
+
+
+      setTimeout(() => {
+         setIsAnimating(false);
+      }, 500);
+      setCartCount((prevCartCount) => prevCartCount + 1);
+   };
+
    return (
-      <div className={styles.addtocart} onClick={carting}>
-         Add To Cart
+      <div className={styles.addtocartContainer}>
+         <button className={`${styles.addToCartButton} ${isAnimating ? styles.animateCart : ''}`} onClick={handleClick}>
+            <span className={styles.addToCartText}>Add To Cart</span>
+         </button>
       </div>
    );
-}
+};
 
-export default AddToCart;

@@ -1,15 +1,15 @@
+import { Card } from '../components/card';
 import { PantsData } from '../components/data';
-import Card from '../components/card';
+import { setCartCount } from '../components/datatypes';
 import styles from './contentpages.module.css';
 
-function Pants() {
+export const Pants = ({ setCartCount }: setCartCount) => {
    return (
       <div className={styles.pageContainer}>
          {PantsData.map((item) => (
-            <Card {...item} key={item.id} />
+            <Card {...item} setCartCount={setCartCount} />
          ))}
       </div>
    );
-}
+};
 
-export default Pants;
