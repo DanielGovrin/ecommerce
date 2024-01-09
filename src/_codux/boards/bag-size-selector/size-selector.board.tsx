@@ -4,7 +4,7 @@ import { BagSizeSelector } from '../../../components/bag-size-selector/size-sele
 export default createBoard({
    name: 'BagSizeSelector',
 
-   Board: () => <BagSizeSelector />,
+   Board: () => <BagSizeSelector size={"XL"}/>,
    isSnippet: true,
    environmentProps: {
       canvasWidth: 104,
