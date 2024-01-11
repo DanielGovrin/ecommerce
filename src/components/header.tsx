@@ -1,5 +1,5 @@
 import styles from './header.module.css';
-import { useCart } from '../CartContext';
+import { useCart } from '../utility';
 
 export const Header = () => {
    const { toggleCartModal, numOfItems } = useCart();

@@ -1,4 +1,4 @@
-import { useCart } from '../CartContext';
+import { useCart } from '../utility';
 import styles from './addtocart.module.css';
 import { CartItem } from './datatypes';
 

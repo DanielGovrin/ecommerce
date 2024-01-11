@@ -1,17 +1,6 @@
-import React, { createContext, useState, useContext } from 'react';
-import { CartItem, Item, Sizes } from './components/datatypes';
-
-interface CartContextProps {
-   cartItems: Map<string, number>;
-   addToCart: (item: CartItem) => void;
-   removeFromCart: (item: CartItem) => void;
-   toggleCartModal: () => void;
-   showModal: boolean;
-   totalPrice: number;
-   clearCart: () => void;
-   numOfItems: number;
-   ChangeNumOfItems: (item: Item, size: Sizes, quantity: number) => void;
-}
+import React, { createContext, useState } from 'react';
+import { CartContextProps, CartItem, Item, Sizes } from './components/datatypes';
+import { generateCartItemId } from './utility';
 
 
 export const CartContext = createContext<CartContextProps | undefined>(
@@ -42,9 +31,6 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
       });
    };
 
-   const generateCartItemId = (id: string, size: Sizes) => {
-      return `${id}#${size}`;
-   }
 
    const removeFromCart = (item: CartItem) => {
       const generatedId = generateCartItemId(item.id, item.size);
@@ -110,10 +96,3 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
    );
 };
 
-export const useCart = (): CartContextProps => {
-   const context = useContext(CartContext);
-   if (!context) {
-      throw new Error('useCart must be used within a CartProvider');
-   }
-   return context;
-};

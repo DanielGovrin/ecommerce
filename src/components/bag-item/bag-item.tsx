@@ -1,7 +1,7 @@
 import BagItem_module from './bag-item.module.css';
 import { CartItem } from '../datatypes';
 import { BagSizeSelector } from '../bag-size-selector/size-selector';
-import { useCart } from '../../CartContext';
+import { useCart } from '../../utility';
 import { QuantitySelect } from '../quantity-select/quantity-select';
 
 export const BagItem: React.FC<CartItem> = ({

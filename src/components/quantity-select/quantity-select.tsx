@@ -1,5 +1,5 @@
 import { ChangeEvent } from 'react';
-import { useCart } from '../../CartContext';
+import { useCart } from '../../utility';
 import { QuantitySelector } from '../datatypes';
 import QuantitySelect_module from './quantity-select.module.css';
 

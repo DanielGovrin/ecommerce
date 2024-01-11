@@ -1,4 +1,6 @@
-
+import * as FaIcons from 'react-icons/fa';
+import * as IoIcons5 from 'react-icons/io5';
+import * as PiIcons from 'react-icons/pi';
 import { SidebarItem, Item } from './datatypes';
 
 export const PantsData: Item[] = [
@@ -236,18 +238,21 @@ export const SidebarData: SidebarItem[] = [
    {
       title: 'HOME',
       path: '/',
-
+      icon: <IoIcons5.IoHome />,
    },
    {
       title: 'PANTS',
       path: '/Pants',
+      icon: <PiIcons.PiPants />,
    },
    {
       title: 'SHIRTS',
       path: '/Shirts',
+      icon: <PiIcons.PiTShirtBold />,
    },
    {
       title: 'HATS',
       path: '/Hats',
+      icon: <FaIcons.FaHatCowboy />,
    },
 ];

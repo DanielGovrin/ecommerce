@@ -1,5 +1,17 @@
 export type Sizes = 'S' | 'M' | 'L' | 'XL' | null;
 
+export interface CartContextProps {
+   cartItems: Map<string, number>;
+   addToCart: (item: CartItem) => void;
+   removeFromCart: (item: CartItem) => void;
+   toggleCartModal: () => void;
+   showModal: boolean;
+   totalPrice: number;
+   clearCart: () => void;
+   numOfItems: number;
+   ChangeNumOfItems: (item: Item, size: Sizes, quantity: number) => void;
+}
+
 export interface Item {
    id: string;
    mainTitle: string;
@@ -16,7 +28,7 @@ export interface CartItem extends Item {
 export interface SidebarItem {
    title: string;
    path: string;
-   icon?: JSX.Element;
+   icon: JSX.Element;
 }
 
 export interface QuantitySelector extends Item{

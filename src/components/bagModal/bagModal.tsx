@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { useCart } from '../../CartContext';
+import { useCart } from '../../utility';
 import styles from './bagmodal.module.css';
 import { dataArrayByName } from '../data';
 import BagModal_module from './bagModal.module.css';

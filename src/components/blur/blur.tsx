@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './blur.module.css';
-import { useCart } from '../../CartContext';
+import { useCart } from '../../utility';
 
 export const Blur: React.FC = () => {
    const { showModal } = useCart();
