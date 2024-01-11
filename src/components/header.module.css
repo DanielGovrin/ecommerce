@@ -4,7 +4,7 @@
    width: 100vw;
    height: 8vh;
    justify-content: space-between;
-   align-items: center; /* add this line */
+   align-items: center;
 
    border-bottom: 1px solid black;
 }
@@ -96,5 +96,5 @@ input:focus {
    justify-content: center;
    align-items: center;
    color: white;
-   margin: 0; /* Remove default margin */
+   margin: 0;
 }

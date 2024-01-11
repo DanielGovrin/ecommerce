@@ -31,8 +31,8 @@ export interface SidebarItem {
    icon: JSX.Element;
 }
 
-export interface QuantitySelector extends Item{
-   size:Sizes;
+export interface QuantitySelector extends Item {
+   size: Sizes;
    quantity: number;
 }
 

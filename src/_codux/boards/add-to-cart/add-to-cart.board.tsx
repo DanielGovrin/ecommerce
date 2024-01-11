@@ -13,7 +13,7 @@ export default createBoard({
             secondaryTitle={PantsData[0].secondaryTitle}
             image={PantsData[0].image}
             price={'400'}
-            size={"L"}
+            size={'L'}
          />
       </CartProvider>
    ),

@@ -3,7 +3,17 @@ import { QuantitySelect } from '../../../components/quantity-select/quantity-sel
 
 export default createBoard({
    name: 'QuantitySelect',
-   Board: () => <QuantitySelect size={null} quantity={0} id={''} mainTitle={''} secondaryTitle={''} image={''} price={''} />,
+   Board: () => (
+      <QuantitySelect
+         size={null}
+         quantity={0}
+         id={''}
+         mainTitle={''}
+         secondaryTitle={''}
+         image={''}
+         price={''}
+      />
+   ),
    isSnippet: true,
    environmentProps: {
       canvasWidth: 125,

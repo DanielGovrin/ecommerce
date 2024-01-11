@@ -4,7 +4,6 @@ import { Item, Sizes } from './datatypes';
 import CardSizeSelector from './card-size-selector/card-size-selector';
 import { useState } from 'react';
 
-
 export const Card: React.FC<Item> = ({
    id,
    mainTitle,

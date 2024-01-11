@@ -1,7 +1,11 @@
 import React, { createContext, useState } from 'react';
-import { CartContextProps, CartItem, Item, Sizes } from './components/datatypes';
+import {
+   CartContextProps,
+   CartItem,
+   Item,
+   Sizes,
+} from './components/datatypes';
 import { generateCartItemId } from './utility';
-
 
 export const CartContext = createContext<CartContextProps | undefined>(
    undefined
@@ -31,26 +35,14 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
       });
    };
 
-
    const removeFromCart = (item: CartItem) => {
       const generatedId = generateCartItemId(item.id, item.size);
-
-      // Get the number of items and calculate the total price for the removed item
       const numOfItemsRemoved: number = cartItems.get(generatedId) ?? 0;
       const totalItemPrice = parseFloat(item.price) * numOfItemsRemoved;
-
-      // Remove the item from the cartItems Map
       cartItems.delete(generatedId);
-
-      // Create a new Map to represent the updated cartItems (shallow copy)
       const newCart = new Map<string, number>(cartItems);
-
-      // Update the state with the new cartItems Map
       setCartItems(newCart);
-
-      // Update the number of items in the cart
       setNumOfItems((prevNumOfItems) => prevNumOfItems - numOfItemsRemoved);
-      // Update the total price by subtracting the total price of the removed item
       setTotalPrice((prevTotalPrice) => prevTotalPrice - totalItemPrice);
    };
 
@@ -67,8 +59,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
       newCartItems.set(generatedId, quantity);
       setCartItems(newCartItems);
       setTotalPrice((prevPrice) => prevPrice - oldItemPrice + newItemPrice);
-   }
-
+   };
 
    const clearCart = () => {
       setCartItems(new Map<string, number>());
@@ -95,4 +86,3 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
       </CartContext.Provider>
    );
 };
-
