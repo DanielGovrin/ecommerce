@@ -16,7 +16,7 @@ export interface CartItem extends Item {
 export interface SidebarItem {
    title: string;
    path: string;
-   icon: JSX.Element;
+   icon?: JSX.Element;
 }
 
 export interface QuantitySelector extends Item{

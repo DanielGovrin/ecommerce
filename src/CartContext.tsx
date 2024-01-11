@@ -11,12 +11,8 @@ interface CartContextProps {
    clearCart: () => void;
    numOfItems: number;
    ChangeNumOfItems: (item: Item, size: Sizes, quantity: number) => void;
-
 }
 
-export function generateCartItemId(id: string, size: Sizes) {
-   return `${id}#${size}`;
-}
 
 export const CartContext = createContext<CartContextProps | undefined>(
    undefined
@@ -45,6 +41,10 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
          );
       });
    };
+
+   const generateCartItemId = (id: string, size: Sizes) => {
+      return `${id}#${size}`;
+   }
 
    const removeFromCart = (item: CartItem) => {
       const generatedId = generateCartItemId(item.id, item.size);
@@ -76,13 +76,13 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
       const oldNumOfItems: number = newCartItems.get(generatedId) ?? 0;
       const oldItemPrice: number = oldNumOfItems * parseFloat(item.price);
       const newItemPrice: number = parseFloat(item.price) * quantity;
-   
+
       // Update the quantity for the specific item and size
       newCartItems.set(generatedId, quantity);
       setCartItems(newCartItems);
       setTotalPrice((prevPrice) => prevPrice - oldItemPrice + newItemPrice);
    }
-   
+
 
    const clearCart = () => {
       setCartItems(new Map<string, number>());
@@ -103,7 +103,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
             clearCart,
             totalPrice,
             numOfItems,
-            ChangeNumOfItems
+            ChangeNumOfItems,
          }}>
          {children}
       </CartContext.Provider>
