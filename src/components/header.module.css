@@ -1,7 +1,11 @@
 .headerContainer {
    display: flex;
-   flex-basis: 100vw;
+   position: sticky;
+   width: 100vw;
+   height: 8vh;
    justify-content: space-between;
+   align-items: center;
+
    border-bottom: 1px solid black;
 }
 
@@ -15,6 +19,7 @@
    from {
       transform: rotate(0deg);
    }
+
    to {
       transform: rotate(360deg);
    }
@@ -74,6 +79,22 @@ input:focus {
    border: solid transparent;
    background: transparent url('../../src/assets/shopping-bag.svg') no-repeat
       center;
-   /* background: red; */
    cursor: pointer;
+   opacity: 1;
+}
+
+.numOfItems {
+   position: relative;
+   top: 45%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background-color: red;
+   border-radius: 50%;
+   width: 20px;
+   height: 22px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: white;
+   margin: 0;
 }

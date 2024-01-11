@@ -1,7 +1,12 @@
-import { cartCount } from './datatypes';
 import styles from './header.module.css';
+import { useCart } from '../utility';
 
-export const Header = ({ cartCount }: cartCount) => {
+export const Header = () => {
+   const { toggleCartModal, numOfItems } = useCart();
+   const handleShoppingBagClick = () => {
+      toggleCartModal();
+   };
+
    return (
       <div className={styles.headerContainer}>
          <img
@@ -23,8 +28,15 @@ export const Header = ({ cartCount }: cartCount) => {
                />
             </form>
 
-            <button type="button" className={styles.shoppingBagButton}>
-               <p>{cartCount <= 0 ? '' : cartCount < 10 ? cartCount : '9+'}</p>
+            <button
+               type="button"
+               className={styles.shoppingBagButton}
+               onClick={handleShoppingBagClick}>
+               {numOfItems > 0 && (
+                  <p className={styles.numOfItems}>
+                     {numOfItems < 10 ? numOfItems : '9+'}
+                  </p>
+               )}
             </button>
          </div>
       </div>

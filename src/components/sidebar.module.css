@@ -1,13 +1,17 @@
 .navbar {
-   height: 100vh;
+   width: 10vh;
    flex: 0 0 10%;
+   padding-top: 35px;
 }
 
 .listItem {
-   margin: 0.5rem;
-   padding: 0.2rem;
-   border-radius: 5px;
-   color: black;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 0.7rem;
+   border-radius: 50px;
+   border: 1px solid black;
+   background-color: white;
 }
 
 .listItem:hover {
@@ -15,17 +19,10 @@
    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.listItem:active {
-   background-color: rgba(7, 7, 7, 0.5);
-   box-shadow: 1px 1px 1px #1c1c1c9e;
-   color: black;
-}
-
 .sidebarContent {
-   display: flex;
-   align-items: center;
-   gap: 1rem;
+   font-family: 'Climate Crisis', sans-serif;
    color: #01001e;
-   margin-left: 0.5rem;
-   font-size: 1.6rem;
+   font-size: 18px;
+   letter-spacing: 0.6px;
+   text-align: center;
 }

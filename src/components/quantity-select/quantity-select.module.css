@@ -1,0 +1,34 @@
+.container {
+   display: flex;
+   flex-direction: row;
+   height: 30px;
+}
+
+.text {
+   color: #707072;
+   margin: 0px;
+   font-size: 16px;
+   font-weight: 400;
+   line-height: 28px;
+   font-family: 'Helvetica Now Text', Helvetica, Arial, sans-serif;
+   align-self: center;
+}
+
+.selectBar {
+   font-family: Tahoma, sans-serif;
+   padding-left: 0px;
+   padding-right: 0px;
+   font-size: 16px;
+   height: 21px;
+   border-radius: 2px;
+   font-weight: 300;
+   font-style: normal;
+   text-align: center;
+   border: 0px solid black;
+   color: #707072;
+   padding-bottom: 0px;
+   align-self: center;
+   margin: 0px 0px 2px 2px;
+   width: 38px;
+   line-height: 28px;
+}

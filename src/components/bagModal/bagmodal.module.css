@@ -1,0 +1,45 @@
+.container {
+   position: absolute;
+   display: flex;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 70vw;
+   height: 60vh;
+   background-color: #fff;
+   border: 1px solid #ccc;
+   border-radius: 15px;
+   padding: 0px;
+   z-index: 1;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+}
+
+.itemList {
+   margin: 0px;
+   overflow: auto;
+   display: flex;
+   flex-direction: column;
+   width: 45%;
+   height: 90%;
+}
+
+.ordersummary {
+   height: 90%;
+   width: 45%;
+   display: flex;
+   flex-direction: column;
+}
+
+.ordersummaryheader {
+   width: 100%;
+   height: 10%;
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+}
+
+.summarytext {
+   display: inline-block;
+}

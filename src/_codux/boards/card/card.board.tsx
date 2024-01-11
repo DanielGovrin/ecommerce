@@ -1,22 +1,26 @@
 import { createBoard } from '@wixc3/react-board';
 import { Card } from '../../../components/card';
 import { PantsData } from '../../../components/data';
+import { CartProvider } from '../../../CartContext';
 
 export default createBoard({
-    name: 'Card',
-    Board: () => (
-        <Card
-            secondaryTitle={''}
+   name: 'Card',
+   Board: () => (
+      <CartProvider>
+         <Card
+            id={'pants1'}
+            mainTitle={PantsData[0].mainTitle}
+            secondaryTitle={PantsData[0].secondaryTitle}
             image={PantsData[0].image}
-            price={'bazillion $'}
-            mainTitle={'Cool pants'} setCartCount={function(count: number | ((prevCartCount: number) => number)): void {
-                throw new Error('Function not implemented.');
-            }} />
-    ),
-    isSnippet: true,
-    environmentProps: {
-        canvasWidth: 360,
-        windowHeight: 584,
-        windowWidth: 756,
-    },
+            price={'400'}
+         />
+      </CartProvider>
+   ),
+   isSnippet: true,
+   environmentProps: {
+      canvasWidth: 344,
+      windowHeight: 478,
+      windowWidth: 756,
+      canvasHeight: 604,
+   },
 });

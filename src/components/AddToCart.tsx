@@ -1,26 +1,35 @@
-import { useState } from 'react';
+import { CartItem } from './datatypes';
+import { useCart } from '../utility';
 import styles from './addtocart.module.css';
-import { setCartCount } from './datatypes';
 
-
-export const AddToCart = ({ setCartCount }: setCartCount) => {
-   const [isAnimating, setIsAnimating] = useState(false);
+export const AddToCart: React.FC<CartItem> = ({
+   id,
+   mainTitle,
+   secondaryTitle,
+   image,
+   price,
+   size,
+   setAddToCartClicked,
+}) => {
+   const { addToCart } = useCart();
    const handleClick = () => {
-      setIsAnimating(true)
-
-
-      setTimeout(() => {
-         setIsAnimating(false);
-      }, 500);
-      setCartCount((prevCartCount) => prevCartCount + 1);
+      if (setAddToCartClicked) setAddToCartClicked(true);
+      if (size) {
+         addToCart({
+            id,
+            mainTitle,
+            secondaryTitle,
+            image,
+            price,
+            size,
+            setAddToCartClicked,
+         });
+      }
    };
 
    return (
-      <div className={styles.addtocartContainer}>
-         <button className={`${styles.addToCartButton} ${isAnimating ? styles.animateCart : ''}`} onClick={handleClick}>
-            <span className={styles.addToCartText}>Add To Cart</span>
-         </button>
-      </div>
+      <button className={styles.addToCartButton} onClick={handleClick}>
+         <span className={styles.addToCartText}>Add To Cart</span>
+      </button>
    );
 };
-
