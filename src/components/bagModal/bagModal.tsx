@@ -10,6 +10,7 @@ export const BagModal = () => {
    const { cartItems, showModal, toggleCartModal, totalPrice } = useCart();
    const modalRef = useRef<HTMLDivElement>(null);
    const [isMouseOver, setIsMouseOver] = useState(false);
+   const currentModalRef = modalRef.current;
    useEffect(() => {
       const handleMouseEnter = () => {
          setIsMouseOver(true);
@@ -42,12 +43,14 @@ export const BagModal = () => {
       }
 
       return () => {
+         
          document.removeEventListener('mousedown', handleClickOutside);
-         modalRef.current?.removeEventListener('mouseenter', handleMouseEnter);
-         modalRef.current?.removeEventListener('mouseleave', handleMouseLeave);
+         currentModalRef?.removeEventListener('mouseenter', handleMouseEnter);
+         currentModalRef?.removeEventListener('mouseleave', handleMouseLeave);
          document.removeEventListener('mousemove', handleGlobalMouseMove);
-      };
-   }, [showModal, toggleCartModal]);
+       };
+       
+   }, [showModal, toggleCartModal,  currentModalRef]);
 
    useEffect(() => {
       document.body.style.cursor = showModal
