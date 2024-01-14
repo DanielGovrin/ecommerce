@@ -11,17 +11,22 @@
    margin: 0.7rem;
    border-radius: 50px;
    border: 1px solid black;
-   background-color: white;
 }
 
+
+.sidebarContent:hover,
 .listItem:hover {
-   background-color: rgba(109, 107, 107, 0.5);
-   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+   background-color: rgba(0, 0, 0);
+   color:white;
 }
 
 .sidebarContent {
    font-family: 'Climate Crisis', sans-serif;
-   color: #01001e;
+   height:100%;
+   width:100%;
+   color: #000000;
+   border-radius: 50px;
+   background-color: white;
    font-size: 18px;
    letter-spacing: 0.6px;
    text-align: center;

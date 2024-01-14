@@ -9,6 +9,7 @@ import { Pants } from './pages/pants';
 import { Shirts } from './pages/shirts';
 import { Blur } from './components/blur/blur';
 
+
 export const App = () => {
    return (
       <MemoryRouter>
