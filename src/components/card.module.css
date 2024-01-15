@@ -1,77 +1,77 @@
 .cardContainer {
-    display: flex;
-    align-items: center;
-    height: 450px;
-    width: 320px;
-    flex-direction: column;
-    border-radius: 18px;
-    background-color: white;
-    border: 1px solid rgb(0, 0, 0);
-    box-shadow: 5px 5px;
-    transition: box-shadow 0.5s ease;
-    flex-wrap: nowrap;
+   display: flex;
+   align-items: center;
+   height: 450px;
+   width: 320px;
+   flex-direction: column;
+   border-radius: 18px;
+   background-color: white;
+   border: 1px solid rgb(0, 0, 0);
+   box-shadow: 5px 5px;
+   transition: box-shadow 0.5s ease;
+   flex-wrap: nowrap;
 }
 
 .cardContainer:hover {
-    box-shadow: 10px 10px rgb(253, 0, 207);
+   box-shadow: 10px 10px rgb(253, 0, 207);
 }
 
 .img {
-    align-self: center;
-    width: 55%;
-    height: 45%;
-    border-radius: 18px;
-    margin-bottom: 15px;
+   align-self: center;
+   width: 55%;
+   height: 45%;
+   border-radius: 18px;
+   margin-bottom: 15px;
 }
 
 .listingContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
 }
 
 .mainTitle {
-    font-size: 16px;
+   font-size: 16px;
 }
 
 .mainTitle,
 .secondaryTitle,
 .price {
-    margin: 2px 0;
+   margin: 2px 0;
 }
 
 .mainTitle {
-    font-family: 'Climate Crisis', sans-serif;
-    letter-spacing: 0.5px;
+   font-family: 'Climate Crisis', sans-serif;
+   letter-spacing: 0.5px;
 }
 
 .price {
-    font-size: 1.6rem;
-    color: #3498db;
-    font-weight: bold;
+   font-size: 1.6rem;
+   color: #3498db;
+   font-weight: bold;
 }
 
 .errorAndSizeContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
 }
 
 .errorMessage {
-    color: red;
-    margin-left: 20px;
-    font-weight: 600;
-    font-size: 16px;
-    animation: showErrorMessage 0.8s ease-in-out;
+   color: red;
+   margin-left: 20px;
+   font-weight: 600;
+   font-size: 16px;
+   animation: showErrorMessage 0.8s ease-in-out;
 }
 
 @keyframes showErrorMessage {
-    from {
-        opacity: 0%;
-    }
+   from {
+      opacity: 0%;
+   }
 
-    to {
-        opacity: 100%;
-    }
+   to {
+      opacity: 100%;
+   }
 }

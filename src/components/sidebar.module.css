@@ -13,17 +13,16 @@
    border: 1px solid black;
 }
 
-
 .sidebarContent:hover,
 .listItem:hover {
    background-color: rgba(0, 0, 0);
-   color:white;
+   color: white;
 }
 
 .sidebarContent {
    font-family: 'Climate Crisis', sans-serif;
-   height:100%;
-   width:100%;
+   height: 100%;
+   width: 100%;
    color: #000000;
    border-radius: 50px;
    background-color: white;

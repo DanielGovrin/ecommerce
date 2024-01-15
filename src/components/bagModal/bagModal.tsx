@@ -43,14 +43,12 @@ export const BagModal = () => {
       }
 
       return () => {
-         
          document.removeEventListener('mousedown', handleClickOutside);
          currentModalRef?.removeEventListener('mouseenter', handleMouseEnter);
          currentModalRef?.removeEventListener('mouseleave', handleMouseLeave);
          document.removeEventListener('mousemove', handleGlobalMouseMove);
-       };
-       
-   }, [showModal, toggleCartModal,  currentModalRef]);
+      };
+   }, [showModal, toggleCartModal, currentModalRef]);
 
    useEffect(() => {
       document.body.style.cursor = showModal

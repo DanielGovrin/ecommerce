@@ -23,11 +23,10 @@
    font-family: 'Inconsolata', monospace;
    font-weight: 500;
    font-size: 20px;
-
 }
 
 .sizeButton:hover {
-   color:white;
+   color: white;
    background-color: black;
 }
 
@@ -35,5 +34,5 @@
    color: #162944;
    border: 2px solid #162944;
    background-color: black;
-   color:white;
+   color: white;
 }
