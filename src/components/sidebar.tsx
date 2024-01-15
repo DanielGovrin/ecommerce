@@ -9,6 +9,7 @@ export const Sidebar = () => {
          {SidebarData.map((item: SidebarItem, index: number) => (
             <li key={index} className={styles.listItem}>
                <Link
+                  role='link'
                   to={item.path}
                   draggable={false}
                   className={styles.sidebarContent}>

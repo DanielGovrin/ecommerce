@@ -1,9 +1,11 @@
 import { Page } from 'playwright-chromium';
 
 export class NavigationDriver {
-   constructor(private page: Page) {}
+    constructor(private page: Page) {}
 
-   setPage(page: Page) {
-      this.page = page;
-   }
+    async clickOnLinkByName(linkName: string) {
+        const link = await this.page.getByRole('link', { name: linkName });
+        return link.click();
+    }
+
 }
