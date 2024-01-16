@@ -1,4 +1,4 @@
-import { MemoryRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import styles from './app.module.css';
 import { BagModal } from './components/bagModal/bagModal';
 import { Header } from './components/header';
@@ -11,7 +11,7 @@ import { Blur } from './components/blur/blur';
 
 export const App = () => {
    return (
-      <MemoryRouter>
+      <BrowserRouter>
          <div className={styles.container}>
             <Blur />
             <BagModal />
@@ -26,6 +26,6 @@ export const App = () => {
                </Routes>
             </div>
          </div>
-      </MemoryRouter>
+      </BrowserRouter>
    );
 };

@@ -20,7 +20,6 @@ describe('My tests', function () {
       browser = newBrowser;
       context = newContext;
       server = newServer;
-      page = await context.newPage();
       navigationDriver = new NavigationDriver(page);
    });
 
@@ -28,6 +27,7 @@ describe('My tests', function () {
       page = await context.newPage();
       await page.goto(`http://localhost:${8000}`);
       await page.waitForLoadState();
+      navigationDriver.setPage(page);
    });
 
    afterEach(async () => {
@@ -37,6 +37,7 @@ describe('My tests', function () {
    after(async () => {
       await serverTeardown(context, browser, server);
    });
+
    describe('Sidebar Navigation', async () => {
       it('should navigate to shirts url', async () => {
          const id = 'SHIRTS';
@@ -44,5 +45,16 @@ describe('My tests', function () {
          const currentUrl = navigationDriver.getPageUrl();
          expect(currentUrl).to.equal(`http://localhost:${8000}/Shirts`);
       });
+
+      it('should navigate to home page', async () => {
+         const id = 'HOME';
+         await navigationDriver.clickOnLinkById(id);
+         const currentUrl = navigationDriver.getPageUrl();
+         expect(currentUrl).to.equal(`http://localhost:${8000}/`)
+      })
    });
+   describe('Adding items to cart', async () => {
+
+   })
+
 });
