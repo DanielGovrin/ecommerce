@@ -15,6 +15,11 @@
 .cardContainer:hover {
    box-shadow: 10px 10px rgb(253, 0, 207);
 }
+.notVisible {
+   visibility: hidden;
+   height: 0px;
+   width: 0px;
+}
 
 .img {
    align-self: center;
