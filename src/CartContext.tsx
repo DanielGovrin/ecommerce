@@ -1,22 +1,11 @@
 import React, { createContext, useState } from 'react';
-import {
-   CartContextProps,
-   CartItem,
-   Item,
-   Sizes,
-} from './components/datatypes';
+import { CartContextProps, CartItem, Item, Sizes } from './components/datatypes';
 import { generateCartItemId } from './utility';
 
-export const CartContext = createContext<CartContextProps | undefined>(
-   undefined
-);
+export const CartContext = createContext<CartContextProps | undefined>(undefined);
 
-export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
-   children,
-}) => {
-   const [cartItems, setCartItems] = useState<Map<string, number>>(
-      new Map<string, number>()
-   );
+export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+   const [cartItems, setCartItems] = useState<Map<string, number>>(new Map<string, number>());
    const [showModal, setShowModal] = useState(false);
    const [totalPrice, setTotalPrice] = useState<number>(0);
    const [numOfItems, setNumOfItems] = useState<number>(0);
@@ -28,10 +17,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({
          const generatedId = generateCartItemId(item.id, item.size);
          const quantity = prevCartItems.get(generatedId) ?? 0;
 
-         return new Map<string, number>(prevCartItems).set(
-            generatedId,
-            quantity + 1
-         );
+         return new Map<string, number>(prevCartItems).set(generatedId, quantity + 1);
       });
    };
 

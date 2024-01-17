@@ -29,8 +29,7 @@
 }
 
 .deleteButton {
-   background: transparent url('../../../src/assets/delete-button.svg')
-      no-repeat center;
+   background: transparent url('../../../src/assets/delete-button.svg') no-repeat center;
    width: 30px;
    height: 32px;
    border: none;

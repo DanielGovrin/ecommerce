@@ -43,9 +43,7 @@ export const BagItem: React.FC<CartItem> = ({
                   price={price}
                />
             </div>
-            <button
-               className={BagItem_module.deleteButton}
-               onClick={handleClick}></button>
+            <button className={BagItem_module.deleteButton} onClick={handleClick}></button>
             <div className={BagItem_module.deleteContainer} />
          </div>
          <h4 className={BagItem_module.price}>{`$ ${price}`}</h4>

@@ -12,7 +12,7 @@ import { Blur } from './components/blur/blur';
 export const App = () => {
    return (
       <BrowserRouter>
-         <div className={styles.container} data-testid = "appContainer">
+         <div className={styles.container} data-testid="appContainer">
             <Blur />
             <BagModal />
             <Header />

@@ -28,7 +28,10 @@ export const AddToCart: React.FC<CartItem> = ({
    };
 
    return (
-      <button className={styles.addToCartButton} onClick={handleClick}>
+      <button
+         className={styles.addToCartButton}
+         onClick={handleClick}
+         data-testid={`${id} + add to cart button`}>
          <span className={styles.addToCartText}>Add To Cart</span>
       </button>
    );
