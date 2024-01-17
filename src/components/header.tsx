@@ -29,6 +29,7 @@ export const Header = () => {
             </form>
 
             <button
+               data-testid='shoppingBagButton'
                type="button"
                className={styles.shoppingBagButton}
                onClick={handleShoppingBagClick}>

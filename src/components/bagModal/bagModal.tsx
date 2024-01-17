@@ -73,8 +73,7 @@ export const BagModal = () => {
    }
 
    return (
-      showModal && (
-         <div className={styles.container} ref={modalRef}>
+         <div className={showModal ? styles.container : styles.notVisible} ref={modalRef} data-testid ='bagModal'>
             <div className={styles.itemList}>
                {Array.from(cartItems.entries()).map(([key]) => {
                   const [id, size] = key.split('#');
@@ -99,5 +98,4 @@ export const BagModal = () => {
             </div>
          </div>
       )
-   );
 };

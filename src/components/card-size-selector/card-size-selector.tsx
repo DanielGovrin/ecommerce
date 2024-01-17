@@ -13,14 +13,14 @@ const SizeSelector: React.FC<CardSizeSelector> = ({ size, setSize }) => {
       <form className={styles.sizeButtons} action="none">
          {sizes.map((currentSize) => (
             <button
+               data-testid={`${currentSize}`}
                key={currentSize}
                type="button"
                className={`${styles.sizeButton} ${styles[currentSize!]}
-                                ${
-                                   size === currentSize
-                                      ? styles.selectedSize
-                                      : ''
-                                }`}
+                                ${size === currentSize
+                     ? styles.selectedSize
+                     : ''
+                  }`}
                onClick={() => handleSelectSize(currentSize)}>
                {currentSize}
             </button>

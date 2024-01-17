@@ -3,6 +3,7 @@ import { Page, Browser, BrowserContext } from 'playwright-chromium';
 import { ViteDevServer } from 'vite';
 import { serverSetup, serverTeardown } from '../test-kit/server-setup';
 import { NavigationDriver } from '../test-kit/navigation-driver';
+import { CartDriver } from '../test-kit/cart-driver';
 
 describe('My tests', function () {
    let page: Page;
@@ -10,6 +11,7 @@ describe('My tests', function () {
    let context: BrowserContext;
    let server: ViteDevServer;
    let navigationDriver: NavigationDriver;
+   let cartDriver : CartDriver;
 
    before(async () => {
       const {
@@ -21,6 +23,7 @@ describe('My tests', function () {
       context = newContext;
       server = newServer;
       navigationDriver = new NavigationDriver(page);
+      cartDriver = new CartDriver(page);
    });
 
    beforeEach(async () => {
@@ -28,6 +31,7 @@ describe('My tests', function () {
       await page.goto(`http://localhost:${8000}`);
       await page.waitForLoadState();
       navigationDriver.setPage(page);
+      cartDriver.setPage(page);
    });
 
    afterEach(async () => {
@@ -53,7 +57,19 @@ describe('My tests', function () {
          expect(currentUrl).to.equal(`http://localhost:${8000}/`)
       })
    });
-   describe('Adding items to cart', async () => {
+   describe('Cart tests', async () => {
+      it('Verify that clicking the cart icon opens the modal and clicking outside the modal closes it.', async () => {
+         await cartDriver.ClickOnCart();
+         expect(await page.getByTestId('bagModal').isVisible()).to.be.true;
+         await cartDriver.ClickOutsideCart();
+         expect(await page.getByTestId('bagModal').isVisible()).to.be.false;
+      });
+
+      it('Ensure adding an item to the cart fails when size is not selected', async()=>{
+
+      })
+
+
 
    })
 
