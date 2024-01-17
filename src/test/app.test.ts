@@ -22,6 +22,7 @@ describe('My tests', function () {
       browser = newBrowser;
       context = newContext;
       server = newServer;
+      page = await browser.newPage();
       navigationDriver = new NavigationDriver(page);
       cartDriver = new CartDriver(page);
    });
@@ -66,6 +67,9 @@ describe('My tests', function () {
       });
 
       it('Ensure adding an item to the cart fails when size is not selected', async()=>{
+         const id = 'PANTS'   
+         await navigationDriver.clickOnLinkById(id);
+         await cartDriver
 
       })
 

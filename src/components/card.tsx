@@ -15,7 +15,7 @@ export const Card: React.FC<Item> = ({
    const [addToCartClicked, setAddToCartClicked] = useState<boolean>(false);
 
    return (
-      <div className={styles.cardContainer} data-testid = {`${mainTitle} card`}>
+      <div className={styles.cardContainer} data-testid = {`${id} card`}>
          <img
             className={styles.img}
             src={image}
@@ -32,10 +32,10 @@ export const Card: React.FC<Item> = ({
             {addToCartClicked && !size && (
                <p className={styles.errorMessage}>Please choose a size</p>
             )}
-            <CardSizeSelector size={size} setSize={setSize} data-testid={`${mainTitle} size selector`} />
+            <CardSizeSelector size={size} setSize={setSize} data-testid={`${id} size selector`} />
          </div>
          <AddToCart
-            data-testid={`${mainTitle} add to cart button`}
+            data-testid={`${id} add to cart button`}
             id={id}
             mainTitle={mainTitle}
             secondaryTitle={secondaryTitle}
