@@ -18,8 +18,17 @@ export const Card: React.FC<Item> = ({ id, mainTitle, secondaryTitle, image, pri
          </div>
          {/* The following div is just so that the error message will be aligned left just as the sizeselector */}
          <div>
-            <p className={addToCartClicked && !size ? styles.errorMessage : styles.notVisible}>Please choose a size</p>
-            <CardSizeSelector size={size} setSize={setSize} data-testid={`${id} size selector`} />
+            <p
+               className={addToCartClicked && !size ? styles.errorMessage : styles.notVisible}
+               data-testid="choose size">
+               Please choose a size
+            </p>
+            <CardSizeSelector
+               id={id}
+               size={size}
+               setSize={setSize}
+               data-testid={`${id} size selector`}
+            />
          </div>
          <AddToCart
             id={id}

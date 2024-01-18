@@ -31,7 +31,7 @@ export const AddToCart: React.FC<CartItem> = ({
       <button
          className={styles.addToCartButton}
          onClick={handleClick}
-         data-testid={`${id} + add to cart button`}>
+         data-testid={`${id} add to cart button`}>
          <span className={styles.addToCartText}>Add To Cart</span>
       </button>
    );

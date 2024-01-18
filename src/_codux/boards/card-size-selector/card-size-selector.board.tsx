@@ -7,6 +7,7 @@ export default createBoard({
    Board: () => (
       <div className={CardSizeSelector_module.container}>
          <CardSizeSelector
+            id="pants9"
             size={null}
             setSize={function (): void {
                throw new Error('Function not implemented.');

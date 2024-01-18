@@ -2,7 +2,7 @@ import React from 'react';
 import styles from './card-size-selector.module.css';
 import { CardSizeSelector, Sizes } from '../datatypes';
 
-const SizeSelector: React.FC<CardSizeSelector> = ({ size, setSize }) => {
+const SizeSelector: React.FC<CardSizeSelector> = ({ id, size, setSize }) => {
    const sizes: Sizes[] = ['S', 'M', 'L', 'XL'];
 
    const handleSelectSize = (currentSize: Sizes) => {
@@ -13,7 +13,7 @@ const SizeSelector: React.FC<CardSizeSelector> = ({ size, setSize }) => {
       <form className={styles.sizeButtons} action="none">
          {sizes.map((currentSize) => (
             <button
-               data-testid={`${currentSize}`}
+               data-testid={`${id} ${currentSize}`}
                key={currentSize}
                type="button"
                className={`${styles.sizeButton} ${styles[currentSize!]}
