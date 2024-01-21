@@ -8,11 +8,11 @@ export class CartDriver {
    private sizes: string[];
    private navigationDriver: NavigationDriver;
 
-   constructor(page: Page) {
+   constructor(page: Page, navigationDriver: NavigationDriver) {
       this.page = page;
       this.dataItems = ['HATS', 'PANTS', 'SHIRTS'];
       this.sizes = ['S', 'M', 'L', 'XL'];
-      this.navigationDriver = new NavigationDriver(this.page);
+      this.navigationDriver = navigationDriver;
    }
 
    setPage(page: Page): void {
@@ -79,7 +79,7 @@ export class CartDriver {
    }
 
    async addSomeItemsToCart(numOfItems: number): Promise<number> {
-      let totalPrice : number = 0;
+      let totalPrice: number = 0;
       for (let i = 0; i < numOfItems; i++) {
          const typeOfItemId: string = this.getRandomTypeOfItem();
          const itemId: string = this.getArbitraryItemFromData(typeOfItemId);
@@ -87,17 +87,11 @@ export class CartDriver {
          const cardLoacator: Locator = await this.getCard(itemId);
          const addToCartLocator: Locator = await this.getAddToCartButton(itemId);
          const sizeLocator: Locator = await this.getCardSizeButton(itemId, this.getRandomSize());
-         sizeLocator.click();
-         addToCartLocator.click();
-         const priceElement = cardLoacator.getByTestId('price');
-         const priceText = priceElement ? await priceElement.textContent() : null;
-         
-         if (priceText !== null) {
-           totalPrice += parseInt(priceText, 10);
-         } else {
-           // Handle the case where priceText is null
-           console.error("Price text is null. Unable to parse as an integer.");
-         }      }
+         await sizeLocator.click();
+         await addToCartLocator.click();
+         const priceText: string = await cardLoacator.getByTestId('price').innerText();
+         totalPrice += parseFloat(parseFloat(priceText).toFixed(2));
+      }
       return totalPrice;
    }
 }

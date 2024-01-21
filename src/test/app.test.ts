@@ -4,6 +4,7 @@ import { ViteDevServer } from 'vite';
 import { serverSetup, serverTeardown } from '../test-kit/server-setup';
 import { NavigationDriver } from '../test-kit/navigation-driver';
 import { CartDriver } from '../test-kit/cart-driver';
+import { areNumbersClose } from '../utility';
 
 describe('My tests', function () {
    let page: Page;
@@ -13,14 +14,13 @@ describe('My tests', function () {
    let navigationDriver: NavigationDriver;
    let cartDriver: CartDriver;
 
-
    before(async () => {
       const { browser: newBrowser, context: newContext, server: newServer } = await serverSetup();
       browser = newBrowser;
       context = newContext;
       server = newServer;
       navigationDriver = new NavigationDriver(page);
-      cartDriver = new CartDriver(page);
+      cartDriver = new CartDriver(page, navigationDriver);
    });
 
    beforeEach(async () => {
@@ -72,15 +72,16 @@ describe('My tests', function () {
          expect(await cardLoacator.getByTestId('choose size').isVisible()).to.be.true;
          const size: string = cartDriver.getRandomSize();
          const sizeLocator: Locator = await cartDriver.getCardSizeButton(itemId, size);
-         // await sizeLargeLocator.highlight();
          await sizeLocator.click();
          expect(await cardLoacator.locator('[data-testid="choose size"]').isVisible()).to.be.false;
       });
 
       it('Confirm that the total price shown in the modal matches the accurate price', async () => {
-         const totalPrice =  await cartDriver.addSomeItemsToCart(4);
-      
-         expect()
-      })
+         const totalPrice: number = await cartDriver.addSomeItemsToCart(Math.random() * 30 + 1);
+         await cartDriver.clickOnCart();
+         const numberShownText: string | null = await page.getByTestId('total-price').textContent();
+         const numberShown: number = numberShownText ? parseInt(numberShownText) : 0;
+         expect(areNumbersClose(totalPrice, numberShown, 1)).to.be.true;
+      });
    });
 });

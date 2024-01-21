@@ -80,7 +80,9 @@ export const BagModal = () => {
          <div className={styles.ordersummary}>
             <div className={BagModal_module.ordersummaryheader}>
                <h2 className={BagModal_module.summarytext}> Order Summary</h2>
-               <h2 className={BagModal_module.totalprice}>{`$ ${totalPrice.toFixed(2)}`}</h2>
+               <h2 className={BagModal_module.totalprice} data-testid="total-price">
+                  {totalPrice.toFixed(2)}
+               </h2>
             </div>
          </div>
       </div>

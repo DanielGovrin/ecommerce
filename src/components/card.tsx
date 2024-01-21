@@ -14,7 +14,9 @@ export const Card: React.FC<Item> = ({ id, mainTitle, secondaryTitle, image, pri
          <div className={styles.listingContainer}>
             <h3 className={styles.mainTitle}>{mainTitle}</h3>
             <h4 className={styles.secondaryTitle}>{secondaryTitle}</h4>
-            <h3 className={styles.price}>{`$ ${price}`}</h3>
+            <h3 className={styles.price} data-testid="price">
+               {price}
+            </h3>
          </div>
          {/* The following div is just so that the error message will be aligned left just as the sizeselector */}
          <div>
