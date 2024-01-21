@@ -1,15 +1,18 @@
 import { Locator, Page } from 'playwright-chromium';
 import { PantsData, HatsData, ShirtsData } from '../components/data';
+import { NavigationDriver } from './navigation-driver';
 
 export class CartDriver {
    private page: Page;
    private dataItems: string[];
    private sizes: string[];
+   private navigationDriver: NavigationDriver;
 
    constructor(page: Page) {
       this.page = page;
       this.dataItems = ['HATS', 'PANTS', 'SHIRTS'];
       this.sizes = ['S', 'M', 'L', 'XL'];
+      this.navigationDriver = new NavigationDriver(this.page);
    }
 
    setPage(page: Page): void {
@@ -73,5 +76,28 @@ export class CartDriver {
                'Invalid input type. Make sure you pass a valid item with capital letters.'
             );
       }
+   }
+
+   async addSomeItemsToCart(numOfItems: number): Promise<number> {
+      let totalPrice : number = 0;
+      for (let i = 0; i < numOfItems; i++) {
+         const typeOfItemId: string = this.getRandomTypeOfItem();
+         const itemId: string = this.getArbitraryItemFromData(typeOfItemId);
+         this.navigationDriver.clickOnLinkById(typeOfItemId);
+         const cardLoacator: Locator = await this.getCard(itemId);
+         const addToCartLocator: Locator = await this.getAddToCartButton(itemId);
+         const sizeLocator: Locator = await this.getCardSizeButton(itemId, this.getRandomSize());
+         sizeLocator.click();
+         addToCartLocator.click();
+         const priceElement = cardLoacator.getByTestId('price');
+         const priceText = priceElement ? await priceElement.textContent() : null;
+         
+         if (priceText !== null) {
+           totalPrice += parseInt(priceText, 10);
+         } else {
+           // Handle the case where priceText is null
+           console.error("Price text is null. Unable to parse as an integer.");
+         }      }
+      return totalPrice;
    }
 }

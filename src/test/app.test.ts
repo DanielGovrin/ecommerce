@@ -12,7 +12,7 @@ describe('My tests', function () {
    let server: ViteDevServer;
    let navigationDriver: NavigationDriver;
    let cartDriver: CartDriver;
-   this.timeout(180_000);
+
 
    before(async () => {
       const { browser: newBrowser, context: newContext, server: newServer } = await serverSetup();
@@ -70,12 +70,17 @@ describe('My tests', function () {
          const addToCartLocator: Locator = await cartDriver.getAddToCartButton(itemId);
          await addToCartLocator.click();
          expect(await cardLoacator.getByTestId('choose size').isVisible()).to.be.true;
-
          const size: string = cartDriver.getRandomSize();
          const sizeLocator: Locator = await cartDriver.getCardSizeButton(itemId, size);
          // await sizeLargeLocator.highlight();
          await sizeLocator.click();
          expect(await cardLoacator.locator('[data-testid="choose size"]').isVisible()).to.be.false;
       });
+
+      it('Confirm that the total price shown in the modal matches the accurate price', async () => {
+         const totalPrice =  await cartDriver.addSomeItemsToCart(4);
+      
+         expect()
+      })
    });
 });

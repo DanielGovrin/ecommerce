@@ -3,7 +3,7 @@ import { createServer, ViteDevServer } from 'vite';
 
 export async function serverSetup() {
    const server = await startPreview();
-   const browser = await chromium.launch({ headless: false });
+   const browser = await chromium.launch();
    const context = await browser.newContext();
    return { browser, context, server };
 }
