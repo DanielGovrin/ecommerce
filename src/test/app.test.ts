@@ -49,10 +49,10 @@ describe('My tests', function () {
       });
 
       it('should navigate to home page', async () => {
-         const id: string = 'HOME';
+         const id: string = 'PANTS';
          await navigationDriver.clickOnLinkById(id);
          const currentUrl: string = navigationDriver.getPageUrl();
-         expect(currentUrl).to.equal(`http://localhost:${8000}/`);
+         expect(currentUrl).to.equal(`http://localhost:${8000}/Pants`);
       });
    });
    describe('Cart tests', async () => {
