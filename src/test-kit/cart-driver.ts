@@ -3,20 +3,12 @@ import { PantsData, HatsData, ShirtsData } from '../components/data';
 import { NavigationDriver } from './navigation-driver';
 
 export class CartDriver {
-   private page: Page;
    private dataItems: string[];
    private sizes: string[];
-   private navigationDriver: NavigationDriver;
 
-   constructor(page: Page, navigationDriver: NavigationDriver) {
-      this.page = page;
+   constructor(private page: Page, private navigationDriver: NavigationDriver) {
       this.dataItems = ['HATS', 'PANTS', 'SHIRTS'];
       this.sizes = ['S', 'M', 'L', 'XL'];
-      this.navigationDriver = navigationDriver;
-   }
-
-   setPage(page: Page): void {
-      this.page = page;
    }
 
    getRandomNumber(min: number, max: number): string {

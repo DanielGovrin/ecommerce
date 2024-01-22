@@ -3,10 +3,6 @@ import { Page } from 'playwright-chromium';
 export class NavigationDriver {
    constructor(private page: Page) {}
 
-   setPage(page: Page) {
-      this.page = page;
-   }
-
    clickOnLinkById(Id: string) {
       const link = this.page.getByTestId(Id);
       return link.click();

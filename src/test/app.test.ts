@@ -13,23 +13,21 @@ describe('My tests', function () {
    let server: ViteDevServer;
    let navigationDriver: NavigationDriver;
    let cartDriver: CartDriver;
-   // this.timeout(10000);
 
    before(async () => {
       const { browser: newBrowser, context: newContext, server: newServer } = await serverSetup();
       browser = newBrowser;
       context = newContext;
       server = newServer;
-      navigationDriver = new NavigationDriver(page);
-      cartDriver = new CartDriver(page, navigationDriver);
+
    });
 
    beforeEach(async () => {
       page = await context.newPage();
       await page.goto(`http://localhost:${8000}`);
       await page.waitForLoadState();
-      navigationDriver.setPage(page);
-      cartDriver.setPage(page);
+      navigationDriver = new NavigationDriver(page);
+      cartDriver = new CartDriver(page, navigationDriver);
    });
 
    afterEach(async () => {
@@ -97,8 +95,20 @@ describe('My tests', function () {
          await page.getByTestId(`${itemId} select`).selectOption('2');
          const totalPriceText: string | null = await page.getByTestId('total-price').textContent();
          const totalPrice: number = totalPriceText ? parseFloat(totalPriceText) : 0;
-         console.log(`the total price is ${totalPrice} and the pants price is ${pantsPrice}`);
          expect(pantsPrice * 2).to.equal(totalPrice);
       });
+      
+      it('Ensures the delete button in the modal actually delete the product from the list',async ()=>{
+         await navigationDriver.clickOnLinkById('HATS');
+         const itemId: string = 'hats8';
+         await (await cartDriver.getCardSizeButton(itemId, 'M')).click();
+         await (await cartDriver.getAddToCartButton(itemId)).click();
+         await cartDriver.clickOnCart();
+         await(page.getByTestId(`${itemId} delete-button`)).click()
+         const totalPriceText: string | null = await page.getByTestId('total-price').textContent();
+         const totalPrice: number = totalPriceText ? parseFloat(totalPriceText) : -1;
+         expect(totalPrice).to.equal(0);
+
+      })
    });
 });

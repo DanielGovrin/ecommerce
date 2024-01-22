@@ -44,6 +44,7 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
       // Update the quantity for the specific item and size
       newCartItems.set(generatedId, quantity);
       setCartItems(newCartItems);
+      setNumOfItems((prevNumOfItems:number) => prevNumOfItems - oldNumOfItems + quantity)
       setTotalPrice((prevPrice) => prevPrice - oldItemPrice + newItemPrice);
    };
 
