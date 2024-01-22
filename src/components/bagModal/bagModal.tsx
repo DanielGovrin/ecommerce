@@ -74,7 +74,7 @@ export const BagModal = () => {
                   ...getItemFromId(id),
                   size: size as Sizes,
                };
-               return <BagItem {...cartItem} data-testid={id}/>;
+               return <BagItem {...cartItem} data-testid={id} />;
             })}
          </div>
          <div className={styles.ordersummary}>

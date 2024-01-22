@@ -41,10 +41,10 @@ export const CartProvider: React.FC<{ children: React.ReactNode }> = ({ children
       const oldItemPrice: number = oldNumOfItems * parseFloat(item.price);
       const newItemPrice: number = parseFloat(item.price) * quantity;
 
-      // Update the quantity for the specific item and size
+      // Update the quantity for the specific item and sizeß
       newCartItems.set(generatedId, quantity);
       setCartItems(newCartItems);
-      setNumOfItems((prevNumOfItems:number) => prevNumOfItems - oldNumOfItems + quantity)
+      setNumOfItems((prevNumOfItems: number) => prevNumOfItems - oldNumOfItems + quantity);
       setTotalPrice((prevPrice) => prevPrice - oldItemPrice + newItemPrice);
    };
 

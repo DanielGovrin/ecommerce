@@ -19,7 +19,6 @@ describe('My tests', function () {
       browser = newBrowser;
       context = newContext;
       server = newServer;
-
    });
 
    beforeEach(async () => {
@@ -89,7 +88,9 @@ describe('My tests', function () {
          const firstPantsCardLocator: Locator = await cartDriver.getCard(itemId);
          await (await cartDriver.getCardSizeButton(itemId, 'L')).click();
          await (await cartDriver.getAddToCartButton(itemId)).click();
-         const pantsPriceText: string | null = await firstPantsCardLocator.getByTestId('price').textContent();
+         const pantsPriceText: string | null = await firstPantsCardLocator
+            .getByTestId('price')
+            .textContent();
          const pantsPrice: number = pantsPriceText ? parseFloat(pantsPriceText) : 0;
          await cartDriver.clickOnCart();
          await page.getByTestId(`${itemId} select`).selectOption('2');
@@ -97,18 +98,34 @@ describe('My tests', function () {
          const totalPrice: number = totalPriceText ? parseFloat(totalPriceText) : 0;
          expect(pantsPrice * 2).to.equal(totalPrice);
       });
-      
-      it('Ensures the delete button in the modal actually delete the product from the list',async ()=>{
+
+      it('Verifies that adjusting the quantity of items through the modal updates the item count in the cart accordingly', async () => {
+         await navigationDriver.clickOnLinkById('SHIRTS');
+         const itemId: string = 'shirts4';
+         await (await cartDriver.getCardSizeButton(itemId, 'XL')).click();
+         await (await cartDriver.getAddToCartButton(itemId)).click();
+         await cartDriver.clickOnCart();
+         await page.getByTestId(`${itemId} select`).selectOption('9');
+         await cartDriver.clickOutsideCart();
+         const numOfItemsInCartText: string | null = await page
+            .getByTestId('number-of-items')
+            .textContent();
+         const numOfItemsInCart: number = numOfItemsInCartText
+            ? parseFloat(numOfItemsInCartText)
+            : 0;
+         expect(numOfItemsInCart).to.equal(9);
+      });
+
+      it('Ensures the delete button in the modal actually delete the product from the list', async () => {
          await navigationDriver.clickOnLinkById('HATS');
          const itemId: string = 'hats8';
          await (await cartDriver.getCardSizeButton(itemId, 'M')).click();
          await (await cartDriver.getAddToCartButton(itemId)).click();
          await cartDriver.clickOnCart();
-         await(page.getByTestId(`${itemId} delete-button`)).click()
+         await page.getByTestId(`${itemId} delete-button`).click();
          const totalPriceText: string | null = await page.getByTestId('total-price').textContent();
          const totalPrice: number = totalPriceText ? parseFloat(totalPriceText) : -1;
          expect(totalPrice).to.equal(0);
-
-      })
+      });
    });
 });

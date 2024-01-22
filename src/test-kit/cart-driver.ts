@@ -6,7 +6,10 @@ export class CartDriver {
    private dataItems: string[];
    private sizes: string[];
 
-   constructor(private page: Page, private navigationDriver: NavigationDriver) {
+   constructor(
+      private page: Page,
+      private navigationDriver: NavigationDriver
+   ) {
       this.dataItems = ['HATS', 'PANTS', 'SHIRTS'];
       this.sizes = ['S', 'M', 'L', 'XL'];
    }
