@@ -15,11 +15,5 @@ export const useCart = (): CartContextProps => {
 };
 
 export const areNumbersClose = (num1: number, num2: number, tolerance: number): boolean => {
-   console.log(
-      `Number 1 is ${num1} and the second number is ${num2}, the difference between them is ${Math.abs(
-         num1 - num2
-      )}`
-   );
-   const dif: boolean = Math.abs(num1 - num2) <= tolerance;
-   return dif;
+   return Math.abs(num1 - num2) <= tolerance;
 };

@@ -13,6 +13,7 @@ describe('My tests', function () {
    let server: ViteDevServer;
    let navigationDriver: NavigationDriver;
    let cartDriver: CartDriver;
+   // this.timeout(10000);
 
    before(async () => {
       const { browser: newBrowser, context: newContext, server: newServer } = await serverSetup();
@@ -82,6 +83,22 @@ describe('My tests', function () {
          const numberShownText: string | null = await page.getByTestId('total-price').textContent();
          const numberShown: number = numberShownText ? parseInt(numberShownText) : 0;
          expect(areNumbersClose(totalPrice, numberShown, 1)).to.be.true;
+      });
+
+      it('Ensures the total price in the modal updates with changes in product quantity.', async () => {
+         await navigationDriver.clickOnLinkById('PANTS');
+         const itemId: string = 'pants10';
+         const firstPantsCardLocator: Locator = await cartDriver.getCard(itemId);
+         await (await cartDriver.getCardSizeButton(itemId, 'L')).click();
+         await (await cartDriver.getAddToCartButton(itemId)).click();
+         const pantsPriceText: string | null = await firstPantsCardLocator.getByTestId('price').textContent();
+         const pantsPrice: number = pantsPriceText ? parseFloat(pantsPriceText) : 0;
+         await cartDriver.clickOnCart();
+         await page.getByTestId(`${itemId} select`).selectOption('2');
+         const totalPriceText: string | null = await page.getByTestId('total-price').textContent();
+         const totalPrice: number = totalPriceText ? parseFloat(totalPriceText) : 0;
+         console.log(`the total price is ${totalPrice} and the pants price is ${pantsPrice}`);
+         expect(pantsPrice * 2).to.equal(totalPrice);
       });
    });
 });
