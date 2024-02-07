@@ -1,33 +1,33 @@
 .container {
-   display: flex;
-   flex-direction: row;
+    display: flex;
+    flex-direction: row;
 }
 
 .text {
-   font-family: 'Helvetica Now Text', Helvetica, Arial, sans-serif;
-   line-height: 28px;
-   color: #707072;
-   margin: 0px;
-   align-self: center;
-   font-weight: 400;
-   font-size: 16px;
+    font-family: 'Helvetica Now Text', Helvetica, Arial, sans-serif;
+    line-height: 28px;
+    color: #707072;
+    margin: 0px;
+    align-self: center;
+    font-weight: 400;
+    font-size: 16px;
 }
 
 .selectBar {
-   font-weight: 100;
-   border: 0px solid black;
-   text-align: center;
-   align-self: center;
-   margin: 0px 0px 2px 2px;
-   padding: 0px;
-   font-family: Tahoma, sans-serif;
-   width: 38px;
-   color: #707072;
-   height: 25px;
-   line-height: 28px;
-   font-size: 14px;
+    font-weight: 100;
+    border: 0px solid black;
+    text-align: center;
+    align-self: center;
+    margin: 0px 0px 2px 2px;
+    padding: 0px;
+    font-family: Tahoma, sans-serif;
+    width: 37px;
+    color: #707072;
+    height: 25px;
+    line-height: 28px;
+    font-size: 14px;
 }
 
 .selectBar:hover {
-   cursor: pointer;
+    cursor: pointer;
 }
