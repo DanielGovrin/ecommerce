@@ -24,11 +24,10 @@ export const QuantitySelect: React.FC<QuantitySelector> = ({
          <label className={QuantitySelect_module.text}>Quantity</label>
          <select
             className={QuantitySelect_module.selectBar}
-            onChange={handleChange}>
+            onChange={handleChange}
+            data-testid={`${id} select`}>
             {options.map((option: number) => (
-               <option
-                  key={option}
-                  selected={option === quantity ? true : false}>
+               <option key={option} selected={option === quantity ? true : false} value={option}>
                   {option}
                </option>
             ))}

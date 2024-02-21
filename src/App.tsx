@@ -1,4 +1,4 @@
-import { MemoryRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import styles from './app.module.css';
 import { BagModal } from './components/bagModal/bagModal';
 import { Header } from './components/header';
@@ -9,11 +9,10 @@ import { Pants } from './pages/pants';
 import { Shirts } from './pages/shirts';
 import { Blur } from './components/blur/blur';
 
-
 export const App = () => {
    return (
-      <MemoryRouter>
-         <div className={styles.container}>
+      <BrowserRouter>
+         <div className={styles.container} data-testid="appContainer">
             <Blur />
             <BagModal />
             <Header />
@@ -27,6 +26,6 @@ export const App = () => {
                </Routes>
             </div>
          </div>
-      </MemoryRouter>
+      </BrowserRouter>
    );
 };

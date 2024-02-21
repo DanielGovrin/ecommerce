@@ -10,6 +10,7 @@ export const BagModal = () => {
    const { cartItems, showModal, toggleCartModal, totalPrice } = useCart();
    const modalRef = useRef<HTMLDivElement>(null);
    const [isMouseOver, setIsMouseOver] = useState(false);
+   const currentModalRef = modalRef.current;
    useEffect(() => {
       const handleMouseEnter = () => {
          setIsMouseOver(true);
@@ -20,18 +21,13 @@ export const BagModal = () => {
       };
 
       const handleClickOutside = (event: MouseEvent) => {
-         if (
-            modalRef.current &&
-            !modalRef.current.contains(event.target as Node)
-         ) {
+         if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
             toggleCartModal();
          }
       };
 
       const handleGlobalMouseMove = (event: MouseEvent) => {
-         setIsMouseOver(
-            modalRef.current?.contains(event.target as Node) ?? false
-         );
+         setIsMouseOver(modalRef.current?.contains(event.target as Node) ?? false);
       };
 
       if (showModal) {
@@ -43,18 +39,14 @@ export const BagModal = () => {
 
       return () => {
          document.removeEventListener('mousedown', handleClickOutside);
-         modalRef.current?.removeEventListener('mouseenter', handleMouseEnter);
-         modalRef.current?.removeEventListener('mouseleave', handleMouseLeave);
+         currentModalRef?.removeEventListener('mouseenter', handleMouseEnter);
+         currentModalRef?.removeEventListener('mouseleave', handleMouseLeave);
          document.removeEventListener('mousemove', handleGlobalMouseMove);
       };
-   }, [showModal, toggleCartModal]);
+   }, [showModal, toggleCartModal, currentModalRef]);
 
    useEffect(() => {
-      document.body.style.cursor = showModal
-         ? isMouseOver
-            ? 'default'
-            : 'pointer'
-         : 'default';
+      document.body.style.cursor = showModal ? (isMouseOver ? 'default' : 'pointer') : 'default';
       return () => {
          document.body.style.cursor = 'default';
       };
@@ -65,38 +57,34 @@ export const BagModal = () => {
       const prefix = id.replace(/[0-9]+$/, '');
 
       // Capitalize the first letter and concatenate "Data"
-      const arrayDataName =
-         prefix.charAt(0).toUpperCase() + prefix.slice(1) + 'Data';
+      const arrayDataName = prefix.charAt(0).toUpperCase() + prefix.slice(1) + 'Data';
       const arrayData: Item[] | undefined = dataArrayByName[arrayDataName];
       return arrayData.find((item) => item.id == id)!;
    }
 
    return (
-      showModal && (
-         <div className={styles.container} ref={modalRef}>
-            <div className={styles.itemList}>
-               {Array.from(cartItems.entries()).map(([key]) => {
-                  const [id, size] = key.split('#');
-                  const cartItem: CartItem = {
-                     ...getItemFromId(id),
-                     size: size as Sizes,
-                  };
-                  return <BagItem {...cartItem} />;
-               })}
-            </div>
-            <div className={styles.ordersummary}>
-               <div className={BagModal_module.ordersummaryheader}>
-                  <h2 className={BagModal_module.summarytext}>
-                     {' '}
-                     Order Summary
-                  </h2>
-                  <h2
-                     className={
-                        BagModal_module.totalprice
-                     }>{`$ ${totalPrice.toFixed(2)}`}</h2>
-               </div>
+      <div
+         className={showModal ? styles.container : styles.notVisible}
+         ref={modalRef}
+         data-testid="bagModal">
+         <div className={styles.itemList}>
+            {Array.from(cartItems.entries()).map(([key]) => {
+               const [id, size] = key.split('#');
+               const cartItem: CartItem = {
+                  ...getItemFromId(id),
+                  size: size as Sizes,
+               };
+               return <BagItem {...cartItem} data-testid={id} />;
+            })}
+         </div>
+         <div className={styles.ordersummary}>
+            <div className={BagModal_module.ordersummaryheader}>
+               <h2 className={BagModal_module.summarytext}> Order Summary</h2>
+               <h2 className={BagModal_module.totalprice} data-testid="total-price">
+                  {totalPrice.toFixed(2)}
+               </h2>
             </div>
          </div>
-      )
+      </div>
    );
 };

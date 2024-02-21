@@ -16,6 +16,12 @@
    justify-content: center;
 }
 
+.notVisible {
+   visibility: hidden;
+   height: 0px;
+   width: 0px;
+}
+
 .itemList {
    margin: 0px;
    overflow: auto;

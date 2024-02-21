@@ -27,7 +27,7 @@ export const BagItem: React.FC<CartItem> = ({
 
    return (
       <div className={BagItem_module.container}>
-         <img src={image} alt="" height="150px" width="150px" />
+         <img src={image} height="150px" width="150px" />
          <div className={BagItem_module.test}>
             <h2>{mainTitle} </h2>
             <h3>{secondaryTitle}</h3>
@@ -45,7 +45,8 @@ export const BagItem: React.FC<CartItem> = ({
             </div>
             <button
                className={BagItem_module.deleteButton}
-               onClick={handleClick}></button>
+               onClick={handleClick}
+               data-testid={`${id} delete-button`}></button>
             <div className={BagItem_module.deleteContainer} />
          </div>
          <h4 className={BagItem_module.price}>{`$ ${price}`}</h4>

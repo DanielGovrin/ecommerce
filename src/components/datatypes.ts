@@ -37,6 +37,7 @@ export interface QuantitySelector extends Item {
 }
 
 export interface CardSizeSelector {
+   id: string;
    size: Sizes;
    setSize: (size: Sizes) => void;
 }
