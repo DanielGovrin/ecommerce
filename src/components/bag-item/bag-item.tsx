@@ -31,6 +31,10 @@ export const BagItem: React.FC<CartItem> = ({
          <div className={BagItem_module.test}>
             <h2>{mainTitle} </h2>
             <h3>{secondaryTitle}</h3>
+            <button
+               className={BagItem_module.deleteButton}
+               onClick={handleClick}
+               data-testid={`${id} delete-button`}></button>
             <div className={BagItem_module.productSelectionContainer}>
                <BagSizeSelector size={size} />
                <QuantitySelect
@@ -43,10 +47,6 @@ export const BagItem: React.FC<CartItem> = ({
                   price={price}
                />
             </div>
-            <button
-               className={BagItem_module.deleteButton}
-               onClick={handleClick}
-               data-testid={`${id} delete-button`}></button>
             <div className={BagItem_module.deleteContainer} />
          </div>
          <h4 className={BagItem_module.price}>{`$ ${price}`}</h4>
